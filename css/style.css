@@ -1,0 +1,293 @@
+@import "reset.css";
+
+@font-face {
+    font-family: Montserrat;
+    src: url("../fonts/Montserrat-VariableFont_wght.ttf");
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    background-color: #7D5F4E;
+    font-family: Montserrat;
+}
+
+.title {
+    text-align: center;
+    background-color: #7D5F4E;
+    font-size: 35px;
+    font-family: Montserrat;
+    padding-top: 59px;
+    padding-bottom: 55px;
+}
+
+/* Button */
+button {
+    border: none;
+    background-color: transparent;
+    margin: 10px;
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+button:focus {
+    outline: none;
+}
+
+button:hover i {
+    color: rgb(102, 102, 102);
+}
+
+i {
+    font-size: 4em;
+}
+
+.prev-btn {
+    padding-right: 80px;
+}
+
+.next-btn {
+    padding-left: 80px;
+}
+
+/* Book */
+.book {
+    width: 515px;
+    height: 772px;
+    position: relative;
+    transition: transform 0.5s;
+}
+
+.paper {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    perspective: 1500px;
+}
+
+/*.cover {*/
+/*    backface-visibility: hidden;*/
+/*    border-left: 3px solid #dac400;*/
+/*    position: absolute;*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    background-color: white;*/
+/*    transform-origin: left;*/
+/*    transition: transform 0.5s;*/
+/*    z-index: 1;*/
+/*    flex-direction: column;*/
+/*}*/
+
+.front {
+    backface-visibility: hidden;
+    border-left: 3px solid #E0BF8F;
+
+}
+
+.front,
+.back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-origin: left;
+    transition: transform 0.5s;
+    background-color: #F2D6B7;
+}
+
+/*.front {*/
+/*    background-image: url("../img/right page-img.png");*/
+/*}*/
+
+/*.back {*/
+/*    background-image: url("../img/left page-img.png");*/
+/*}*/
+
+.front {
+    z-index: 1;
+}
+
+.back {
+    z-index: 0;
+}
+
+.front-content,
+.back-content {
+    width: 100%;
+    height: 100%;
+}
+
+.back-content {
+    transform: rotateY(180deg)
+}
+
+/* Paper Flipped */
+.flipped .front,
+.flipped .back {
+    transform: rotateY(-180deg)
+}
+
+/* Paper Z-index */
+#p1 {
+    z-index: 4;
+}
+
+#p2 {
+    z-index: 3;
+}
+
+#p3 {
+    z-index: 2;
+}
+
+#p4 {
+    z-index: 1;
+}
+
+/* Customization */
+
+.book-title {
+    font-size: 3em;
+    text-align: center;
+}
+
+.cover-img {
+    width: 200px;
+    height: 270px;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+/*#b1 {*/
+/*    padding: 20px;*/
+/*    text-align: center;*/
+/*    font-size: 1.2em;*/
+/*    justify-content: space-around;*/
+/*}*/
+
+/*#b1 h2 {*/
+/*    font-size: 2em;*/
+/*    margin-top: 10px;*/
+/*    margin-bottom: 20px;*/
+/*}*/
+
+#b1 p {
+    margin-bottom: 0;
+}
+
+.page1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.page1__title {
+    padding-top: 169px;
+    padding-bottom: 35px;
+}
+
+.page1-text {
+    width: 392px;
+    height: 134px;
+    flex-shrink: 0;
+    text-align: justify;
+    font-size: 16px;
+    text-indent: 25px;
+    line-height: 150%; /* 24px */
+    letter-spacing: -0.352px;
+    color: #2F1301;
+}
+
+.page2 {
+    display: flex;
+    align-items: center;
+}
+
+.backstory-photo {
+    width: 470px;
+    height: 304px;
+    flex-shrink: 0;
+    padding-left: 35px;
+}
+
+.page3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.page3-img {
+    padding-top: 142px;
+    padding-bottom: 49px;
+
+}
+
+.page3-p {
+    width: 392px;
+    height: 168px;
+    color: #2F1301;
+    text-align: justify;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: -0.352px;
+    text-indent: 25px;
+}
+
+.page4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.page4-img {
+    width: 470px;
+    height: 304px;
+}
+
+.page5 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page5-img {
+    width: 470px;
+    height: 304px;
+}
+
+.page6 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.page6-p {
+    color: #2F1301;
+    text-align: justify;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+    letter-spacing: -0.352px;
+    width: 392px;
+    height: 168px;
+    text-indent: 25px;
+}
