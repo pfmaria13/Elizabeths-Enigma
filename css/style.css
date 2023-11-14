@@ -5,6 +5,10 @@
     src: url("../fonts/Montserrat-VariableFont_wght.ttf");
 }
 
+body {
+    background-color: #7D5F4E;
+}
+
 .container {
     max-width: 1440px;
     margin: 0 auto;
@@ -13,13 +17,12 @@
     align-items: center;
     justify-content: center;
     font-family: sans-serif;
-    background-color: #7D5F4E;
     font-family: Montserrat;
 }
 
 .title {
     text-align: center;
-    background-color: #7D5F4E;
+    color: #fff;
     font-size: 35px;
     font-family: Montserrat;
     padding-top: 59px;
@@ -27,20 +30,26 @@
 }
 
 /* Button */
-button {
-    border: none;
-    background-color: transparent;
-    margin: 10px;
-    cursor: pointer;
-    transition: transform 0.5s;
-}
+/*button {*/
+/*    border: none;*/
+/*    background-color: transparent;*/
+/*    margin: 10px;*/
+/*    cursor: pointer;*/
+/*    transition: transform 0.5s;*/
+/*}*/
 
-button:focus {
-    outline: none;
-}
+/*button:focus {*/
+/*    outline: none;*/
+/*}*/
 
-button:hover i {
-    color: rgb(102, 102, 102);
+/*button:hover i {*/
+/*    color: rgb(102, 102, 102);*/
+/*}*/
+
+.choice-btn:hover {
+    width: 100%;
+    fill: linear-gradient(89deg, #E0BF8F -1.79%, #F2D6B7 14.25%, #FBEEDE 50.06%, #F7E3CA 100.85%);
+    box-shadow: 0px 4px 27.6px 0px rgba(104, 47, 15, 0.25) inset;
 }
 
 i {
@@ -145,21 +154,32 @@ i {
 
 /* Paper Z-index */
 #p1 {
-    z-index: 4;
+    z-index: 7;
 }
 
 #p2 {
-    z-index: 3;
+    z-index: 6;
 }
 
 #p3 {
-    z-index: 2;
+    z-index: 5;
 }
 
 #p4 {
-    z-index: 1;
+    z-index: 4;
 }
 
+#p5 {
+    z-index: 3;
+}
+
+#p6 {
+    z-index: 2;
+}
+
+#p7 {
+    z-index: 1;
+}
 /* Customization */
 
 .book-title {
@@ -279,6 +299,7 @@ i {
     align-items: center;
     justify-content: center;
 }
+
 .page6-p {
     color: #2F1301;
     text-align: justify;
@@ -290,4 +311,46 @@ i {
     width: 392px;
     height: 168px;
     text-indent: 25px;
+}
+
+.page7 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.page8 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.page9 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.page9-text {
+    color: #2F1301;
+    text-align: justify;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+    letter-spacing: -0.352px;
+    text-indent: 25px;
+    width: 357px;
+    height: 120px;
+    padding-top: 42px;
+}
+
+.page10 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
 }
