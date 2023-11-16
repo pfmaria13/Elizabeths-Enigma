@@ -128,3 +128,7 @@ function chooseYakov() {
     paper6.style.zIndex = 5;
     prevBtn.style.visibility = 'hidden';
 }
+
+function playAgain() {
+
+}
