@@ -57,12 +57,12 @@ function goNext() {
                 paper4.classList.add("flipped");
                 paper4.style.zIndex = 4;
                 paper5.style.zIndex = 4;
+                nextBtn.style.visibility = 'hidden';
                 break;
             case 5:
                 paper5.classList.add("flipped");
                 paper5.style.zIndex = 5;
                 paper6.style.zIndex = 5;
-                nextBtn.style.visibility = 'hidden';
                 break;
             case 6:
                 paper6.classList.add("flipped");
