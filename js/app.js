@@ -20,6 +20,9 @@ let currentState = 1;
 let numOfPapers = 7;
 let maxState = numOfPapers + 1;
 
+// Game variables
+let lives = 3;
+let choices = 0;
 
 function openBook() {
     book.style.transform = "translateX(50%)";
@@ -57,6 +60,7 @@ function goNext() {
                 paper4.classList.add("flipped");
                 paper4.style.zIndex = 4;
                 paper5.style.zIndex = 4;
+                nextBtn.style.visibility = 'hidden';
                 break;
             case 5:
                 paper5.classList.add("flipped");
@@ -127,4 +131,10 @@ function chooseYakov() {
     paper5.style.zIndex = 5;
     paper6.style.zIndex = 5;
     prevBtn.style.visibility = 'hidden';
+}
+
+function playAgain() {
+    if (lives === 0) {
+
+    }
 }
