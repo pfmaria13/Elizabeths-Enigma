@@ -122,6 +122,7 @@ function goPrevious() {
                 paper7.style.zIndex = 6;
                 break;
         }
+
         currentState--;
     }
 }
