@@ -2,6 +2,7 @@
 const prevBtn = document.querySelector('#prev-btn');
 const nextBtn = document.querySelector('#next-btn');
 const book = document.querySelector('#book');
+const bookBackground = document.querySelector('#book-background')
 
 const paper1 = document.querySelector('#p1')
 const paper2 = document.querySelector('#p2')
@@ -42,6 +43,7 @@ function goNext() {
         switch(currentState) {
             case 1:
                 openBook();
+                bookBackground.style.visibility = 'unset';
                 paper1.classList.add("flipped");
                 paper1.style.zIndex = 1;
                 break;
