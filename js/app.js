@@ -104,6 +104,7 @@ function goPrevious() {
                 paper4.classList.remove("flipped");
                 paper4.style.zIndex = 4;
                 paper5.style.zIndex = 3;
+                nextBtn.style.visibility = 'unset';
                 break;
             case 6:
                 paper5.classList.remove("flipped");
