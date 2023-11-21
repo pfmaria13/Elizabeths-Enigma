@@ -10,17 +10,18 @@
     <script defer src="js/app.js"></script>
 </head>
 <body>
-    <div class="title"><img src="img/logo.png" alt="Лого" class="logo"></div>
+    <div class="title" id="title"><img src="img/logo.png" alt="Лого" class="logo"></div>
     <div class="container">
-        <button id="prev-btn">
-            <i class="prev-btn"><img src="img/prev%20button.png" alt=""></i>
-        </button>
+        <button id="prev-btn" class="prev-btn"><img src="img/prev%20button.png" alt="Назад"></button>
         <div class="game-lives">
             <img src="img/life-img.png" alt="" class="game-life1">
             <img src="img/life-img.png" alt="" class="game-life2">
             <img src="img/life-img.png" alt="" class="game-life3">
         </div>
+        <button class="play-again"><img src="img/play-again-img.png" alt="Начать заново"></button>
+        <img src="img/cover-background.png" alt="Обложка" class="cover-background" id="cover-background">
         <img src="img/book-background.png" alt="Книга" class="book-background" id="book-background">
+        <button class="dictionary-tab" id="dictionary-tab" onclick="showDictionary()"></button>
         <!-- The Book -->
         <div id="book" class="book">
             <!-- Paper 1 -->
@@ -120,11 +121,41 @@
                     </div>
                 </div>
             </div>
+
+            <!--Словарь-->
+            <div id="dictionary-page1" class="paper">
+<!--                <div class="front">-->
+<!--                    <div id="f8" class="front-content page10">-->
+<!--                    </div>-->
+<!--                </div>-->
+                <div class="back">
+                    <div id="b8" class="back-content dictionary-page1">
+                        <img src="img/dictionary-title-img.png" alt="Заголовок словаря" class="dictionary-title-img">
+                        <p class="dictionary-p1"><b class="bold-text">Богемия</b> - официальное название в 1526-1918 Чехии (без Моравии) в составе Габсбургской империи.
+                            <br><b class="bold-text">Гекзаметр</b> - (греч. hexametros – шестимерник), древнейшая форма античного стиха, существующая со времён Гомера.
+                            <br><b class="bold-text">Канцлер</b> - первый министр. </p>
+                    </div>
+                </div>
+            </div>
+            <div id="dictionary-page2" class="paper">
+                <div class="front">
+                    <div id="f9" class="front-content dictionary-page2">
+                        <p class="dictionary-p2"><b class="bold-text">Муза</b> - каждая из девяти богинь, покровительниц наук и искусств в древнегреческой мифологии.
+                            <br><b class="bold-text">Тристия</b> - скорбные песни.
+                            <br><b class="bold-text">Феб</b> -  в древнегреческой мифологии: второе имя Аполлона, как божества солнечного света.
+                            <br><b class="bold-text">Фортуна</b> - богиня случая и судьбы.
+                            <br><b class="bold-text">Чума</b> - острозаразная эпидемическая болезнь.
+                            <br><b class="bold-text">Эпитафия</b> - (греч. epitaphios – надгробный), надгробная надпись, часто стихотворная.</p>
+                    </div>
+                </div>
+<!--                <div class="back">-->
+<!--                    <div id="b9" class="back-content">-->
+<!--                    </div>-->
+<!--                </div>-->
+            </div>
         </div>
 
-        <button id="next-btn">
-            <i class="next-btn"><img src="img/next%20button.png" alt=""></i>
-        </button>
+        <button id="next-btn" class="next-btn"><img src="img/next%20button.png" alt=""></button>
     </div>
 
 

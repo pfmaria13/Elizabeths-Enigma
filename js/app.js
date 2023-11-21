@@ -2,15 +2,21 @@
 const prevBtn = document.querySelector('#prev-btn');
 const nextBtn = document.querySelector('#next-btn');
 const book = document.querySelector('#book');
-const bookBackground = document.querySelector('#book-background')
+const bookBackground = document.querySelector('#book-background');
+const coverBackground = document.querySelector('#cover-background')
+const dictionaryTab = document.querySelector('#dictionary-tab');
 
-const paper1 = document.querySelector('#p1')
-const paper2 = document.querySelector('#p2')
-const paper3 = document.querySelector('#p3')
-const paper4 = document.querySelector('#p4')
-const paper5 = document.querySelector('#p5')
-const paper6 = document.querySelector('#p6')
-const paper7 = document.querySelector('#p7')
+const paper1 = document.querySelector('#p1');
+const paper2 = document.querySelector('#p2');
+const paper3 = document.querySelector('#p3');
+const paper4 = document.querySelector('#p4');
+const paper5 = document.querySelector('#p5');
+const paper6 = document.querySelector('#p6');
+const paper7 = document.querySelector('#p7');
+
+//Dictionary
+const dictionaryPage1 = document.querySelector('#dictionary-page1');
+const dictionaryPage2 = document.querySelector('#dictionary-page2');
 
 // Event listeners
 prevBtn.addEventListener("click", goPrevious);
@@ -43,7 +49,12 @@ function goNext() {
         switch(currentState) {
             case 1:
                 openBook();
+                book.style.visibility = 'unset';
+                coverBackground.style.visibility = 'hidden';
+                prevBtn.style.visibility = 'unset';
                 bookBackground.style.visibility = 'unset';
+                dictionaryTab.style.visibility = 'unset';
+                dictionaryTab.style.transition = '1s';
                 paper1.classList.add("flipped");
                 paper1.style.zIndex = 1;
                 break;
@@ -89,6 +100,12 @@ function goPrevious() {
         switch(currentState) {
             case 2:
                 closeBook(true);
+                book.style.visibility = 'hidden';
+                coverBackground.style.visibility = 'unset';
+                prevBtn.style.visibility = 'hidden';
+                bookBackground.style.visibility = 'hidden';
+                dictionaryTab.style.transition = 'unset';
+                dictionaryTab.style.visibility = 'hidden';
                 paper1.classList.remove("flipped");
                 paper1.style.zIndex = 7;
                 break;
@@ -136,4 +153,12 @@ function chooseYakov() {
 
 function playAgain() {
 
+}
+
+function showDictionary() {
+    dictionaryPage1.classList.add("flipped");
+    dictionaryPage1.style.zIndex = '10';
+    dictionaryPage2.style.zIndex = '10';
+    nextBtn.style.visibility = 'hidden';
+    prevBtn.style.visibility = 'hidden';
 }
