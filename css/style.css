@@ -11,7 +11,7 @@
 }
 
 body {
-    background-color: #7D5F4E;
+    background-color: #79543F;
 }
 
 .container {
@@ -24,24 +24,16 @@ body {
     font-family: PP Writer;
 }
 
-.title {
-    text-align: center;
-    padding-top: 36px;
-    padding-bottom: 60px;
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 36px 90px 60px;
 }
 
 .game-lives {
-    position: absolute;
-    top: 59px;
-    left: 90px;
     display: flex;
     column-gap: 31px;
-}
-
-.play-again {
-    position: absolute;
-    top: 59px;
-    left: 332px;
 }
 
 .cover-background {
@@ -314,7 +306,7 @@ i {
     align-items: center;
 }
 
-.page1__title {
+.page1-title {
     padding-top: 169px;
     padding-bottom: 35px;
 }
@@ -349,21 +341,21 @@ i {
     align-items: center;
 }
 
-.page3-img {
-    padding-top: 142px;
-    padding-bottom: 49px;
+.page3-title {
+    padding-top: 163px;
+    padding-bottom: 9px;
 
 }
 
 .page3-p {
-    width: 392px;
+    width: 390px;
     height: 168px;
     color: #2F1301;
     text-align: justify;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
-    line-height: 150%;
+    line-height: 150%; /* 24px */
     letter-spacing: -0.352px;
     text-indent: 25px;
 }
@@ -376,8 +368,9 @@ i {
 }
 
 .page4-img {
-    width: 470px;
-    height: 304px;
+    width: 393px;
+    height: 239px;
+    padding-bottom: 25px;
 }
 
 .page5 {
@@ -405,7 +398,7 @@ i {
     font-weight: 400;
     line-height: 150%; /* 24px */
     letter-spacing: -0.352px;
-    width: 392px;
+    width: 357px;
     height: 168px;
     text-indent: 25px;
 }
@@ -417,6 +410,10 @@ i {
     justify-content: center;
 }
 
+.page7-title {
+    padding-bottom: 9px;
+}
+
 .page8 {
     display: flex;
     flex-direction: column;
@@ -424,14 +421,14 @@ i {
     justify-content: space-evenly;
 }
 
-.page9 {
+.page9-yakov {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.page9-text {
+.page9-text-yakov {
     color: #2F1301;
     text-align: justify;
     font-size: 16px;
@@ -442,13 +439,93 @@ i {
     text-indent: 25px;
     width: 357px;
     height: 120px;
-    padding-top: 42px;
+    padding-top: 18px;
 }
 
-.page10 {
+.page10-yakov {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
 }
+.page10-sudba {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.page10-sudba-choice2 {
+    width: 418px;
+    height: 276px;
+    position: relative;
+}
+.page10-sudba-p {
+    color: #2F1301;
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 21px */
+    letter-spacing: -0.7px;
+    /*text-indent: 25px;*/
+    width: 345px;
+    height: 63px;
+    position: absolute;
+    bottom: 11%;
+}
+
+.page12-sudba {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 16px;
+}
+
+.page12-sudba-p {
+    color: #2F1301;
+    text-align: justify;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+    letter-spacing: -0.352px;
+    text-indent: 5px;
+    height: 48px;
+    width: 357px;
+}
+
+.again {
+    position: relative;
+}
+
+.again:hover {
+    .again-btn-decor {
+        transition: 0.5s;
+        background-image: url("../img/again-btn-decor-hover.png");
+    }
+
+    .again-btn-text {
+        transition: 0.5s;
+        color: #B67951;
+        text-shadow: none;
+    }
+}
+
+.again-btn-text {
+    color: #2F1301;
+    text-align: justify;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 30px */
+    letter-spacing: -0.44px;
+    position: absolute;
+    top: 0;
+    left: 12%;
+}
+
+
 

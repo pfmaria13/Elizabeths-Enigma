@@ -10,76 +10,90 @@
     <script defer src="js/app.js"></script>
 </head>
 <body>
-    <div class="title" id="title"><img src="img/logo.png" alt="Лого" class="logo"></div>
+<header>
+    <div class="game-lives">
+        <img src="img/life-img.png" alt="" class="game-life1">
+        <img src="img/life-img.png" alt="" class="game-life2">
+        <img src="img/life-img.png" alt="" class="game-life3">
+    </div>
+    <div class="title" id="title">
+        <img src="img/logo.png" alt="Лого" class="logo">
+    </div>
+    <div>
+        <button class="play-again"><img src="img/play-again-img.png" alt="Начать заново"></button>
+    </div>
+</header>
+<main>
     <div class="container">
         <button id="prev-btn" class="prev-btn"><img src="img/prev%20button.png" alt="Назад"></button>
-        <div class="game-lives">
-            <img src="img/life-img.png" alt="" class="game-life1">
-            <img src="img/life-img.png" alt="" class="game-life2">
-            <img src="img/life-img.png" alt="" class="game-life3">
-        </div>
-        <button class="play-again"><img src="img/play-again-img.png" alt="Начать заново"></button>
         <img src="img/cover-background.png" alt="Обложка" class="cover-background" id="cover-background">
         <img src="img/book-background.png" alt="Книга" class="book-background" id="book-background">
         <button class="dictionary-tab" id="dictionary-tab" onclick="showDictionary()"></button>
         <!-- The Book -->
         <div id="book" class="book">
-            <!-- Paper 1 -->
             <div id="p1" class="paper">
+                <!-- Page 0 -->
                 <div class="front">
                     <div id="f1" class="front-content">
                         <img src="img/cover.png" alt="Обложка" class="cover">
                     </div>
                 </div>
+                <!-- Page 1 -->
                 <div class="back">
                     <div id="b1" class="back-content page1">
-                        <div class="page1__title"><img src="img/backstory-title.png" alt="Заголовок" class="backstory-title"></div>
+                        <div class="page1-title"><img src="img/page1-img.png" alt="Заголовок" class="page1-img"></div>
                         <div class="page1-text"><p class="page1-p">В подростковом возрасте  в семье  Элизабет начались проблемы. Ее отчим  - алхимик Эдвард Келли попал в немилость императора.<p>Фемида встала на сторону Рудольфа II,  Эдвард был заключен в тюрьму по обвинению в государственной измене.
                         </p></div>
                     </div>
                 </div>
             </div>
-            <!-- Paper 2 -->
             <div id="p2" class="paper">
+                <!-- Page 2 -->
                 <div class="front">
                     <div id="f2" class="front-content page2">
                         <img src="img/backstory-photo.png" alt="Картинка предыстории" class="backstory-photo">
                     </div>
                 </div>
+                <!-- Page 3 -->
                 <div class="back">
                     <div id="b2" class="back-content page3">
-                        <div class="page3__title"><img src="img/title3.png" alt="Заголовок" class="page3-img"></div>
-                        <div class="page3__text"><p class="page3-p">В дом к семье Элизабет нагрянули стражи. Они конфисковывают семейное имущество. Несколько дней назад поэтесса получила письмо о смерти отчима - алхимика Эдварда Келли. Посвящая эпитафии любимому отчиму, Элизабет впадает в отчаяние. Девушка понимает, что больше так жить не хочет.</p></div>
+                        <img src="img/page3-title.png" alt="Заголовок" class="page3-title">
+                        <img src="img/kostil.png" alt="Картинка изменений" class="page3-img">
                     </div>
                 </div>
             </div>
-            <!-- Paper 3 -->
             <div id="p3" class="paper">
+                <!-- Page 4 -->
                 <div class="front">
                     <div id="f3" class="front-content page4">
-                        <img src="img/photo4.png" alt="Картинка изменений" class="page4-img">
+                        <img src="img/kostil.png" alt="Картинка изменений" class="page4-img">
+                        <div class="page3-text"><p class="page3-p">В дом к семье Элизабет нагрянули стражи. Они конфисковывают семейное имущество. Несколько дней назад поэтесса получила письмо о смерти отчима - алхимика <u>Эдварда Келли</u>. Посвящая эпитафии любимому отчиму, Элизабет впадает в отчаяние. Девушка понимает, что больше так жить не хочет.</p></div>
                     </div>
                 </div>
+                <!-- Page 5 -->
                 <div class="back">
                     <div id="b3" class="back-content page5">
-                        <img src="img/photo5.png" alt="Картинка изменений" class="page5-img">
+                        <img src="" alt="Картинка изменений" class="page5-img">
                     </div>
                 </div>
             </div>
             <div id="p4" class="paper">
+                <!-- Page 6 -->
                 <div class="front">
                     <div id="f4" class="front-content page6">
                         <p class="page6-p">Неожиданно в ее комнату юрист , советник  Его Священного Императорского Величества, покровитель пражских литераторов -  Иоганн Антон Барвиц , прочитав эпитафии Уэстон, Иоганн восхищается талантом девушки, он советует написать гимн королю с мольбами о помощи.</p>
                     </div>
                 </div>
+                <!-- Page 7 -->
                 <div class="back">
                     <div id="b4" class="back-content page7">
-                        <img src="img/photo7.png" alt="Заголовок" class="page7-title">
-                        <img src="img/photo7-elizabeth.png" alt="Изображение выбора" class="page7-img">
+                        <img src="img/page7-title.png" alt="Заголовок" class="page7-title">
+                        <img src="img/kostil.png" alt="Изображение выбора" class="page7-img">
                     </div>
                 </div>
             </div>
             <div id="p5" class="paper">
+                <!-- Page 8 -->
                 <div class="front">
                     <div id="f5" class="front-content page8">
                         <button class="choice-btn" onclick="chooseYakov()"><img src="img/page8-choice1.png" alt="Выбор 1" class="page8-choice1"></button>
@@ -87,36 +101,38 @@
                         <button class="choice-btn"><img src="img/page8-choice3.png" alt="Выбор 3" class="page8-choice3"></button>
                     </div>
                 </div>
+                <!-- Page 9 (Yakov)-->
                 <div class="back">
-                    <div id="b5" class="back-content page9">
-                        <img src="img/page9-img.png" alt="Изображение" class="page9-img">
-                        <div class="page9-text"><p class="page9-p">При предоставлении письма советник короля назвал Элизабет шарлатанкой.
-                            <p class="page9-p">Поэтому Яков I не только не прочел письмо,  а с негодованием отверг его, восприняв этот жест за  напрасную лесть.</p>
+                    <div class="back-content page9-yakov">
+                        <img src="img/page9-1.png" alt="Изображение" class="page9-img-yakov">
+                        <div class="page9-text-yakov"><p class="page9-p-yakov">При предоставлении письма советник короля назвал Элизабет шарлатанкой.
+                            <p class="page9-p-yakov">Поэтому Яков I не только не прочел письмо,  а с негодованием отверг его, восприняв этот жест за  напрасную лесть.</p>
                         </div>
                     </div>
                 </div>
             </div>
             <div id="p6" class="paper">
+                <!-- Page 10 (Yakov)-->
                 <div class="front">
-                    <div id="f6" class="front-content page10">
-                        <img src="img/page10-choice1.png" alt="Выбор 1" class="page10-choice1">
-                        <img src="img/page10-choice2.png" alt="Выбор 2" class="page10-choice2">
+                    <div class="front-content page10-yakov">
+                        <button class="choice-btn"><img src="img/page10-yakov-choice1.png" alt="Выбор 1" class="page10-yakov-choice1"></button>
+                        <button class="choice-btn"><img src="img/page10-yakov-choice2.png" alt="Выбор 2" class="page10-yakov-choice2"></button>
                     </div>
                 </div>
                 <div class="back">
-                    <div id="b6" class="back-content">
-                        <h1>The Good Bye</h1>
+                    <div class="back-content">
+
                     </div>
                 </div>
             </div>
             <div id="p7" class="paper">
                 <div class="front">
-                    <div id="f7" class="front-content page10">
+                    <div class="front-content page10-yakov">
 
                     </div>
                 </div>
                 <div class="back">
-                    <div id="b7" class="back-content">
+                    <div class="back-content">
                         <h1>The Good Bye2</h1>
                     </div>
                 </div>
@@ -124,10 +140,10 @@
 
             <!--Словарь-->
             <div id="dictionary-page1" class="paper">
-<!--                <div class="front">-->
-<!--                    <div id="f8" class="front-content page10">-->
-<!--                    </div>-->
-<!--                </div>-->
+                <!--                <div class="front">-->
+                <!--                    <div id="f8" class="front-content page10">-->
+                <!--                    </div>-->
+                <!--                </div>-->
                 <div class="back">
                     <div id="b8" class="back-content dictionary-page1">
                         <img src="img/dictionary-title-img.png" alt="Заголовок словаря" class="dictionary-title-img">
@@ -148,15 +164,86 @@
                             <br><b class="bold-text">Эпитафия</b> - (греч. epitaphios – надгробный), надгробная надпись, часто стихотворная.</p>
                     </div>
                 </div>
-<!--                <div class="back">-->
-<!--                    <div id="b9" class="back-content">-->
-<!--                    </div>-->
-<!--                </div>-->
+                <!--                <div class="back">-->
+                <!--                    <div id="b9" class="back-content">-->
+                <!--                    </div>-->
+                <!--                </div>-->
             </div>
+            <div id="p8" class="paper">
+                <div class="front">
+                    <div class="front-content">
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="back-content page9-sudba">
+
+                    </div>
+                </div>
+            </div>
+            <!--  id          -->
+            <div id="p99" class="paper">
+                <div class="front">
+                    <div class="front-content page10-sudba">
+                        <img src="img/page10-sudba-choice1.png" alt="Выбор 1" class="page10-sudba-choice1">
+                        <img src="img/page10-sudba-choice2.png" alt="" class="page10-sudba-choice2">
+                        <p class="page10-sudba-p">Остаться одной, ухаживая за матерью,читая ей холодными вечерами Вашу авторскую  поэзию в надежде на помощь <u>Феба</u>.</p>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="back-content page11-sudba-choice1">
+
+                    </div>
+                </div>
+            </div>
+            <div id="p10" class="paper">
+                <div class="front">
+                    <div class="front-content page12-sudba">
+                        <img src="img/page12-sudba-img.png" alt="Игра окончена" class="page12-sudba-img">
+                        <p class="page12-sudba-p">Во время очередных родов Вы погибаете. Вы не раскрыли свой талант.</p>
+                        <button><img src="img/page12-sudba-button.png" alt="Попробовать снова" class="page12-sudba-button"></button>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="back-content">
+
+                    </div>
+                </div>
+            </div>
+            <div id="p11" class="paper">
+                <div class="front">
+                    <div class="front-content">
+
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="back-content page11-sudba-choice2">
+
+                    </div>
+                </div>
+            </div>
+            <div id="p9" class="paper">
+                <div class="front">
+                    <div class="front-content page12-sudba">
+                        <img src="img/page12-sudba-img.png" alt="Игра окончена" class="page12-sudba-img">
+                        <p class="page12-sudba-p">Случайно Вы заражаетесь чумой, немного погодя болезнь Вас поражает.</p>
+                        <button class="again">
+                            <img src="img/again-btn-decor.png" alt="Завитушки" class="again-btn-decor">
+                            <p class="again-btn-text">Попробовать снова</p>
+                        </button>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="back-content">
+                    </div>
+                </div>
+            </div>
+
         </div>
 
         <button id="next-btn" class="next-btn"><img src="img/next%20button.png" alt=""></button>
     </div>
+</main>
+
 
 
 

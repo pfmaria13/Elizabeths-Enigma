@@ -13,6 +13,9 @@ const paper4 = document.querySelector('#p4');
 const paper5 = document.querySelector('#p5');
 const paper6 = document.querySelector('#p6');
 const paper7 = document.querySelector('#p7');
+const paper8 = document.querySelector('#p8');
+const paper9 = document.querySelector('#p9');
+
 
 //Dictionary
 const dictionaryPage1 = document.querySelector('#dictionary-page1');
@@ -56,36 +59,39 @@ function goNext() {
                 dictionaryTab.style.visibility = 'unset';
                 dictionaryTab.style.transition = '1s';
                 paper1.classList.add("flipped");
-                paper1.style.zIndex = 1;
+                paper1.style.zIndex = '1';
+                // paper8.classList.add("flipped");
+                // paper8.style.zIndex = '15';
+                // paper9.style.zIndex = '15';
                 break;
             case 2:
                 paper2.classList.add("flipped");
-                paper2.style.zIndex = 2;
+                paper2.style.zIndex = '2';
                 break;
             case 3:
                 paper3.classList.add("flipped");
-                paper3.style.zIndex = 3;
+                paper3.style.zIndex = '3';
                 break;
             case 4:
                 paper4.classList.add("flipped");
-                paper4.style.zIndex = 4;
-                paper5.style.zIndex = 4;
+                paper4.style.zIndex = '4';
+                paper5.style.zIndex = '4';
                 nextBtn.style.visibility = 'hidden';
                 break;
             case 5:
                 paper5.classList.add("flipped");
-                paper5.style.zIndex = 5;
-                paper6.style.zIndex = 5;
+                paper5.style.zIndex = '5';
+                paper6.style.zIndex = '5';
                 break;
             case 6:
                 paper6.classList.add("flipped");
-                paper6.style.zIndex = 6;
-                paper7.style.zIndex = 7;
+                paper6.style.zIndex = '6';
+                paper7.style.zIndex = '7';
                 break;
             case 7:
                 closeBook(false);
                 paper7.classList.add("flipped");
-                paper7.style.zIndex = 7;
+                paper7.style.zIndex = '7';
                 break;
             default:
                 throw new Error("unknown state");
