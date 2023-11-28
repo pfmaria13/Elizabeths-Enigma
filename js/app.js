@@ -60,9 +60,9 @@ function goNext() {
                 dictionaryTab.style.transition = '1s';
                 paper1.classList.add("flipped");
                 paper1.style.zIndex = '1';
-                // paper8.classList.add("flipped");
-                // paper8.style.zIndex = '15';
-                // paper9.style.zIndex = '15';
+                paper8.classList.add("flipped");
+                paper8.style.zIndex = '15';
+                paper9.style.zIndex = '16';
                 break;
             case 2:
                 paper2.classList.add("flipped");

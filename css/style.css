@@ -12,6 +12,7 @@
 
 body {
     background-color: #79543F;
+    color: #2F1301;;
 }
 
 .container {
@@ -320,7 +321,6 @@ i {
     text-indent: 25px;
     line-height: 150%; /* 24px */
     letter-spacing: -0.352px;
-    color: #2F1301;
 }
 
 .page2 {
@@ -350,7 +350,6 @@ i {
 .page3-p {
     width: 390px;
     height: 168px;
-    color: #2F1301;
     text-align: justify;
     font-size: 16px;
     font-style: normal;
@@ -391,7 +390,6 @@ i {
 }
 
 .page6-p {
-    color: #2F1301;
     text-align: justify;
     font-size: 16px;
     font-style: normal;
@@ -429,7 +427,6 @@ i {
 }
 
 .page9-text-yakov {
-    color: #2F1301;
     text-align: justify;
     font-size: 16px;
     font-style: normal;
@@ -461,7 +458,6 @@ i {
     position: relative;
 }
 .page10-sudba-p {
-    color: #2F1301;
     text-align: center;
     font-size: 14px;
     font-style: normal;
@@ -484,14 +480,13 @@ i {
 }
 
 .page12-sudba-p {
-    color: #2F1301;
     text-align: justify;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: 150%; /* 24px */
     letter-spacing: -0.352px;
-    text-indent: 5px;
+    text-indent: 25px;
     height: 48px;
     width: 357px;
 }
@@ -514,7 +509,6 @@ i {
 }
 
 .again-btn-text {
-    color: #2F1301;
     text-align: justify;
     text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     font-size: 20px;
@@ -528,4 +522,157 @@ i {
 }
 
 
+.page12-yakov {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 16px;
+}
 
+.page12-yakov-p {
+    text-align: justify;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+    letter-spacing: -0.352px;
+    width: 357px;
+    height: 96px;
+}
+
+.page9-rudolf {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.page9-rudolf-p {
+    text-align: justify;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+    letter-spacing: -0.352px;
+    width: 357px;
+    height: 120px;
+    padding-top: 16px;
+    text-indent: 25px;
+}
+.page10-rudolf {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.page11-rudolf-choice1-p {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: -0.352px;
+    text-indent: 25px;
+    width: 391px;
+    height: 216px;
+}
+
+.page11-rudolf-choice1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.page12-rudolf-choice1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.page11-rudolf-choice2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.page11-rudolf-choice2-p {
+    text-align: justify;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+    letter-spacing: -0.352px;
+    text-indent: 25px;
+    padding-top: 16px;
+    width: 357px;
+    height: 48px;
+}
+
+.page12-rudolf-choice2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 16px;
+}
+
+.page12-rudolf-choice2-p {
+    text-align: justify;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+    letter-spacing: -0.352px;
+    width: 357px;
+    height: 72px;
+}
+
+.page13-rudolf-choice1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.page13-rudolf-choice1-p {
+    width: 391px;
+    height: 120px;
+    text-align: justify;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+    letter-spacing: -0.352px;
+    text-indent: 25px;
+    padding-top: 10px;
+}
+.page14-rudolf-choice1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 115px;
+}
+
+.page14-rudolf-choice2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 16px;
+}
+
+.page14-rudolf-choice2-p {
+    height: 72px;
+    width: 357px;
+    text-align: justify;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+    letter-spacing: -0.352px;
+    text-indent: 25px;
+}
