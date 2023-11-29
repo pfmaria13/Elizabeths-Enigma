@@ -506,6 +506,12 @@ i {
         color: #B67951;
         text-shadow: none;
     }
+
+    .again-btn-text2 {
+        transition: 0.5s;
+        color: #B67951;
+        text-shadow: none;
+    }
 }
 
 .again-btn-text {
@@ -675,4 +681,246 @@ i {
     line-height: 150%; /* 24px */
     letter-spacing: -0.352px;
     text-indent: 25px;
+}
+
+.page15-rudolf-true {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.page15-rudolf-true-p {
+    text-align: justify;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+    letter-spacing: -0.352px;
+    text-indent: 15px;
+    padding-top: 10px;
+    width: 391px;
+    height: 96px;
+}
+
+.page16-rudolf-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.page16-life {
+    padding-top: 70px;
+    padding-bottom: 20px;
+}
+
+.page16-rudolf-false {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 16px;
+}
+
+.page16-rudolf-false-p {
+    text-align: justify;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+    letter-spacing: -0.352px;
+    text-indent: 15px;
+    width: 357px;
+    height: 120px;
+}
+
+.page17-rudolf {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.page17-rudolf-p {
+    text-align: justify;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+    letter-spacing: -0.352px;
+    padding-top: 10px;
+    width: 391px;
+    height: 96px;
+}
+.page18-rudolf {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.page18-rudolf-p {
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 21px */
+    letter-spacing: -0.7px;
+    width: 356px;
+    height: 84px;
+    position: absolute;
+    bottom: 57%;
+}
+
+.page18-rudolf-choice1 {
+    position: relative;
+}
+
+.page19-rudolf-choice1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.page19-rudolf-choice1-p {
+    text-align: justify;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+    letter-spacing: -0.352px;
+    width: 391px;
+    height: 72px;
+    text-indent: 25px;
+    padding-top: 10px;
+}
+
+.page20-rudolf-choice1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.page20-rudolf-choice1-p {
+    position: absolute;
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 21px */
+    letter-spacing: -0.7px;
+    width: 356px;
+    height: 42px;
+    bottom: 15%;
+    left: 8%;
+}
+
+.page20-rudolf-choice1-div {
+    position: relative;
+}
+
+.page20-rudolf-choice2-p {
+    position: absolute;
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 21px */
+    letter-spacing: -0.7px;
+    width: 345px;
+    height: 63px;
+    bottom: 10%;
+    left: 9%;
+}
+
+.page20-rudolf-choice2-div {
+    position: relative;
+}
+
+.page20-rudolf-gameover-p {
+    text-align: justify;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+    letter-spacing: -0.352px;
+    text-indent: 25px;
+    width: 357px;
+    height: 96px;
+}
+.page20-rudolf-gameover {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 16px;
+}
+.page21-rudolf-choice1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.page21-rudolf-choice1-p {
+    text-align: justify;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+    letter-spacing: -0.352px;
+    width: 391px;
+    height: 72px;
+    text-indent: 25px;
+    padding-top: 10px;
+}
+.page22-rudolf-choice2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 35px;
+}
+.page22-rudolf-choice1-p {
+    text-align: justify;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+    letter-spacing: -0.352px;
+    text-indent: 25px;
+    width: 377px;
+    height: 72px;
+}
+
+.again-btn-text2 {
+    text-align: justify;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 30px */
+    letter-spacing: -0.44px;
+    position: absolute;
+    top: 0;
+    left: 15%;
+}
+.page22-rudolf-choice2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 20px;
+}
+.page22-rudolf-choice2-p {
+    width: 357px;
+    height: 96px;
+    text-indent: 25px;
+    text-align: justify;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+    letter-spacing: -0.352px;
 }
