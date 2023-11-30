@@ -37,6 +37,18 @@ header {
     column-gap: 31px;
 }
 
+.play-again {
+    width: 185px;
+    height: 30px;
+    background-image: url("../img/play-again-img.png");
+    transition: .75s;
+}
+
+.play-again:hover {
+    transition: .75s;
+    background-image: url("../img/play-again-hover.png");
+}
+
 .cover-background {
     position: absolute;
     top: 204px;
@@ -174,6 +186,9 @@ i {
     transform-origin: left;
     transition: transform 0.5s;
     background-color: #F2D6B7;
+    background-image: url("../img/page-decor.png");
+    background-repeat: no-repeat;
+    background-position-x: 8px;
 }
 
 /*.front {*/
@@ -469,6 +484,7 @@ i {
     height: 63px;
     position: absolute;
     bottom: 11%;
+    left: 12%;
 }
 
 .page12-sudba {
@@ -497,21 +513,25 @@ i {
 
 .again:hover {
     .again-btn-decor {
-        transition: 0.5s;
+        transition: .75s;
         background-image: url("../img/again-btn-decor-hover.png");
     }
 
     .again-btn-text {
-        transition: 0.5s;
+        transition: .75s;
         color: #B67951;
         text-shadow: none;
     }
 
     .again-btn-text2 {
-        transition: 0.5s;
+        transition: .75s;
         color: #B67951;
         text-shadow: none;
     }
+}
+
+.again-btn-decor {
+    transition: .75s;
 }
 
 .again-btn-text {
@@ -525,6 +545,7 @@ i {
     position: absolute;
     top: 0;
     left: 12%;
+    transition: .75s;
 }
 
 
@@ -905,6 +926,7 @@ i {
     position: absolute;
     top: 0;
     left: 15%;
+    transition: .75s;
 }
 .page22-rudolf-choice2 {
     display: flex;

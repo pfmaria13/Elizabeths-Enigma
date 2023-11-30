@@ -20,7 +20,7 @@
         <img src="img/logo.png" alt="Лого" class="logo">
     </div>
     <div>
-        <button class="play-again"><img src="img/play-again-img.png" alt="Начать заново"></button>
+        <button class="play-again"></button>
     </div>
 </header>
 <main>
@@ -51,7 +51,7 @@
                 <!-- Page 2 -->
                 <div class="front">
                     <div id="f2" class="front-content page2">
-                        <img src="img/backstory-photo.png" alt="Картинка предыстории" class="backstory-photo">
+<!--                        <img src="img/backstory-photo.png" alt="Картинка предыстории" class="backstory-photo">-->
                     </div>
                 </div>
                 <!-- Page 3 -->
@@ -73,7 +73,7 @@
                 <!-- Page 5 -->
                 <div class="back">
                     <div id="b3" class="back-content page5">
-                        <img src="" alt="Картинка изменений" class="page5-img">
+<!--                        <img src="" alt="Картинка изменений" class="page5-img">-->
                     </div>
                 </div>
             </div>
@@ -94,11 +94,11 @@
             </div>
             <div id="p5" class="paper">
                 <!-- Page 8 -->
-                <div class="front">
+                <div class="front" style="background-image: none">
                     <div id="f5" class="front-content page8">
                         <button class="choice-btn" onclick="chooseYakov()"><img src="img/page8-choice1.png" alt="Выбор 1" class="page8-choice1"></button>
-                        <button class="choice-btn"><img src="img/page8-choice2.png" alt="Выбор 2" class="page8-choice2"></button>
-                        <button class="choice-btn"><img src="img/page8-choice3.png" alt="Выбор 3" class="page8-choice3"></button>
+                        <button class="choice-btn" onclick="chooseRudolf()"><img src="img/page8-choice2.png" alt="Выбор 2" class="page8-choice2"></button>
+                        <button class="choice-btn" onclick="chooseResignFate()"><img src="img/page8-choice3.png" alt="Выбор 3" class="page8-choice3"></button>
                     </div>
                 </div>
                 <!-- Yakov-->
@@ -112,10 +112,10 @@
                 </div>
             </div>
             <div id="p6" class="paper">
-                <div class="front">
+                <div class="front" style="background-image: none">
                     <div class="front-content page10-yakov">
-                        <button class="choice-btn"><img src="img/page10-yakov-choice1.png" alt="Выбор 1" class="page10-yakov-choice1"></button>
-                        <button class="choice-btn"><img src="img/page10-yakov-choice2.png" alt="Выбор 2" class="page10-yakov-choice2"></button>
+                        <button class="choice-btn" onclick="chooseYakovP10_1()"><img src="img/page10-yakov-choice1.png" alt="Выбор 1" class="page10-yakov-choice1"></button>
+                        <button class="choice-btn" onclick="chooseYakovP10_2()"><img src="img/page10-yakov-choice2.png" alt="Выбор 2" class="page10-yakov-choice2"></button>
                     </div>
                 </div>
                 <div class="back">
@@ -150,7 +150,7 @@
                     </div>
                 </div>
             </div>
-            <div id="p0" class="paper">
+            <div id="p8" class="paper">
                 <div class="front page12-yakov">
                     <img src="img/game-over.png" alt="Игра окончена" class="game-over">
                     <p class="page12-yakov-p">Яков I обеспокоен Вашим постоянным пребыванием у ворот королевского двора и приказывает Вас казнить.</p>
@@ -164,7 +164,8 @@
                     </div>
                 </div>
             </div>
-            <div id="p0" class="paper">
+            <!-- Rudolf -->
+            <div id="p9" class="paper">
                 <div class="front">
                     <div class="front-content">
                     </div>
@@ -176,11 +177,11 @@
                     </div>
                 </div>
             </div>
-            <div id="p0" class="paper">
-                <div class="front">
+            <div id="p10" class="paper">
+                <div class="front" style="background-image: none">
                     <div class="front-content page10-rudolf">
-                        <button class="choice-btn"><img src="img/page10-rudolf-choice1.png" alt="Выбор 1" class="page10-rudolf-choice1"></button>
-                        <button class="choice-btn"><img src="img/page10-rudolf-choice2.png" alt="Выбор 2" class="page10-rudolf-choice2"></button>
+                        <button class="choice-btn" onclick="chooseRudolfP10_1()"><img src="img/page10-rudolf-choice1.png" alt="Выбор 1" class="page10-rudolf-choice1"></button>
+                        <button class="choice-btn" onclick="chooseRudolfP10_2()"><img src="img/page10-rudolf-choice2.png" alt="Выбор 2" class="page10-rudolf-choice2"></button>
                     </div>
                 </div>
                 <div class="back">
@@ -191,11 +192,11 @@
                     </div>
                 </div>
             </div>
-            <div id="p0" class="paper">
-                <div class="front">
+            <div id="p11" class="paper">
+                <div class="front" style="background-image: none">
                     <div class="front-content page12-rudolf-choice1">
-                        <button class="choice-btn"><img src="img/page12-rudolf-choice1.png" alt="Выбор 1" class="page12-rudolf-choice1"></button>
-                        <button class="choice-btn"><img src="img/page12-rudolf-choice2.png" alt="Выбор 2" class="page12-rudolf-choice2"></button>
+                        <button class="choice-btn" onclick="chooseRudolfP12_1()"><img src="img/page12-rudolf-choice1.png" alt="Выбор 1" class="page12-rudolf-choice1-img"></button>
+                        <button class="choice-btn" onclick="chooseRudolfP12_2()"><img src="img/page12-rudolf-choice2.png" alt="Выбор 2" class="page12-rudolf-choice2-img"></button>
                     </div>
                 </div>
                 <div class="back">
@@ -205,7 +206,7 @@
                     </div>
                 </div>
             </div>
-            <div id="p0" class="paper">
+            <div id="p14" class="paper">
                 <div class="front">
                     <div class="front-content page14-rudolf-choice1">
                         <img src="img/page14-rudolf-choice1-img.png" alt="" class="page14-rudolf-choice1-img">
@@ -218,7 +219,7 @@
                     </div>
                 </div>
             </div>
-            <div id="p0" class="paper">
+            <div id="p15" class="paper">
                 <div class="front page16-rudolf-right">
                     <img src="img/page16-life.png" alt="" class="page16-life">
                     <img src="img/page16-rudolf-right-img.png" alt="" class="page16-rudolf-right-img">
@@ -230,11 +231,11 @@
                     </div>
                 </div>
             </div>
-            <div id="p0" class="paper">
-                <div class="front page18-rudolf">
-                    <button class="choice-btn"><img src="img/choice-fragment.png" alt="Выбор 1" class="page18-rudolf-choice1"></button>
+            <div id="p16" class="paper">
+                <div class="front page18-rudolf" style="background-image: none">
+                    <button class="choice-btn" onclick="chooseRudolfP18_1()"><img src="img/choice-fragment.png" alt="Выбор 1" class="page18-rudolf-choice1"></button>
                     <p class="page18-rudolf-p">Совместно с господином Бальдховеном Вы много и плодотворно начинаете работать , Бальдховен распространяет Вашу поэзию в литературных кругах <u>Богемии</u>, затем в “Республике ученых”.</p>
-                    <button class="choice-btn"><img src="img/page18-rudolf-choice2.png" alt="Выбор 2" class="page18-rudolf-choice2"></button>
+                    <button class="choice-btn" onclick="chooseRudolfP18_2()"><img src="img/page18-rudolf-choice2.png" alt="Выбор 2" class="page18-rudolf-choice2"></button>
                 </div>
                 <div class="back">
                     <div class="back-content page19-rudolf-choice1">
@@ -243,14 +244,16 @@
                     </div>
                 </div>
             </div>
-            <div id="p0" class="paper">
-                <div class="front page20-rudolf-choice1">
+            <div id="p17" class="paper">
+                <div class="front page20-rudolf-choice1" style="background-image: none">
                     <div class="page20-rudolf-choice1-div">
-                        <button class="choice-btn"><img src="img/page20-rudolf-choice1-img.png" alt="Выбор 1" class="page20-rudolf-choice1-img"></button>
+                        <button class="choice-btn" onclick="chooseRudolfP20_1()"><img src="img/page20-rudolf-choice1-img.png" alt="Выбор 1" class="page20-rudolf-choice1-img"></button>
                         <p class="page20-rudolf-choice1-p">На одной из встреч Вы знакомитесь с адвокатом королевского двора <u>Йоханессом Лео</u>.</p>
                     </div>
-                    <div class="page20-rudolf-choice2-div"><button class="choice-btn"><img src="img/page20-rudolf-choice2-img.png" alt="Выбор 2" class="page20-rudolf-choice2-img"></button>
-                    <p class="page20-rudolf-choice2-p">В знак благодарности за помощь и содействие г-на <u>Бальдховена</u>, Вы отвечаете взаимной симпатией на его знаки внимания и выходите за него замуж.</p></div>
+                    <div class="page20-rudolf-choice2-div">
+                        <button class="choice-btn" onclick="chooseRudolfP20_2()"><img src="img/page20-rudolf-choice2-img.png" alt="Выбор 2" class="page20-rudolf-choice2-img"></button>
+                        <p class="page20-rudolf-choice2-p">В знак благодарности за помощь и содействие г-на <u>Бальдховена</u>, Вы отвечаете взаимной симпатией на его знаки внимания и выходите за него замуж.</p>
+                    </div>
                 </div>
                 <div class="back">
                     <div class="back-content page21-rudolf-choice1">
@@ -259,7 +262,7 @@
                     </div>
                 </div>
             </div>
-            <div id="p0" class="paper">
+            <div id="p20" class="paper">
                 <div class="front">
                     <div class="front-content page22-rudolf-choice2">
                         <img src="img/page22-rudolf-choice1-img.png" alt="" class="page22-rudolf-choice2-img">
@@ -276,7 +279,7 @@
                     </div>
                 </div>
             </div>
-            <div id="p0" class="paper">
+            <div id="p12" class="paper">
                 <div class="front">
                     <div class="front-content">
                     </div>
@@ -288,7 +291,7 @@
                     </div>
                 </div>
             </div>
-            <div id="p0" class="paper">
+            <div id="p13" class="paper">
                 <div class="front">
                     <div class="front-content page12-rudolf-choice2">
                         <img src="img/game-over.png" alt="Игра окончена" class="game-over">
@@ -304,7 +307,7 @@
                     </div>
                 </div>
             </div>
-            <div id="p0" class="paper">
+            <div id="p25" class="paper">
                 <div class="front">
                     <div class="front-content">
                     </div>
@@ -315,11 +318,11 @@
                     </div>
                 </div>
             </div>
-            <div id="p0" class="paper">
+            <div id="p26" class="paper">
                 <div class="front">
                     <div class="front-content page14-rudolf-choice2">
                         <img src="img/game-over.png" alt="Игра окончена" class="game-over">
-                        <p class="page14-rudolf-choice2-p">У Вас счастливая семья,  семеро детей, но вы живете в бедности, и умираете  от заражения инфекцией.</p>
+                        <p class="page14-rudolf-choice2-p">Рудольф II Вам отказывает, забирает обратно конфискованное имущество и все дары. Вы вновь в нищете, Ваша жизнь обрывается.</p>
                         <button class="again">
                             <img src="img/again-btn-decor.png" alt="Завитушки" class="again-btn-decor">
                             <p class="again-btn-text">Попробовать снова</p>
@@ -358,7 +361,7 @@
                     </div>
                 </div>
             </div>
-            <div id="p0" class="paper">
+            <div id="p18" class="paper">
                 <div class="front">
                     <div class="front-content">
                     </div>
@@ -369,7 +372,7 @@
                     </div>
                 </div>
             </div>
-            <div id="p0" class="paper">
+            <div id="p19" class="paper">
                 <div class="front">
                     <div class="front-content page20-rudolf-gameover">
                         <img src="img/game-over.png" alt="Игра окончена" class="game-over">
@@ -385,7 +388,7 @@
                     </div>
                 </div>
             </div>
-            <div id="p0" class="paper">
+            <div id="p21" class="paper">
                 <div class="front">
                     <div class="front-content">
                     </div>
@@ -396,7 +399,7 @@
                     </div>
                 </div>
             </div>
-            <div id="p0" class="paper">
+            <div id="p22" class="paper">
                 <div class="front">
                     <div class="front-content page22-rudolf-choice2">
                         <img src="img/game-over.png" alt="Игра окончена" class="game-over">
@@ -417,7 +420,7 @@
 
 
             <!-- Ветка "Смириться со своей судьбой -->
-            <div id="p0" class="paper">
+            <div id="p23" class="paper">
                 <div class="front">
                     <div class="front-content">
                     </div>
@@ -429,12 +432,12 @@
                 </div>
             </div>
             <!--  id          -->
-            <div id="p0" class="paper">
-                <div class="front">
+            <div id="p24" class="paper">
+                <div class="front" style="background-image: none">
                     <div class="front-content page10-sudba">
-                        <img src="img/page10-sudba-choice1.png" alt="Выбор 1" class="page10-sudba-choice1">
-                        <img src="img/page10-sudba-choice2.png" alt="" class="page10-sudba-choice2">
-                        <p class="page10-sudba-p">Остаться одной, ухаживая за матерью,читая ей холодными вечерами Вашу авторскую  поэзию в надежде на помощь <u>Феба</u>.</p>
+                        <button class="choice-btn" onclick="chooseResignFateP10_1()"><img src="img/page10-sudba-choice1.png" alt="Выбор 1" class="page10-sudba-choice1"></button>
+                        <button class="choice-btn" onclick="chooseResignFateP10_2()"><img src="img/page10-sudba-choice2.png" alt="" class="page10-sudba-choice2">
+                        <p class="page10-sudba-p">Остаться одной, ухаживая за матерью, читая ей холодными вечерами Вашу авторскую  поэзию в надежде на помощь <u>Феба</u>.</p></button>
                     </div>
                 </div>
                 <div class="back">
@@ -443,7 +446,7 @@
                     </div>
                 </div>
             </div>
-            <div id="p0" class="paper">
+            <div id="p27" class="paper">
                 <div class="front">
                     <div class="front-content page12-sudba">
                         <img src="img/game-over.png" alt="Игра окончена" class="game-over">
@@ -460,7 +463,7 @@
                     </div>
                 </div>
             </div>
-            <div id="p0" class="paper">
+            <div id="p28" class="paper">
                 <div class="front">
                     <div class="front-content">
 
@@ -472,7 +475,7 @@
                     </div>
                 </div>
             </div>
-            <div id="p0" class="paper">
+            <div id="p29" class="paper">
                 <div class="front">
                     <div class="front-content page12-sudba">
                         <img src="img/game-over.png" alt="Игра окончена" class="game-over">
