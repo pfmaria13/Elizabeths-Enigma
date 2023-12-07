@@ -12,7 +12,8 @@
 
 body {
     background-color: #79543F;
-    color: #2F1301;;
+    color: #2F1301;
+    overflow: hidden;
 }
 
 .container {
@@ -178,8 +179,8 @@ header {
 
 .cover-background {
     position: absolute;
-    top: 204px;
-    left: 495px;
+    top: 160px;
+    left: 505px;
     width: 460px;
     height: 585px;
     /*height: 685px; для ПК*/
@@ -188,15 +189,18 @@ header {
 .book-background {
     position: absolute;
     z-index: -2;
-    top: 200px;
-    left: 220px;
+    top: 155px;
+    left: 225px;
     visibility: hidden;
+    /*для ноута*/
+    width: 996px;
+    height: 610px;
 }
 
 .dictionary-tab {
     position: absolute;
     visibility: hidden;
-    top: 270px;
+    top: 220px;
     right: 195px;
     z-index: 0;
     background-image: url("../img/dictionary-tab-hidden.png");
@@ -312,9 +316,9 @@ i {
     align-items: center;
     transform-origin: left;
     transition: transform 0.5s;
-    background-image: url("../img/page-decor.png"), linear-gradient(89deg, #E0BF8F -1.75%, #F2D6B7 13.97%, #FBEEDE 49.08%, #F7E3CA 98.85%);
+    background-image: url("../img/page-decor-mid.png"), linear-gradient(89deg, #E0BF8F -1.75%, #F2D6B7 13.97%, #FBEEDE 49.08%, #F7E3CA 98.85%);
     background-repeat: no-repeat, no-repeat;
-    background-position-x: 8px;
+    background-position-x: 10px;
 }
 
 /*.front {*/

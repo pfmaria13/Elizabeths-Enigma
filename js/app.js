@@ -177,10 +177,20 @@ function goPrevious() {
         dictionaryTab.style.backgroundImage = 'url("../img/dictionary-tab-hidden.png")';
         dictionaryTab.style.backgroundRepeat = 'no repeat';
         dictionaryTab.style.position = 'absolute';
-        dictionaryTab.style.top = '270px';
+        dictionaryTab.style.top = '220px';
         dictionaryTab.style.right = '195px';
         dictionaryTab.style.width = '71px';
         dictionaryTab.style.height = '30px';
+    }
+}
+
+function spendLife() {
+    if (gameLife3.style.opacity !== '0.3') {
+        gameLife3.style.opacity = '0.3';
+    } else if (gameLife3.style.opacity === '0.3' && gameLife2.style.opacity !== '0.3') {
+        gameLife2.style.opacity = '0.3';
+    } else if (gameLife2.style.opacity === '0.3' && gameLife1.style.opacity !== '0.3') {
+        gameLife1.style.opacity = '0.3';
     }
 }
 
@@ -322,9 +332,7 @@ function chooseYakovP10_1() {
     paper6.style.zIndex = '5';
     paper7.style.zIndex = '5';
 
-    if (gameLife3.style.opacity !== '0.3') {
-        gameLife3.style.opacity = '0.3';
-    }
+    spendLife();
 }
 
 function chooseYakovP10_2() {
@@ -332,9 +340,7 @@ function chooseYakovP10_2() {
     paper6.style.zIndex = '5';
     paper8.style.zIndex = '5';
 
-    if (gameLife3.style.opacity !== '0.3') {
-        gameLife3.style.opacity = '0.3';
-    }
+    spendLife();
 }
 
 // Rudolf's story
@@ -393,9 +399,7 @@ function chooseResignFateP10_1() {
     paper24.style.zIndex = '5';
     paper27.style.zIndex = '6';
 
-    if (gameLife3.style.opacity !== '0.3') {
-        gameLife3.style.opacity = '0.3';
-    }
+    spendLife()
 }
 
 function chooseResignFateP10_2() {
@@ -403,7 +407,5 @@ function chooseResignFateP10_2() {
     paper28.style.zIndex = '5';
     paper29.style.zIndex = '6';
 
-    if (gameLife3.style.opacity !== '0.3') {
-        gameLife3.style.opacity = '0.3';
-    }
+    spendLife()
 }
