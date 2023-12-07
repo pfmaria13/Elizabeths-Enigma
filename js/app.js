@@ -177,8 +177,8 @@ function goPrevious() {
         dictionaryTab.style.backgroundImage = 'url("../img/dictionary-tab-hidden.png")';
         dictionaryTab.style.backgroundRepeat = 'no repeat';
         dictionaryTab.style.position = 'absolute';
-        dictionaryTab.style.top = '220px';
-        dictionaryTab.style.right = '195px';
+        dictionaryTab.style.top = '50px';
+        dictionaryTab.style.left = '450px';
         dictionaryTab.style.width = '71px';
         dictionaryTab.style.height = '30px';
     }

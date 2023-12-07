@@ -202,8 +202,8 @@ header {
 .dictionary-tab {
     position: absolute;
     visibility: hidden;
-    top: 220px;
-    right: 195px;
+    top: 50px;
+    left: 450px;
     z-index: 0;
     background-image: url("../img/dictionary-tab-hidden.png");
     background-repeat: no-repeat;
