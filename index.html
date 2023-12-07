@@ -12,15 +12,34 @@
 <body>
 <header>
     <div class="game-lives">
-        <img src="img/life-img.png" alt="" class="game-life1">
-        <img src="img/life-img.png" alt="" class="game-life2">
-        <img src="img/life-img.png" alt="" class="game-life3">
+        <img src="img/life-img.png" alt="" class="game-life1" id="game-life1">
+        <img src="img/life-img.png" alt="" class="game-life2" id="game-life2">
+        <img src="img/life-img.png" alt="" class="game-life3" id="game-life3">
     </div>
     <div class="title" id="title">
         <img src="img/logo.png" alt="Лого" class="logo">
     </div>
     <div>
-        <button class="play-again"></button>
+        <button class="play-again trigger"></button>
+        <div class="modal">
+            <div class="modal-content">
+                <span class="close-button"></span>
+                <div class="play-again-text">
+                    <img src="img/play-again-title.png" alt="Вы уверены?">
+                    <p class="play-again-p">Если вы сейчас начнёте игру заново, одна жизнь будет потеряна. Хотите перезапустить игру?</p>
+                    <div class="play-again-submit">
+                        <button class="play-again-no">
+                            <img class="play-again-no-decor" src="img/play-again-no-decor.png" alt="Завитушки">
+                            <p class="play-again-no-p">Нет</p>
+                        </button>
+                        <button class="play-again-yes">
+                            <img src="img/play-again-yes-decor.png" alt="Завитушки" class="play-again-yes-decor">
+                            <p class="play-again-yes-p">Да</p>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </header>
 <main>
@@ -94,8 +113,8 @@
             </div>
             <div id="p5" class="paper">
                 <!-- Page 8 -->
-                <div class="front" style="background-image: none">
-                    <div id="f5" class="front-content page8">
+                <div class="front">
+                    <div id="f5" class="front-content page8" style="background-image: linear-gradient(89deg, #E0BF8F -1.75%, #F2D6B7 13.97%, #FBEEDE 49.08%, #F7E3CA 98.85%);">
                         <button class="choice-btn" onclick="chooseYakov()"><img src="img/page8-choice1.png" alt="Выбор 1" class="page8-choice1"></button>
                         <button class="choice-btn" onclick="chooseRudolf()"><img src="img/page8-choice2.png" alt="Выбор 2" class="page8-choice2"></button>
                         <button class="choice-btn" onclick="chooseResignFate()"><img src="img/page8-choice3.png" alt="Выбор 3" class="page8-choice3"></button>
@@ -112,8 +131,8 @@
                 </div>
             </div>
             <div id="p6" class="paper">
-                <div class="front" style="background-image: none">
-                    <div class="front-content page10-yakov">
+                <div class="front">
+                    <div class="front-content page10-yakov" style="background-image: linear-gradient(89deg, #E0BF8F -1.75%, #F2D6B7 13.97%, #FBEEDE 49.08%, #F7E3CA 98.85%);">
                         <button class="choice-btn" onclick="chooseYakovP10_1()"><img src="img/page10-yakov-choice1.png" alt="Выбор 1" class="page10-yakov-choice1"></button>
                         <button class="choice-btn" onclick="chooseYakovP10_2()"><img src="img/page10-yakov-choice2.png" alt="Выбор 2" class="page10-yakov-choice2"></button>
                     </div>
@@ -128,7 +147,7 @@
                     <div class="front-content page12-yakov">
                         <img src="img/game-over.png" alt="Игра окончена" class="game-over">
                         <p class="page12-yakov-p">С. Лезье против этого, и просит Вас не заниматься самовольностью. Вы сделали всё, что было в Ваших силах. Вы миритесь со своей судьбой и погибаете в нищете.</p>
-                        <button class="again">
+                        <button class="again" id="againYakov1">
                             <img src="img/again-btn-decor.png" alt="Завитушки" class="again-btn-decor">
                             <p class="again-btn-text">Попробовать снова</p>
                         </button>
@@ -154,7 +173,7 @@
                 <div class="front page12-yakov">
                     <img src="img/game-over.png" alt="Игра окончена" class="game-over">
                     <p class="page12-yakov-p">Яков I обеспокоен Вашим постоянным пребыванием у ворот королевского двора и приказывает Вас казнить.</p>
-                    <button class="again">
+                    <button class="again" id="againYakov2">
                         <img src="img/again-btn-decor.png" alt="Завитушки" class="again-btn-decor">
                         <p class="again-btn-text">Попробовать снова</p>
                     </button>
@@ -178,8 +197,8 @@
                 </div>
             </div>
             <div id="p10" class="paper">
-                <div class="front" style="background-image: none">
-                    <div class="front-content page10-rudolf">
+                <div class="front">
+                    <div class="front-content page10-rudolf" style="background-image: linear-gradient(89deg, #E0BF8F -1.75%, #F2D6B7 13.97%, #FBEEDE 49.08%, #F7E3CA 98.85%);">
                         <button class="choice-btn" onclick="chooseRudolfP10_1()"><img src="img/page10-rudolf-choice1.png" alt="Выбор 1" class="page10-rudolf-choice1"></button>
                         <button class="choice-btn" onclick="chooseRudolfP10_2()"><img src="img/page10-rudolf-choice2.png" alt="Выбор 2" class="page10-rudolf-choice2"></button>
                     </div>
@@ -193,8 +212,8 @@
                 </div>
             </div>
             <div id="p11" class="paper">
-                <div class="front" style="background-image: none">
-                    <div class="front-content page12-rudolf-choice1">
+                <div class="front">
+                    <div class="front-content page12-rudolf-choice1" style="background-image: linear-gradient(89deg, #E0BF8F -1.75%, #F2D6B7 13.97%, #FBEEDE 49.08%, #F7E3CA 98.85%);">
                         <button class="choice-btn" onclick="chooseRudolfP12_1()"><img src="img/page12-rudolf-choice1.png" alt="Выбор 1" class="page12-rudolf-choice1-img"></button>
                         <button class="choice-btn" onclick="chooseRudolfP12_2()"><img src="img/page12-rudolf-choice2.png" alt="Выбор 2" class="page12-rudolf-choice2-img"></button>
                     </div>
@@ -232,7 +251,7 @@
                 </div>
             </div>
             <div id="p16" class="paper">
-                <div class="front page18-rudolf" style="background-image: none">
+                <div class="front page18-rudolf" style="background-image: linear-gradient(89deg, #E0BF8F -1.75%, #F2D6B7 13.97%, #FBEEDE 49.08%, #F7E3CA 98.85%);">
                     <button class="choice-btn" onclick="chooseRudolfP18_1()"><img src="img/choice-fragment.png" alt="Выбор 1" class="page18-rudolf-choice1"></button>
                     <p class="page18-rudolf-p">Совместно с господином Бальдховеном Вы много и плодотворно начинаете работать , Бальдховен распространяет Вашу поэзию в литературных кругах <u>Богемии</u>, затем в “Республике ученых”.</p>
                     <button class="choice-btn" onclick="chooseRudolfP18_2()"><img src="img/page18-rudolf-choice2.png" alt="Выбор 2" class="page18-rudolf-choice2"></button>
@@ -245,7 +264,7 @@
                 </div>
             </div>
             <div id="p17" class="paper">
-                <div class="front page20-rudolf-choice1" style="background-image: none">
+                <div class="front page20-rudolf-choice1" style="background-image: linear-gradient(89deg, #E0BF8F -1.75%, #F2D6B7 13.97%, #FBEEDE 49.08%, #F7E3CA 98.85%);">
                     <div class="page20-rudolf-choice1-div">
                         <button class="choice-btn" onclick="chooseRudolfP20_1()"><img src="img/page20-rudolf-choice1-img.png" alt="Выбор 1" class="page20-rudolf-choice1-img"></button>
                         <p class="page20-rudolf-choice1-p">На одной из встреч Вы знакомитесь с адвокатом королевского двора <u>Йоханессом Лео</u>.</p>
@@ -267,7 +286,7 @@
                     <div class="front-content page22-rudolf-choice2">
                         <img src="img/page22-rudolf-choice1-img.png" alt="" class="page22-rudolf-choice2-img">
                         <p class="page22-rudolf-choice1-p">Вам удалось стать успешной поэтессой, Вы смогли справится  и преодолеть все трудности  начала XVII века! </p>
-                        <button class="again">
+                        <button class="again" id="againRudolf1">
                             <img src="img/again-btn-decor2.png" alt="Завитушки" class="again-btn-decor">
                             <p class="again-btn-text2">Начать заново</p>
                         </button>
@@ -296,7 +315,7 @@
                     <div class="front-content page12-rudolf-choice2">
                         <img src="img/game-over.png" alt="Игра окончена" class="game-over">
                         <p class="page12-rudolf-choice2-p">У Вас счастливая семья,  семеро детей, но вы живете в бедности, и умираете  от заражения инфекцией.</p>
-                        <button class="again">
+                        <button class="again" id="againRudolf2">
                             <img src="img/again-btn-decor.png" alt="Завитушки" class="again-btn-decor">
                             <p class="again-btn-text">Попробовать снова</p>
                         </button>
@@ -323,7 +342,7 @@
                     <div class="front-content page14-rudolf-choice2">
                         <img src="img/game-over.png" alt="Игра окончена" class="game-over">
                         <p class="page14-rudolf-choice2-p">Рудольф II Вам отказывает, забирает обратно конфискованное имущество и все дары. Вы вновь в нищете, Ваша жизнь обрывается.</p>
-                        <button class="again">
+                        <button class="again" id="againRudolf3">
                             <img src="img/again-btn-decor.png" alt="Завитушки" class="again-btn-decor">
                             <p class="again-btn-text">Попробовать снова</p>
                         </button>
@@ -350,7 +369,7 @@
                     <div class="front-content page16-rudolf-false">
                         <img src="img/page16-false.png" alt="" class="page16-false">
                         <div class="page16-rudolf-false-p"><p>Шкатулка не открывается. Вам нечего предоставить императору. <p>Рудольф II забирает обратно все конфискованное имущество и все дары. <u>Фортуна</u> не на Вашей стороне.</p></div>
-                        <button class="again">
+                        <button class="again" id="againRudolf4">
                             <img src="img/again-btn-decor.png" alt="Завитушки" class="again-btn-decor">
                             <p class="again-btn-text">Попробовать снова</p>
                         </button>
@@ -377,7 +396,7 @@
                     <div class="front-content page20-rudolf-gameover">
                         <img src="img/game-over.png" alt="Игра окончена" class="game-over">
                         <p class="page20-rudolf-gameover-p"><u>Муза</u> Вас не благословляет, в литературных кругах Вас серьезно не воспринимают, и как следствие, не публикуют. Вы так и остаетесь в нищете и умираете от голода.</p>
-                        <button class="again">
+                        <button class="again" id="againRudolf5">
                             <img src="img/again-btn-decor.png" alt="Завитушки" class="again-btn-decor">
                             <p class="again-btn-text">Попробовать снова</p>
                         </button>
@@ -404,7 +423,7 @@
                     <div class="front-content page22-rudolf-choice2">
                         <img src="img/game-over.png" alt="Игра окончена" class="game-over">
                         <p class="page22-rudolf-choice2-p">Однако в браке Вы несчастны, г-н <u>Бальдховен</u> присваивает себе авторство Ваших произведений. От несчастья Вы скоропостижно умираете.</p>
-                        <button class="again">
+                        <button class="again" id="againRudolf6">
                             <img src="img/again-btn-decor.png" alt="Завитушки" class="again-btn-decor">
                             <p class="again-btn-text">Попробовать снова</p>
                         </button>
@@ -433,8 +452,8 @@
             </div>
             <!--  id          -->
             <div id="p24" class="paper">
-                <div class="front" style="background-image: none">
-                    <div class="front-content page10-sudba">
+                <div class="front">
+                    <div class="front-content page10-sudba" style="background-image: linear-gradient(89deg, #E0BF8F -1.75%, #F2D6B7 13.97%, #FBEEDE 49.08%, #F7E3CA 98.85%);">
                         <button class="choice-btn" onclick="chooseResignFateP10_1()"><img src="img/page10-sudba-choice1.png" alt="Выбор 1" class="page10-sudba-choice1"></button>
                         <button class="choice-btn" onclick="chooseResignFateP10_2()"><img src="img/page10-sudba-choice2.png" alt="" class="page10-sudba-choice2">
                         <p class="page10-sudba-p">Остаться одной, ухаживая за матерью, читая ей холодными вечерами Вашу авторскую  поэзию в надежде на помощь <u>Феба</u>.</p></button>
@@ -451,7 +470,7 @@
                     <div class="front-content page12-sudba">
                         <img src="img/game-over.png" alt="Игра окончена" class="game-over">
                         <p class="page12-sudba-p">Во время очередных родов Вы погибаете. Вы не раскрыли свой талант.</p>
-                        <button class="again">
+                        <button class="again" id="againFate1">
                             <img src="img/again-btn-decor.png" alt="Завитушки" class="again-btn-decor">
                             <p class="again-btn-text">Попробовать снова</p>
                         </button>
@@ -480,7 +499,7 @@
                     <div class="front-content page12-sudba">
                         <img src="img/game-over.png" alt="Игра окончена" class="game-over">
                         <p class="page12-sudba-p">Случайно Вы заражаетесь чумой, немного погодя болезнь Вас поражает.</p>
-                        <button class="again">
+                        <button class="again" id="againFate2">
                             <img src="img/again-btn-decor.png" alt="Завитушки" class="again-btn-decor">
                             <p class="again-btn-text">Попробовать снова</p>
                         </button>
@@ -499,22 +518,24 @@
                 <!--                </div>-->
                 <div class="back">
                     <div id="b8" class="back-content dictionary-page1">
-                        <img src="img/dictionary-title-img.png" alt="Заголовок словаря" class="dictionary-title-img">
-                        <p class="dictionary-p1"><b class="bold-text">Богемия</b> - официальное название в 1526-1918 Чехии (без Моравии) в составе Габсбургской империи.
-                            <br><b class="bold-text">Гекзаметр</b> - (греч. hexametros – шестимерник), древнейшая форма античного стиха, существующая со времён Гомера.
-                            <br><b class="bold-text">Канцлер</b> - первый министр. </p>
+                        <img src="img/dictionary-title.png" alt="Заголовок словаря" class="dictionary-title-img">
+                            <p class="dictionary-p1">Богемия - официальное название в 1526-1918 Чехии (без Моравии) в составе Габсбургской империи.</p>
+                            <p class="dictionary-p1">Гекзаметр - (греч. hexametros – шестимерник), древнейшая форма античного стиха, существующая со времён Гомера.</p>
+                            <p class="dictionary-p1">Канцлер- первый министр.</p>
                     </div>
                 </div>
             </div>
             <div id="dictionary-page2" class="paper">
                 <div class="front">
                     <div id="f9" class="front-content dictionary-page2">
-                        <p class="dictionary-p2"><b class="bold-text">Муза</b> - каждая из девяти богинь, покровительниц наук и искусств в древнегреческой мифологии.
-                            <br><b class="bold-text">Тристия</b> - скорбные песни.
-                            <br><b class="bold-text">Феб</b> -  в древнегреческой мифологии: второе имя Аполлона, как божества солнечного света.
-                            <br><b class="bold-text">Фортуна</b> - богиня случая и судьбы.
-                            <br><b class="bold-text">Чума</b> - острозаразная эпидемическая болезнь.
-                            <br><b class="bold-text">Эпитафия</b> - (греч. epitaphios – надгробный), надгробная надпись, часто стихотворная.</p>
+                        <div class="dictionary-page1-p">
+                            <p class="dictionary-p2">Муза - каждая из девяти богинь, покровительниц наук и искусств в древнегреческой мифологии.</p>
+                            <p class="dictionary-p2">Тристия - скорбные песни.</p>
+                            <p class="dictionary-p2">Феб -  в древнегреческой мифологии: второе имя Аполлона, как божества солнечного света.</p>
+                            <p class="dictionary-p2">Фортуна - богиня случая и судьбы.</p>
+                            <p class="dictionary-p2">Чума - острозаразная эпидемическая болезнь.</p>
+                            <p class="dictionary-p2">Эпитафия - (греч. epitaphios – надгробный), надгробная надпись, часто стихотворная.</p>
+                        </div>
                     </div>
                 </div>
                 <!--                <div class="back">-->

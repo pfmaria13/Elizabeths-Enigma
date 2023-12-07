@@ -5,6 +5,9 @@ const book = document.querySelector('#book');
 const bookBackground = document.querySelector('#book-background');
 const coverBackground = document.querySelector('#cover-background')
 const dictionaryTab = document.querySelector('#dictionary-tab');
+const gameLife1 = document.querySelector('#game-life1');
+const gameLife2 = document.querySelector('#game-life2');
+const gameLife3 = document.querySelector('#game-life3');
 
 const paper1 = document.querySelector('#p1');
 const paper2 = document.querySelector('#p2');
@@ -120,7 +123,7 @@ function goNext() {
 }
 
 function goPrevious() {
-    if(currentState > 1) {
+    if(currentState > 1 && dictionaryPage1.style.zIndex !== '12') {
         switch(currentState) {
             case 2:
                 closeBook(true);
@@ -166,18 +169,127 @@ function goPrevious() {
 
         currentState--;
     }
+    if (dictionaryPage1.style.zIndex === '12') {
+        dictionaryPage1.classList.remove("flipped");
+        dictionaryPage1.style.zIndex = '-10';
+        dictionaryPage2.style.zIndex = '-10';
+        nextBtn.style.visibility = 'unset';
+        dictionaryTab.style.backgroundImage = 'url("../img/dictionary-tab-hidden.png")';
+        dictionaryTab.style.backgroundRepeat = 'no repeat';
+        dictionaryTab.style.position = 'absolute';
+        dictionaryTab.style.top = '270px';
+        dictionaryTab.style.right = '195px';
+        dictionaryTab.style.width = '71px';
+        dictionaryTab.style.height = '30px';
+    }
 }
 
-function playAgain() {
+// Button try again
+const tryAgainYakov1 = document.querySelector('#againYakov1');
+const tryAgainYakov2 = document.querySelector('#againYakov2');
 
+const tryAgainRudolf1 = document.querySelector('#againRudolf1');
+const tryAgainRudolf2 = document.querySelector('#againRudolf2');
+const tryAgainRudolf3 = document.querySelector('#againRudolf3');
+const tryAgainRudolf4 = document.querySelector('#againRudolf4');
+const tryAgainRudolf5 = document.querySelector('#againRudolf5');
+const tryAgainRudolf6 = document.querySelector('#againRudolf6');
+
+const tryAgainFate1 = document.querySelector('#againFate1');
+const tryAgainFate2 = document.querySelector('#againFate2');
+
+tryAgainYakov1.addEventListener("click", tryAgainYakovP1);
+tryAgainYakov2.addEventListener("click", tryAgainYakovP2);
+
+tryAgainFate1.addEventListener("click", tryAgainFateP1);
+tryAgainFate2.addEventListener("click", tryAgainFateP2);
+
+function tryAgainYakovP1() {
+    paper6.classList.remove("flipped");
+    paper5.classList.remove("flipped");
+    paper4.style.zIndex = '4';
+    paper5.style.zIndex = '5';
+    paper6.style.zIndex = '2';
+    paper7.style.zIndex = '1';
+    paper8.style.zIndex = '0';
+    nextBtn.style.visibility = 'hidden';
 }
 
+function tryAgainYakovP2() {
+    paper6.classList.remove("flipped");
+    paper5.classList.remove("flipped");
+    paper4.style.zIndex = '4';
+    paper5.style.zIndex = '5';
+    paper6.style.zIndex = '2';
+    paper8.style.zIndex = '1';
+    paper7.style.zIndex = '0';
+    nextBtn.style.visibility = 'hidden';
+}
+
+function tryAgainFateP1() {
+    paper23.classList.remove("flipped");
+    paper24.classList.remove("flipped");
+    paper4.style.zIndex = '4';
+    paper5.style.zIndex = '5';
+    paper23.style.zIndex = '2';
+    paper24.style.zIndex = '1';
+    paper27.style.zIndex = '0';
+    nextBtn.style.visibility = 'hidden';
+}
+
+function tryAgainFateP2() {
+    paper23.classList.remove("flipped");
+    paper24.classList.remove("flipped");
+    paper28.classList.remove("flipped");
+    paper4.style.zIndex = '4';
+    paper5.style.zIndex = '5';
+    paper28.style.zIndex = '2';
+    paper24.style.zIndex = '1';
+    paper29.style.zIndex = '0';
+    paper23.style.zIndex = '0';
+    nextBtn.style.visibility = 'hidden';
+}
+
+
+// Button PlayAgain
+const modal = document.querySelector(".modal");
+const trigger = document.querySelector(".trigger");
+const closeButton = document.querySelector(".close-button");
+const playAgainYesBtn = document.querySelector(".play-again-yes");
+const playAgainNoBtn = document.querySelector(".play-again-no");
+
+function toggleModal() {
+    modal.classList.toggle("show-modal");
+}
+
+function windowOnClick(event) {
+    if (event.target === modal) {
+        toggleModal();
+    }
+}
+
+trigger.addEventListener("click", toggleModal);
+closeButton.addEventListener("click", toggleModal);
+window.addEventListener("click", windowOnClick);
+playAgainYesBtn.addEventListener("click", playAgainYes);
+playAgainNoBtn.addEventListener("click", toggleModal);
+
+function playAgainYes() {
+    location.reload(true);
+}
+
+// Show dictionary
 function showDictionary() {
     dictionaryPage1.classList.add("flipped");
     dictionaryPage1.style.zIndex = '12';
     dictionaryPage2.style.zIndex = '12';
     nextBtn.style.visibility = 'hidden';
-    prevBtn.style.visibility = 'hidden';
+    prevBtn.style.visibility = 'unset';
+    dictionaryTab.style.backgroundImage = 'url("../img/dictionary-tab.png")';
+    dictionaryTab.style.backgroundRepeat = 'no repeat';
+    dictionaryTab.style.right = '140px';
+    dictionaryTab.style.width = '118px';
+    dictionaryTab.style.height = '30px';
 }
 
 // Main choices
@@ -199,6 +311,7 @@ function chooseResignFate() {
     paper23.classList.add("flipped");
     paper23.style.zIndex = '5';
     paper24.style.zIndex = '5';
+    prevBtn.style.visibility = 'hidden';
 }
 
 // Other choices
@@ -208,12 +321,20 @@ function chooseYakovP10_1() {
     paper6.classList.add("flipped");
     paper6.style.zIndex = '5';
     paper7.style.zIndex = '5';
+
+    if (gameLife3.style.opacity !== '0.3') {
+        gameLife3.style.opacity = '0.3';
+    }
 }
 
 function chooseYakovP10_2() {
     paper6.classList.add("flipped");
     paper6.style.zIndex = '5';
     paper8.style.zIndex = '5';
+
+    if (gameLife3.style.opacity !== '0.3') {
+        gameLife3.style.opacity = '0.3';
+    }
 }
 
 // Rudolf's story
@@ -271,10 +392,18 @@ function chooseResignFateP10_1() {
     paper24.classList.add("flipped");
     paper24.style.zIndex = '5';
     paper27.style.zIndex = '6';
+
+    if (gameLife3.style.opacity !== '0.3') {
+        gameLife3.style.opacity = '0.3';
+    }
 }
 
 function chooseResignFateP10_2() {
     paper28.classList.add("flipped");
     paper28.style.zIndex = '5';
     paper29.style.zIndex = '6';
+
+    if (gameLife3.style.opacity !== '0.3') {
+        gameLife3.style.opacity = '0.3';
+    }
 }
