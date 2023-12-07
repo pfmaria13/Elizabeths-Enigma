@@ -128,7 +128,7 @@ function goPrevious() {
             case 2:
                 closeBook(true);
                 book.style.visibility = 'hidden';
-                coverBackground.style.visibility = 'unset';
+                coverBackground.style.visibility = 'visible';
                 prevBtn.style.visibility = 'hidden';
                 bookBackground.style.visibility = 'hidden';
                 dictionaryTab.style.transition = 'unset';
