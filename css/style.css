@@ -179,22 +179,24 @@ header {
 
 .cover-background {
     position: absolute;
-    top: 160px;
-    left: 505px;
+    bottom: 10px;
+    left: 15px;
     width: 460px;
     height: 585px;
+    visibility: visible;
+    z-index: -2;
     /*height: 685px; для ПК*/
 }
 
 .book-background {
     position: absolute;
     z-index: -2;
-    top: 155px;
-    left: 225px;
+    top: -15px;
+    right: -40px;
     visibility: hidden;
     /*для ноута*/
-    width: 996px;
-    height: 610px;
+    min-width: 996px;
+    max-height: 610px;
 }
 
 .dictionary-tab {
