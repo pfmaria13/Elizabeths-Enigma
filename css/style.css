@@ -448,6 +448,11 @@ i {
     padding-top: 115px;
     padding-bottom: 28px;
 }
+
+.dictionary-word:hover {
+    color: #B67951;
+}
+
 /* Страницы */
 .page1 {
     display: flex;
@@ -656,11 +661,21 @@ i {
         text-shadow: none;
     }
 
+    .verse-answers {
+        transition: .75s;
+        color: #B67951;
+        text-shadow: none;
+    }
+
     .again-btn-text2 {
         transition: .75s;
         color: #B67951;
         text-shadow: none;
     }
+}
+
+.verse-answers {
+    transition: .75s;
 }
 
 .again-btn-decor {
@@ -669,7 +684,6 @@ i {
 
 .again-btn-text {
     text-align: justify;
-    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
@@ -814,7 +828,7 @@ i {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    padding-top: 115px;
+    padding-top: 85px;
 }
 
 .page14-rudolf-choice2 {
@@ -1050,7 +1064,6 @@ i {
 
 .again-btn-text2 {
     text-align: justify;
-    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
@@ -1078,4 +1091,64 @@ i {
     font-weight: 400;
     line-height: 150%; /* 24px */
     letter-spacing: -0.352px;
+}
+
+.rudolf-verse {
+    width: 439px;
+    height: 105px;
+    color: #2F1301;
+    text-align: center;
+    font-family: PP Writer;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 27px */
+    letter-spacing: -0.396px;
+}
+
+.rudolf-verse-answers {
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+    align-items: center;
+    justify-content: center;
+    row-gap: 15px;
+}
+
+.answers-title {
+    color: #2F1301;
+    font-family: PP Writer;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100.5%;
+    letter-spacing: -0.396px;
+}
+
+.verse-answers {
+    color: #2F1301;
+    font-family: PP Writer;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100.5%;
+    letter-spacing: -0.396px;
+}
+
+.verse-answer1 {
+    position: absolute;
+    top: 3px;
+    left: 24px;
+}
+
+.verse-answer2 {
+    position: absolute;
+    top: 3px;
+    left: 23px;
+}
+
+.verse-answer3 {
+    position: absolute;
+    top: 3px;
+    left: 24px;
 }

@@ -38,6 +38,8 @@ const paper26 = document.querySelector('#p26');
 const paper27 = document.querySelector('#p27');
 const paper28 = document.querySelector('#p28');
 const paper29 = document.querySelector('#p29');
+const paper30 = document.querySelector('#p30');
+const paper31 = document.querySelector('#p31');
 
 
 // Dictionary
@@ -99,17 +101,12 @@ function goNext() {
                 nextBtn.style.visibility = 'hidden';
                 break;
             case 5:
-                paper14.classList.add("flipped");
-                paper14.style.zIndex = '7';
-                paper15.style.zIndex = '8';
-                break;
-            case 6:
                 paper15.classList.add("flipped");
                 paper15.style.zIndex = '8';
                 paper16.style.zIndex = '9';
                 nextBtn.style.visibility = 'hidden';
                 break;
-            case 7:
+            case 6:
                 closeBook(false);
                 paper7.classList.add("flipped");
                 paper7.style.zIndex = '7';
@@ -201,7 +198,7 @@ const tryAgainYakov2 = document.querySelector('#againYakov2');
 const tryAgainRudolf1 = document.querySelector('#againRudolf1');
 const tryAgainRudolf2 = document.querySelector('#againRudolf2');
 const tryAgainRudolf3 = document.querySelector('#againRudolf3');
-const tryAgainRudolf4 = document.querySelector('#againRudolf4');
+const verseWrongAnswerTryAgain = document.querySelector("#againRudolf4");
 const tryAgainRudolf5 = document.querySelector('#againRudolf5');
 const tryAgainRudolf6 = document.querySelector('#againRudolf6');
 
@@ -211,13 +208,18 @@ const tryAgainFate2 = document.querySelector('#againFate2');
 tryAgainYakov1.addEventListener("click", tryAgainYakovP1);
 tryAgainYakov2.addEventListener("click", tryAgainYakovP2);
 
+tryAgainRudolf2.addEventListener("click", tryAgainRudolfP1);
+tryAgainRudolf3.addEventListener("click", tryAgainRudolfP2);
+verseWrongAnswerTryAgain.addEventListener("click", rudolfVerseWrongAnswerTryAgain);
+tryAgainRudolf5.addEventListener("click", tryAgainRudolfP4);
+tryAgainRudolf6.addEventListener("click", tryAgainRudolfP5);
+
 tryAgainFate1.addEventListener("click", tryAgainFateP1);
 tryAgainFate2.addEventListener("click", tryAgainFateP2);
 
 function tryAgainYakovP1() {
     paper6.classList.remove("flipped");
     paper5.classList.remove("flipped");
-    paper4.style.zIndex = '4';
     paper5.style.zIndex = '5';
     paper6.style.zIndex = '2';
     paper7.style.zIndex = '1';
@@ -234,6 +236,39 @@ function tryAgainYakovP2() {
     paper8.style.zIndex = '1';
     paper7.style.zIndex = '0';
     nextBtn.style.visibility = 'hidden';
+}
+
+function tryAgainRudolfP1() {
+    paper12.classList.remove("flipped");
+    paper12.style.zIndex = 'unset';
+    paper13.style.zIndex = 'unset';
+}
+
+function tryAgainRudolfP2() {
+    paper25.classList.remove("flipped");
+    paper25.style.zIndex = 'unset';
+    paper26.style.zIndex = 'unset';
+}
+
+function rudolfVerseWrongAnswerTryAgain() {
+    paper30.classList.remove("flipped");
+    paper30.style.zIndex = 'unset';
+    paper31.style.zIndex = 'unset';
+    paper11.classList.add("flipped");
+    paper11.style.zIndex = '6';
+    paper14.style.zIndex = '7';
+}
+
+function tryAgainRudolfP4() {
+    paper18.classList.remove("flipped");
+    paper18.style.zIndex = 'unset';
+    paper19.style.zIndex = 'unset';
+}
+
+function tryAgainRudolfP5() {
+    paper21.classList.remove("flipped");
+    paper21.style.zIndex = 'unset';
+    paper22.style.zIndex = 'unset';
 }
 
 function tryAgainFateP1() {
@@ -267,6 +302,7 @@ const trigger = document.querySelector(".trigger");
 const closeButton = document.querySelector(".close-button");
 const playAgainYesBtn = document.querySelector(".play-again-yes");
 const playAgainNoBtn = document.querySelector(".play-again-no");
+const playAgainFinal = document.querySelector("#againRudolf1");
 
 function toggleModal() {
     modal.classList.toggle("show-modal");
@@ -283,6 +319,7 @@ closeButton.addEventListener("click", toggleModal);
 window.addEventListener("click", windowOnClick);
 playAgainYesBtn.addEventListener("click", playAgainYes);
 playAgainNoBtn.addEventListener("click", toggleModal);
+playAgainFinal.addEventListener("click", playAgainYes);
 
 function playAgainYes() {
     location.reload(true);
@@ -344,6 +381,14 @@ function chooseYakovP10_2() {
 }
 
 // Rudolf's story
+const verseCorrectAnswer = document.querySelector("#verse-answer1");
+const verseWrongAnswer1 = document.querySelector("#verse-answer2");
+const verseWrongAnswer2 = document.querySelector("#verse-answer3");
+
+verseCorrectAnswer.addEventListener("click", rudolfVerseCorrectAnswer);
+verseWrongAnswer1.addEventListener("click", rudolfVerseWrongAnswer);
+verseWrongAnswer2.addEventListener("click", rudolfVerseWrongAnswer);
+
 function chooseRudolfP10_1() {
     paper10.classList.add("flipped");
     paper10.style.zIndex = '5';
@@ -351,6 +396,7 @@ function chooseRudolfP10_1() {
 }
 
 function chooseRudolfP10_2() {
+    spendLife();
     paper12.classList.add("flipped");
     paper12.style.zIndex = '5';
     paper13.style.zIndex = '6';
@@ -360,13 +406,27 @@ function chooseRudolfP12_1() {
     paper11.classList.add("flipped");
     paper11.style.zIndex = '6';
     paper14.style.zIndex = '7';
-    nextBtn.style.visibility = 'unset';
 }
 
 function chooseRudolfP12_2() {
+    spendLife();
     paper25.classList.add("flipped");
     paper25.style.zIndex = '6';
     paper26.style.zIndex = '7';
+}
+
+function rudolfVerseCorrectAnswer() {
+    nextBtn.style.visibility = 'unset';
+    paper14.classList.add("flipped");
+    paper14.style.zIndex = '7';
+    paper15.style.zIndex = '8';
+}
+
+function rudolfVerseWrongAnswer() {
+    spendLife();
+    paper30.classList.add("flipped");
+    paper30.style.zIndex = '7';
+    paper31.style.zIndex = '8';
 }
 
 function chooseRudolfP18_1() {
@@ -376,6 +436,7 @@ function chooseRudolfP18_1() {
 }
 
 function chooseRudolfP18_2() {
+    spendLife();
     paper18.classList.add("flipped");
     paper18.style.zIndex = '9';
     paper19.style.zIndex = '10';
@@ -388,6 +449,7 @@ function chooseRudolfP20_1() {
 }
 
 function chooseRudolfP20_2() {
+    spendLife();
     paper21.classList.add("flipped");
     paper21.style.zIndex = '10';
     paper22.style.zIndex = '11';
