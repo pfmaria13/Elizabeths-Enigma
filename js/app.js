@@ -416,7 +416,6 @@ function chooseRudolfP12_2() {
 }
 
 function rudolfVerseCorrectAnswer() {
-    nextBtn.style.visibility = 'unset';
     paper14.classList.add("flipped");
     paper14.style.zIndex = '7';
     paper15.style.zIndex = '8';

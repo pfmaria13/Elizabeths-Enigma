@@ -6,8 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elizabeth's Enigma</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="css/image-puzzle.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/b0f29e9bfe.js" crossorigin="anonymous"></script>
     <script defer src="js/app.js"></script>
+    <script defer src="js/jquery-2.1.1.min.js"></script>
+    <script defer src="js/jquery-ui.js"></script>
+    <script defer src="js/image-puzzle.js"></script>
+    <script defer src="js/puzzle-logic.js"></script>
 </head>
 <body>
 <header>
@@ -264,6 +269,31 @@
                 <div class="front page16-rudolf-right">
 <!--                    <img src="img/page16-life.png" alt="" class="page16-life">-->
                     <img src="img/page16-rudolf-right-img.png" alt="" class="page16-rudolf-right-img">
+                    <div id="collage">
+                        <div id="playPanel" style="padding:5px;display:none;">
+                            <div style="display:inline-block; margin:auto; width:95%; vertical-align:top;">
+                                <ul id="sortable" class="sortable"></ul>
+                                <div id="actualImageBox">
+                                    <p id="levelPanel" style="display: none">
+                                        <input type="radio" name="level" id="medium" checked="checked" value="4" /> <label for="medium">Medium</label>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="gameOver" style="display:none;">
+                            <div style="background-color: #fc9e9e; padding: 5px 10px 20px 10px; text-align: center; ">
+                                <h2 style="text-align:center">Game over !!</h2>
+                                Congratulations!! <br /> You got the picture ready.
+                                <br />
+                                Time: <span class="stepCount">0</span> gear.
+                                <br />
+                                Time spent: <span class="timeCount">0</span> seconds<br />
+                                <div>
+                                    <button type="button" onclick="window.location.reload(true);">Play more</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="back">
                     <div class="back-content page17-rudolf">
@@ -567,7 +597,7 @@
             </div>
         </div>
 
-        <button id="next-btn" class="next-btn"><img src="img/next%20button.png" alt=""></button>
+        <button id="next-btn" class="next-btn next-btn-effect"><img src="img/next%20button.png" alt=""></button>
     </div>
 </main>
 
