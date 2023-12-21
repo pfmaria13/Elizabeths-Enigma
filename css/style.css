@@ -10,6 +10,11 @@
     src: url("../fonts/PPWriter-Bold.otf");
 }
 
+@font-face {
+    font-family: DiplomaScriptRus;
+    src: url("../fonts/Diploma Script Basic RUS.otf");
+}
+
 body {
     background-color: #79543F;
     color: #2F1301;
@@ -1095,16 +1100,16 @@ i {
 }
 
 .rudolf-verse {
-    width: 439px;
-    height: 105px;
+    width: 430px;
+    height: 150px;
+    font-family: DiplomaScriptRus;
     color: #2F1301;
     text-align: center;
-    font-family: PP Writer;
-    font-size: 18px;
+    font-size: 26px;
     font-style: normal;
     font-weight: 400;
-    line-height: 150%; /* 27px */
-    letter-spacing: -0.396px;
+    line-height: 150%; /* 39px */
+    letter-spacing: -0.572px;
 }
 
 .rudolf-verse-answers {
@@ -1118,7 +1123,7 @@ i {
 
 .answers-title {
     color: #2F1301;
-    font-family: PP Writer;
+    font-family: DiplomaScriptRus;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
@@ -1128,34 +1133,38 @@ i {
 
 .verse-answers {
     color: #2F1301;
-    font-family: PP Writer;
-    font-size: 18px;
+    font-family: DiplomaScriptRus;
+    font-size: 30px;
     font-style: normal;
     font-weight: 400;
-    line-height: 100.5%;
-    letter-spacing: -0.396px;
+    line-height: 81%;
+    letter-spacing: -0.66px;
 }
 
 .verse-answer1 {
     position: absolute;
     top: 3px;
-    left: 24px;
+    left: 28px;
 }
 
 .verse-answer2 {
     position: absolute;
     top: 3px;
-    left: 23px;
+    left: 35px;
 }
 
 .verse-answer3 {
     position: absolute;
     top: 3px;
-    left: 24px;
+    left: 30px;
 }
 
 .next-btn-effect {
     position: relative;
+}
+
+#next-btn-effect {
+    display: none;
 }
 
 .next-btn-effect::after,
