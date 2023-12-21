@@ -33,10 +33,8 @@ var imagePuzzle = {
                 $(this).replaceAll(ui.draggable);
 
                 currentList = $('#sortable > li').map(function (i, el) { return $(el).attr('data-value'); });
-                if (isSorted(currentList)) {
-                    nextBtnEffect.style.display = 'unset';
-                    nextBtn.style.opacity = '0';
-                }
+                if (isSorted(currentList))
+                    nextBtn.style.visibility = 'unset';
                 else {
                     var now = new Date().getTime();
                     imagePuzzle.stepCount++;
