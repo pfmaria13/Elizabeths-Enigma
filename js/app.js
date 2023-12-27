@@ -1,5 +1,6 @@
 // References to DOM elements
 const prevBtn = document.querySelector('#prev-btn');
+const prevBtnImg = document.querySelector('#prev-btn-img');
 const nextBtn = document.querySelector('#next-btn');
 const book = document.querySelector('#book');
 const bookBackground = document.querySelector('#book-background');
@@ -48,7 +49,12 @@ const dictionaryPage2 = document.querySelector('#dictionary-page2');
 
 // Event listeners
 prevBtn.addEventListener("click", goPrevious);
+prevBtn.addEventListener("mouseover", e => prevBtn.src = "../img/prev-btn-hover.png");
+prevBtn.addEventListener('mouseout', e => prevBtn.src = "../img/prev%20button.png");
+
 nextBtn.addEventListener("click", goNext);
+nextBtn.addEventListener("mouseover", e => nextBtn.src = "../img/next-btn-hover.png");
+nextBtn.addEventListener("mouseout", e => nextBtn.src = "../img/next%20button.png")
 
 // Business Logic
 let currentState = 1;
@@ -124,7 +130,6 @@ function goPrevious() {
         switch(currentState) {
             case 2:
                 closeBook(true);
-                book.style.visibility = 'hidden';
                 coverBackground.style.visibility = 'visible';
                 prevBtn.style.visibility = 'hidden';
                 bookBackground.style.visibility = 'hidden';

@@ -1,5 +1,5 @@
 var images = [
-    { src: 'img/full-puzzle-400x400.png', title: 'Tiger’s Nest Temple, Bhutan' }
+    { src: 'img/full-puzzle-400x400-new.png', title: 'Notes' }
 ];
 
 $(function () {

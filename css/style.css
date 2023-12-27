@@ -266,13 +266,80 @@ header {
 
 .word-epitafiya2 {
     top: -60px;
-    left: -215px;
+    left: -270px;
 }
 
 .word-muza {
     top: unset;
     bottom: -70px;
     left: -30px;
+}
+
+.word-bogemiya {
+    top: unset;
+    bottom: -68px;
+    left: -30px;
+}
+
+.word-Kelly {
+    top: -70px;
+    height: 70px;
+}
+
+.word-Femida {
+    top: -70px;
+    height: 70px;
+    left: -10px;
+}
+
+.word-Rudolf {
+    top: unset;
+    left: -210px;
+    height: 110px;
+    bottom: -110px;
+}
+
+.word-Kelly2 {
+    left: -170px;
+}
+
+.word-Barvits {
+    top: unset;
+    height: 70px;
+    left: 0;
+    bottom: -75px;
+}
+
+.word-Yakov {
+    top: unset;
+    height: 70px;
+    left: -100px;
+}
+
+.word-chuma {
+    top: -70px;
+    left: -220px;
+}
+
+.word-Pheba {
+    top: unset;
+    left: -220px;
+}
+
+.word-Rudolf2 {
+    top: unset;
+    height: 110px;
+    left: -35px;
+}
+
+.word-Kelly3 {
+    left: -130px;
+}
+
+.word-Rudolf3 {
+    top: unset;
+    height: 110px;
+    left: 10px;
 }
 
 .dictionary-word:hover {
@@ -305,12 +372,14 @@ i {
 }
 
 .prev-btn {
-    padding-right: 140px;
+    margin-right: 140px;
     visibility: hidden;
+    cursor: pointer;
 }
 
 .next-btn {
-    padding-left: 140px;
+    margin-left: 140px;
+    cursor: pointer;
 }
 
 .next-btn-warning {
@@ -324,7 +393,7 @@ i {
     position: absolute;
     border: 1px solid #F2D6B7;
     top: -20px;
-    right: -2px;
+    right: -183px;
     height: 100px;
     width: 100px;
     border-radius: 50%;
@@ -440,13 +509,13 @@ i {
 }
 
 .back-content {
-    transform: rotateY(180deg)
+    transform: rotateY(180deg);
 }
 
 /* Paper Flipped */
 .flipped .front,
 .flipped .back {
-    transform: rotateY(-180deg)
+    transform: rotateY(-180deg);
 }
 
 /* Paper Z-index */
@@ -714,11 +783,16 @@ i {
     justify-content: space-around;
 }
 
+.page1-sudba-choice1-div {
+    position: relative;
+}
+
 .page10-sudba-choice2 {
     width: 418px;
     height: 276px;
     position: relative;
 }
+
 .page10-sudba-p {
     text-align: center;
     font-size: 14px;
@@ -730,8 +804,22 @@ i {
     width: 345px;
     height: 63px;
     position: absolute;
-    bottom: 8%;
-    left: 12%;
+    bottom: 13%;
+    left: 9%;
+}
+
+.page10-sudba-u {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 21px */
+    letter-spacing: -0.7px;
+    /*text-indent: 25px;*/
+    width: 345px;
+    height: 63px;
+    position: absolute;
+    bottom: -2%;
+    left: 59%;
 }
 
 .page11-sudba-choice1 {
@@ -859,6 +947,7 @@ i {
     letter-spacing: -0.352px;
     width: 357px;
     height: 96px;
+    text-indent: 25px;
 }
 
 .page9-rudolf {
@@ -955,6 +1044,7 @@ i {
     letter-spacing: -0.352px;
     width: 357px;
     height: 72px;
+    text-indent: 25px;
 }
 
 .page13-rudolf-choice1 {
@@ -1073,6 +1163,7 @@ i {
     padding-top: 10px;
     width: 391px;
     height: 96px;
+    text-indent: 25px;
 }
 .page18-rudolf {
     display: flex;
@@ -1091,7 +1182,27 @@ i {
     width: 356px;
     height: 84px;
     position: absolute;
-    bottom: 57%;
+    bottom: 54%;
+}
+
+.page18-rudolf-u {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 21px */
+    letter-spacing: -0.7px;
+}
+.page18-rudolf-div {
+    position: absolute;
+    bottom: 54%;
+    left: 19%;
+}
+
+
+.choice-btn-new {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .page18-rudolf-choice1 {
@@ -1134,8 +1245,19 @@ i {
     letter-spacing: -0.7px;
     width: 356px;
     height: 42px;
-    bottom: 15%;
+    bottom: 13%;
     left: 8%;
+}
+
+.page20-rudolf-choice1-u {
+    position: absolute;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 21px */
+    letter-spacing: -0.7px;
+    bottom: 13%;
+    left: 55%;
 }
 
 .page20-rudolf-choice1-div {
@@ -1152,8 +1274,19 @@ i {
     letter-spacing: -0.7px;
     width: 345px;
     height: 63px;
-    bottom: 10%;
+    bottom: 9%;
     left: 9%;
+}
+
+.page20-rudolf-choice2-u {
+    position: absolute;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 21px */
+    letter-spacing: -0.7px;
+    bottom: 17%;
+    left: 8.5%;
 }
 
 .page20-rudolf-choice2-div {

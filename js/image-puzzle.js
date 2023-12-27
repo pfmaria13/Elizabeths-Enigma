@@ -1,4 +1,4 @@
-﻿const nextBtnEffect = document.querySelector("#next-btn-effect");
+﻿const pulseAnim = document.querySelector('#pulse');
 
 var timerFunction;
 
@@ -34,7 +34,7 @@ var imagePuzzle = {
 
                 currentList = $('#sortable > li').map(function (i, el) { return $(el).attr('data-value'); });
                 if (isSorted(currentList)) {
-                    nextBtn.classList.add("next-btn-warning");
+                    pulseAnim.classList.add("next-btn-warning");
                     nextBtn.style.visibility = 'unset';
                 }
                 else {
@@ -93,43 +93,3 @@ $.fn.randomize = function (selector) {
     });
     return this;
 };
-
-// .next-btn-effect {
-//     position: relative;
-//     visibility: unset;
-// }
-//
-// .next-btn-effect::after,
-// .next-btn-effect::before {
-//     content: '';
-//     position: absolute;
-//     border: 2px solid  #F2D6B7;
-//     left: 127px;
-//     opacity: 0;
-//     right: -20px;
-//     top: -20px;
-//     bottom: -20px;
-//     border-radius: 50%;
-//     animation: pulse 2.5s linear infinite;
-//     width: 120px;
-//     height: 105px;
-// }
-//
-// .next-btn-effect::after {
-//     animation-delay: 1.25s;
-// }
-//
-// @keyframes pulse {
-//
-//     0% {
-//         transform: scale(0.8);
-//         opacity: 0;
-//     }
-//     50% {
-//         opacity: 1;
-//     }
-//     100% {
-//         transform: scale(1.3);
-//         opacity: 0;
-//     }
-// }

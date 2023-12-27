@@ -49,7 +49,7 @@
 </header>
 <main>
     <div class="container">
-        <button id="prev-btn" class="prev-btn"><img src="img/prev%20button.png" alt="Назад"></button>
+        <img src="img/prev%20button.png" alt="Назад" id="prev-btn" class="prev-btn">
         <!-- The Book -->
         <div id="book" class="book">
             <button class="dictionary-tab" id="dictionary-tab" onclick="showDictionary()"></button>
@@ -66,7 +66,19 @@
                 <div class="back">
                     <div id="b1" class="back-content page1">
                         <div class="page1-title"><img src="img/page1-img.png" alt="Заголовок" class="page1-img"></div>
-                        <div class="page1-text"><p class="page1-p">В подростковом возрасте  в семье  Элизабет начались проблемы. Ее отчим  - алхимик <u>Эдвард Келли</u> попал в немилость императора.<p><u>Фемида</u> встала на сторону <u>Рудольфа II</u>,  Эдвард был заключен в тюрьму по обвинению в государственной измене.
+                        <div class="page1-text"><p class="page1-p">В подростковом возрасте  в семье  Элизабет начались проблемы. Ее отчим  - алхимик <button class="dictionary-word"><u>Эдвард Келли</u><div class="dictionary-word-popup word-Kelly">
+                            <img src="img/dictionary-word-hover-left-decor.png" alt="Декор слева">
+                            <p class="dictionary-short-text">Эдвард Келли (1555-1597/8) - английский алхимик и компаньон знаменитого астролога, алхимика и математика Джона Ди.</p>
+                            <img src="img/dictionary-word-hover-right-decor.png" alt="Декор справа">
+                        </div></button> попал в немилость императора.<p><button class="dictionary-word"><u>Фемида</u><div class="dictionary-word-popup word-Femida">
+                            <img src="img/dictionary-word-hover-left-decor.png" alt="Декор слева">
+                            <p class="dictionary-short-text">Фемида - (греч. миф.) богиня правосудия, изображалась с повязкой на глазах и с весами в руках.</p>
+                            <img src="img/dictionary-word-hover-right-decor.png" alt="Декор справа">
+                        </div></button> встала на сторону <button class="dictionary-word"><u>Рудольфа II</u><div class="dictionary-word-popup word-Rudolf">
+                            <img src="img/dictionary-word-hover-left-decor.png" alt="Декор слева" class="word-decor-left-Rudolf">
+                            <p class="dictionary-short-text">Рудольф II Габсбург - (18.07.1552, Вена – 20.01.1612, Прага), король Германии и император Священной Римской империи. Сын Максимилиана II Габсбурга и дочери императора Карла V Марии Испанской.</p>
+                            <img src="img/dictionary-word-hover-right-decor.png" alt="Декор справа" class="word-decor-right-Rudolf">
+                        </div></button>,  Эдвард был заключен в тюрьму по обвинению в государственной измене.
                         </p></div>
                     </div>
                 </div>
@@ -92,7 +104,11 @@
                     <div id="f3" class="front-content page4">
                         <img src="img/page4-img.png" alt="Картинка-4" class="page4-img">
                         <div class="page4-text">
-                            <p class="page4-p">В дом к семье Элизабет нагрянули стражи. Они конфисковывают семейное имущество. Несколько дней назад поэтесса получила письмо о смерти отчима - алхимика <u>Эдварда Келли</u>. Посвящая <button class="dictionary-word"><u>эпитафии</u><div class="dictionary-word-popup">
+                            <p class="page4-p">В дом к семье Элизабет нагрянули стражи. Они конфисковывают семейное имущество. Несколько дней назад поэтесса получила письмо о смерти отчима - алхимика <button class="dictionary-word"><u>Эдварда Келли</u><div class="dictionary-word-popup word-Kelly2">
+                                <img src="img/dictionary-word-hover-left-decor.png" alt="Декор слева">
+                                <p class="dictionary-short-text">Эдвард Келли (1555-1597/8) - английский алхимик и компаньон знаменитого астролога, алхимика и математика Джона Ди.</p>
+                                <img src="img/dictionary-word-hover-right-decor.png" alt="Декор справа">
+                            </div></button>. Посвящая <button class="dictionary-word"><u>эпитафии</u><div class="dictionary-word-popup">
                                 <img src="img/dictionary-word-hover-left-decor.png" alt="Декор слева">
                                 <p class="dictionary-short-text">Эпитафия - (греч. epitaphios – надгробный), надгробная надпись, часто стихотворная.</p>
                                 <img src="img/dictionary-word-hover-right-decor.png" alt="Декор справа">
@@ -111,7 +127,11 @@
                 <!-- Page 6 -->
                 <div class="front">
                     <div id="f4" class="front-content page6">
-                        <p class="page6-p">Неожиданно в ее комнату юрист , советник  Его Священного Императорского Величества, покровитель пражских литераторов -  <u>Иоганн Антон Барвиц</u> , прочитав <button class="dictionary-word"><u>эпитафии</u><div class="dictionary-word-popup word-epitafiya2">
+                        <p class="page6-p">Неожиданно в ее комнату юрист, советник  Его Священного Императорского Величества, покровитель пражских литераторов -  <button class="dictionary-word"><u>Иоганн Антон Барвиц</u><div class="dictionary-word-popup word-Barvits">
+                            <img src="img/dictionary-word-hover-left-decor.png" alt="Декор слева">
+                            <p class="dictionary-short-text">Иоганн Антон Барвиц (1555- 1620) - советник, ближайшее доверенное лицо императора Рудольфа II.</p>
+                            <img src="img/dictionary-word-hover-right-decor.png" alt="Декор справа">
+                        </div></button>, прочитав <button class="dictionary-word"><u>эпитафии</u><div class="dictionary-word-popup word-epitafiya2">
                             <img src="img/dictionary-word-hover-left-decor.png" alt="Декор слева">
                             <p class="dictionary-short-text">Эпитафия - (греч. epitaphios – надгробный), надгробная надпись, часто стихотворная.</p>
                             <img src="img/dictionary-word-hover-right-decor.png" alt="Декор справа">
@@ -140,7 +160,11 @@
                     <div class="back-content page9-yakov">
                         <img src="img/kostil.png" alt="Изображение" class="page9-img-yakov">
                         <div class="page9-text-yakov"><p class="page9-p-yakov">При предоставлении письма советник короля назвал Элизабет шарлатанкой.
-                            <p class="page9-p-yakov">Поэтому Яков I не только не прочел письмо,  а с негодованием отверг его, восприняв этот жест за  напрасную лесть.</p>
+                            <p class="page9-p-yakov">Поэтому <button class="dictionary-word"><u>Яков I</u><div class="dictionary-word-popup word-Yakov">
+                            <img src="img/dictionary-word-hover-left-decor.png" alt="Декор слева">
+                            <p class="dictionary-short-text">Яков I (1566-1625) - король Англии и Шотландии (как Яков VI). Единственный сын шотландской королевы Марии и Генриха Стюарта.</p>
+                            <img src="img/dictionary-word-hover-right-decor.png" alt="Декор справа">
+                        </div></button> не только не прочел письмо,  а с негодованием отверг его, восприняв этот жест за  напрасную лесть.</p>
                         </div>
                     </div>
                 </div>
@@ -201,7 +225,11 @@
                 <div class="back">
                     <div class="back-content page9-rudolf">
                         <img src="img/page9-rudolf-img.png" alt="" class="page9-rudolf-img">
-                        <p class="page9-rudolf-p"><u>Рудольф II</u> принимает Вашу просьбу, одаривает Вас почестями и дарами и приглашает к себе на встречу. Вы счастливы от добродушия императора, Вам возвращают имущество.</p>
+                        <p class="page9-rudolf-p"><button class="dictionary-word"><u>Рудольф II</u><div class="dictionary-word-popup word-Rudolf2">
+                            <img src="img/dictionary-word-hover-left-decor.png" alt="Декор слева">
+                            <p class="dictionary-short-text">Рудольф II Габсбург - (18.07.1552, Вена – 20.01.1612, Прага), король Германии и император Священной Римской империи. Сын Максимилиана II Габсбурга и дочери императора Карла V Марии Испанской.</p>
+                            <img src="img/dictionary-word-hover-right-decor.png" alt="Декор справа">
+                        </div></button> принимает Вашу просьбу, одаривает Вас почестями и дарами и приглашает к себе на встречу. Вы счастливы от добродушия императора, Вам возвращают имущество.</p>
                     </div>
                 </div>
             </div>
@@ -215,7 +243,15 @@
                 <div class="back">
                     <div class="back-content page11-rudolf-choice1">
                         <div class="page11-rudolf-choice1-p">
-                            <p>Император помнит о способностях Вашего отчима - алхимика <u>Эдварда Келли</u>, так как <u>Рудольфа II</u>мучают головные боли и панические атаки, он просит Вас найти записи отчима и сделать зелье, способное облегчить его болезни. <p>В ответ на Вашу помощь, император обещает Вас пригласить в императорский двор и сделать из Вас известную поэтессу на всю Священную Римскую империю.</p>
+                            <p>Император помнит о способностях Вашего отчима - алхимика <button class="dictionary-word"><u>Эдварда Келли</u><div class="dictionary-word-popup word-Kelly3">
+                                <img src="img/dictionary-word-hover-left-decor.png" alt="Декор слева">
+                                <p class="dictionary-short-text">Эдвард Келли (1555-1597/8) - английский алхимик и компаньон знаменитого астролога, алхимика и математика Джона Ди.</p>
+                                <img src="img/dictionary-word-hover-right-decor.png" alt="Декор справа">
+                            </div></button>, так как <button class="dictionary-word"><u>Рудольфа II</u><div class="dictionary-word-popup word-Rudolf3">
+                                <img src="img/dictionary-word-hover-left-decor.png" alt="Декор слева">
+                                <p class="dictionary-short-text">Рудольф II Габсбург - (18.07.1552, Вена – 20.01.1612, Прага), король Германии и император Священной Римской империи. Сын Максимилиана II Габсбурга и дочери императора Карла V Марии Испанской.</p>
+                                <img src="img/dictionary-word-hover-right-decor.png" alt="Декор справа">
+                            </div></button> мучают головные боли и панические атаки, он просит Вас найти записи отчима и сделать зелье, способное облегчить его болезни. <p>В ответ на Вашу помощь, император обещает Вас пригласить в императорский двор и сделать из Вас известную поэтессу на всю Священную Римскую империю.</p>
                         </div>
                     </div>
                 </div>
@@ -307,8 +343,17 @@
             </div>
             <div id="p16" class="paper">
                 <div class="front page18-rudolf" style="background-image: linear-gradient(89deg, #E0BF8F -1.75%, #F2D6B7 13.97%, #FBEEDE 49.08%, #F7E3CA 98.85%);">
-                    <button class="choice-btn" onclick="chooseRudolfP18_1()"><img src="img/choice-fragment.png" alt="Выбор 1" class="page18-rudolf-choice1"></button>
-                    <p class="page18-rudolf-p">Совместно с господином Бальдховеном Вы много и плодотворно начинаете работать, Бальдховен распространяет Вашу поэзию в литературных кругах <u>Богемии</u>, затем в “Республике ученых”.</p>
+                    <button class="choice-btn choice-btn-new" onclick="chooseRudolfP18_1()">
+                        <img src="img/choice-fragment.png" alt="Выбор 1" class="page18-rudolf-choice1">
+                        <p class="page18-rudolf-p">Совместно с господином Бальдховеном Вы много и плодотворно начинаете работать, Бальдховен распространяет Вашу поэзию в литературных кругах &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp, затем в “Республике ученых”.</p>
+                    </button>
+                    <div class="page18-rudolf-div">
+                    <button class="dictionary-word"><p class="page18-rudolf-u"><u>Богемии</u></p><div class="dictionary-word-popup word-bogemiya">
+                        <img src="img/dictionary-word-hover-left-decor.png" alt="Декор слева">
+                        <p class="dictionary-short-text">Богемия - официальное название в 1526-1918 Чехии (без Моравии) в составе Габсбургской империи.</p>
+                        <img src="img/dictionary-word-hover-right-decor.png" alt="Декор справа">
+                    </div></button>
+                    </div>
                     <button class="choice-btn" onclick="chooseRudolfP18_2()"><img src="img/page18-rudolf-choice2.png" alt="Выбор 2" class="page18-rudolf-choice2"></button>
                 </div>
                 <div class="back">
@@ -321,12 +366,19 @@
             <div id="p17" class="paper">
                 <div class="front page20-rudolf-choice1" style="background-image: linear-gradient(89deg, #E0BF8F -1.75%, #F2D6B7 13.97%, #FBEEDE 49.08%, #F7E3CA 98.85%);">
                     <div class="page20-rudolf-choice1-div">
-                        <button class="choice-btn" onclick="chooseRudolfP20_1()"><img src="img/page20-rudolf-choice1-img.png" alt="Выбор 1" class="page20-rudolf-choice1-img"></button>
-                        <p class="page20-rudolf-choice1-p">На одной из встреч Вы знакомитесь с адвокатом королевского двора <u>Йоханессом Лео</u>.</p>
+                        <button class="choice-btn" onclick="chooseRudolfP20_1()">
+                            <img src="img/page20-rudolf-choice1-img.png" alt="Выбор 1" class="page20-rudolf-choice1-img">
+                            <p class="page20-rudolf-choice1-p">На одной из встреч Вы знакомитесь с адвокатом королевского двора &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</p>
+                        </button>
+                        <p class="page20-rudolf-choice1-u"> <u>Йоханессом Лео</u>.</p>
                     </div>
                     <div class="page20-rudolf-choice2-div">
-                        <button class="choice-btn" onclick="chooseRudolfP20_2()"><img src="img/page20-rudolf-choice2-img.png" alt="Выбор 2" class="page20-rudolf-choice2-img"></button>
-                        <p class="page20-rudolf-choice2-p">В знак благодарности за помощь и содействие г-на <u>Бальдховена</u>, Вы отвечаете взаимной симпатией на его знаки внимания и выходите за него замуж.</p>
+                        <button class="choice-btn" onclick="chooseRudolfP20_2()">
+                            <img src="img/page20-rudolf-choice2-img.png" alt="Выбор 2" class="page20-rudolf-choice2-img">
+                            <p class="page20-rudolf-choice2-p">В знак благодарности за помощь и содействие господина
+                                &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp, Вы отвечаете взаимной симпатией на его знаки внимания и выходите за него замуж.</p>
+                        </button>
+                        <p class="page20-rudolf-choice2-u"><u>Бальдховена</u></p>
                     </div>
                 </div>
                 <div class="back">
@@ -496,8 +548,16 @@
                 <div class="front">
                     <div class="front-content page10-sudba" style="background-image: linear-gradient(89deg, #E0BF8F -1.75%, #F2D6B7 13.97%, #FBEEDE 49.08%, #F7E3CA 98.85%);">
                         <button class="choice-btn" onclick="chooseResignFateP10_1()"><img src="img/page10-sudba-choice1.png" alt="Выбор 1" class="page10-sudba-choice1"></button>
-                        <button class="choice-btn" onclick="chooseResignFateP10_2()"><img src="img/page10-sudba-choice2.png" alt="" class="page10-sudba-choice2">
-                        <p class="page10-sudba-p">Остаться одной, ухаживая за матерью, читая ей холодными вечерами Вашу авторскую  поэзию в надежде на помощь <u>Феба</u>.</p></button>
+                        <div class="page1-sudba-choice1-div">
+                            <button class="choice-btn" onclick="chooseResignFateP10_2()"><img src="img/page10-sudba-choice2.png" alt="" class="page10-sudba-choice2">
+                                <p class="page10-sudba-p">Остаться одной, ухаживая за матерью, читая ей холодными вечерами Вашу авторскую  поэзию в надежде на помощь</p>
+                            </button>
+                            <p class="page10-sudba-u"><button class="dictionary-word"><u>Феба</u><div class="dictionary-word-popup word-Pheba">
+                                <img src="img/dictionary-word-hover-left-decor.png" alt="Декор слева">
+                                <p class="dictionary-short-text">Феб - в древнегреческой мифологии: второе имя Аполлона, как божества солнечного света.</p>
+                                <img src="img/dictionary-word-hover-right-decor.png" alt="Декор справа">
+                            </div></button>.</p>
+                        </div>
                     </div>
                 </div>
                 <div class="back" style="background-image: linear-gradient(89deg, #E0BF8F -1.75%, #F2D6B7 13.97%, #FBEEDE 49.08%, #F7E3CA 98.85%);">
@@ -535,7 +595,11 @@
                 <div class="front">
                     <div class="front-content page12-sudba">
                         <img src="img/game-over.png" alt="Игра окончена" class="game-over">
-                        <p class="page12-sudba-p">Случайно Вы заражаетесь <u>Чумой</u>, немного погодя болезнь Вас поражает.</p>
+                        <p class="page12-sudba-p">Случайно Вы заражаетесь <button class="dictionary-word"><u>Чумой</u><div class="dictionary-word-popup word-chuma">
+                            <img src="img/dictionary-word-hover-left-decor.png" alt="Декор слева">
+                            <p class="dictionary-short-text">Чума - острозаразная эпидемическая болезнь.</p>
+                            <img src="img/dictionary-word-hover-right-decor.png" alt="Декор справа">
+                        </div></button>, немного погодя болезнь Вас поражает.</p>
                         <button class="again" id="againFate2"></button>
                     </div>
                 </div>
@@ -579,7 +643,7 @@
             </div>
         </div>
 
-        <button id="next-btn" class="next-btn"><img src="img/next%20button.png" alt=""></button>
+        <div id="pulse"><img src="img/next%20button.png" alt="Далее" id="next-btn" class="next-btn"></div>
 <!--        <button id="next-btn-effect" class="next-btn next-btn-effect"><img src="img/next%20button.png" alt=""></button>-->
     </div>
 </main>
