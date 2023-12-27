@@ -49,12 +49,12 @@ const dictionaryPage2 = document.querySelector('#dictionary-page2');
 
 // Event listeners
 prevBtn.addEventListener("click", goPrevious);
-prevBtn.addEventListener("mouseover", e => prevBtn.src = "../img/prev-btn-hover.png");
-prevBtn.addEventListener('mouseout', e => prevBtn.src = "../img/prev%20button.png");
+prevBtn.addEventListener("mouseover", e => prevBtn.src = "img/prev-btn-hover.png");
+prevBtn.addEventListener('mouseout', e => prevBtn.src = "img/prev%20button.png");
 
 nextBtn.addEventListener("click", goNext);
-nextBtn.addEventListener("mouseover", e => nextBtn.src = "../img/next-btn-hover.png");
-nextBtn.addEventListener("mouseout", e => nextBtn.src = "../img/next%20button.png")
+nextBtn.addEventListener("mouseover", e => nextBtn.src = "img/next-btn-hover.png");
+nextBtn.addEventListener("mouseout", e => nextBtn.src = "img/next%20button.png")
 
 // Business Logic
 let currentState = 1;
