@@ -342,6 +342,35 @@ header {
     left: 10px;
 }
 
+.word-fortune {
+    width: 200px;
+}
+
+.word-Rudolf4 {
+    top: -110px;
+    height: 110px;
+}
+
+.word-Baldhoven {
+    top: unset;
+    height: 100px;
+}
+
+.word-gekzametr {
+    top: -65px;
+    left: -270px;
+}
+
+.word-Baldhoven2 {
+    top: -100px;
+    height: 100px;
+}
+
+.word-Baldhoven3 {
+    top: -100px;
+    height: 100px;
+}
+
 .dictionary-word:hover {
     color: #B67951;
 
@@ -1118,7 +1147,6 @@ i {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    padding-top: 30px;
 }
 
 .page16-life {

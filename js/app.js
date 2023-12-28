@@ -1,6 +1,6 @@
 // References to DOM elements
 const prevBtn = document.querySelector('#prev-btn');
-const prevBtnImg = document.querySelector('#prev-btn-img');
+const pulseAnimation = document.querySelector('#pulse');
 const nextBtn = document.querySelector('#next-btn');
 const book = document.querySelector('#book');
 const bookBackground = document.querySelector('#book-background');
@@ -110,7 +110,7 @@ function goNext() {
                 paper15.classList.add("flipped");
                 paper15.style.zIndex = '8';
                 paper16.style.zIndex = '9';
-                nextBtn.style.visibility = 'hidden';
+                pulseAnimation.style.visibility = 'hidden';
                 break;
             case 6:
                 closeBook(false);
