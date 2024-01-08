@@ -6,6 +6,7 @@ const book = document.querySelector('#book');
 const bookBackground = document.querySelector('#book-background');
 const coverBackground = document.querySelector('#cover-background')
 const dictionaryTab = document.querySelector('#dictionary-tab');
+const personalityTab = document.querySelector('#personality-tab');
 const gameLife1 = document.querySelector('#game-life1');
 const gameLife2 = document.querySelector('#game-life2');
 const gameLife3 = document.querySelector('#game-life3');
@@ -46,6 +47,10 @@ const paper31 = document.querySelector('#p31');
 // Dictionary
 const dictionaryPage1 = document.querySelector('#dictionary-page1');
 const dictionaryPage2 = document.querySelector('#dictionary-page2');
+
+// Personality
+const personalityPage1 = document.querySelector('#personality-page1');
+const personalityPage2 = document.querySelector('#personality-page2');
 
 // Event listeners
 prevBtn.addEventListener("click", goPrevious);
@@ -89,6 +94,8 @@ function goNext() {
                 bookBackground.style.visibility = 'unset';
                 dictionaryTab.style.visibility = 'unset';
                 dictionaryTab.style.transition = '1s';
+                personalityTab.style.visibility = 'unset';
+                personalityTab.style.transition = '1s';
                 paper1.classList.add("flipped");
                 paper1.style.zIndex = '1';
                 break;
@@ -126,7 +133,7 @@ function goNext() {
 }
 
 function goPrevious() {
-    if(currentState > 1 && dictionaryPage1.style.zIndex !== '12') {
+    if(currentState > 1 && dictionaryPage1.style.zIndex !== '12' && personalityPage1.style.zIndex !== '12') {
         switch(currentState) {
             case 2:
                 closeBook(true);
@@ -135,6 +142,8 @@ function goPrevious() {
                 bookBackground.style.visibility = 'hidden';
                 dictionaryTab.style.transition = 'unset';
                 dictionaryTab.style.visibility = 'hidden';
+                personalityTab.style.transition = 'unset';
+                personalityTab.style.visibility = 'hidden';
                 paper1.classList.remove("flipped");
                 paper1.style.zIndex = '7';
                 break;
@@ -171,19 +180,52 @@ function goPrevious() {
 
         currentState--;
     }
+
     if (dictionaryPage1.style.zIndex === '12') {
         dictionaryPage1.classList.remove("flipped");
         dictionaryPage1.style.zIndex = '-10';
         dictionaryPage2.style.zIndex = '-10';
-        nextBtn.style.visibility = 'unset';
+        nextBtnNeed();
+        prevBtnNeed();
         dictionaryTab.style.backgroundImage = 'url("../img/dictionary-tab-hidden.png")';
         dictionaryTab.style.backgroundRepeat = 'no repeat';
         dictionaryTab.style.position = 'absolute';
         dictionaryTab.style.top = '50px';
-        dictionaryTab.style.left = '450px';
+        dictionaryTab.style.left = '460px';
         dictionaryTab.style.width = '71px';
         dictionaryTab.style.height = '30px';
     }
+
+    if (personalityPage1.style.zIndex === '12') {
+        personalityPage1.classList.remove("flipped");
+        personalityPage1.style.zIndex = '-10';
+        personalityPage2.style.zIndex = '-10';
+        nextBtnNeed();
+        prevBtnNeed();
+        personalityTab.style.backgroundImage = 'url("../img/personality-tab-hidden.png")';
+        personalityTab.style.backgroundRepeat = 'no repeat';
+        personalityTab.style.position = 'absolute';
+        personalityTab.style.top = '110px';
+        personalityTab.style.left = '460px';
+        personalityTab.style.width = '71px';
+        personalityTab.style.height = '30px';
+    }
+}
+
+function prevBtnNeed() {
+    if (paper5.style.zIndex === '5') hidePrevNextBtns();
+    else if (paper9.style.zIndex === '5') hidePrevNextBtns();
+    else if (paper23.style.zIndex === '5') hidePrevNextBtns();
+}
+
+function nextBtnNeed() {
+    if (paper5.style.zIndex === '4') nextBtn.style.visibility = 'hidden';
+    else nextBtn.style.visibility = 'unset';
+}
+
+function hidePrevNextBtns() {
+    prevBtn.style.visibility = 'hidden';
+    nextBtn.style.visibility = 'hidden';
 }
 
 function spendLife() {
@@ -342,6 +384,20 @@ function showDictionary() {
     dictionaryTab.style.right = '140px';
     dictionaryTab.style.width = '118px';
     dictionaryTab.style.height = '30px';
+}
+
+// Show personality
+function showPersonality() {
+    personalityPage1.classList.add('flipped');
+    personalityPage1.style.zIndex = '12';
+    personalityPage2.style.zIndex = '12';
+    nextBtn.style.visibility = 'hidden';
+    prevBtn.style.visibility = 'unset';
+    personalityTab.style.backgroundImage = 'url("../img/personality-tab.png")';
+    personalityTab.style.backgroundRepeat = 'no repeat';
+    personalityTab.style.right = '140px';
+    personalityTab.style.width = '118px';
+    personalityTab.style.height = '30px';
 }
 
 // Main choices

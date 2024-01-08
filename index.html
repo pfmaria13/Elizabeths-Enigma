@@ -53,6 +53,7 @@
         <!-- The Book -->
         <div id="book" class="book">
             <button class="dictionary-tab" id="dictionary-tab" onclick="showDictionary()"></button>
+            <button class="personality-tab" id="personality-tab" onclick="showPersonality()"></button>
             <img src="img/book-background.png" alt="Книга" class="book-background" id="book-background">
             <div id="p1" class="paper">
                 <!-- Page 0 -->
@@ -636,12 +637,9 @@
                     </div>
                 </div>
             </div>
+
             <!--Словарь-->
             <div id="dictionary-page1" class="paper">
-                <!--                <div class="front">-->
-                <!--                    <div id="f8" class="front-content page10">-->
-                <!--                    </div>-->
-                <!--                </div>-->
                 <div class="back">
                     <div id="b8" class="back-content dictionary-page1">
                         <img src="img/dictionary-title.png" alt="Заголовок словаря" class="dictionary-title-img">
@@ -664,10 +662,28 @@
                         </div>
                     </div>
                 </div>
-                <!--                <div class="back">-->
-                <!--                    <div id="b9" class="back-content">-->
-                <!--                    </div>-->
-                <!--                </div>-->
+            </div>
+
+            <!--Персоналии-->
+            <div id="personality-page1" class="paper">
+                <div class="back">
+                    <div id="b9" class="back-content personality-page1">
+                        <img src="img/personality-title.png" alt="Заголовок словаря" class="personality-title-img">
+                        <p class="personality-p1">Иоганн Антон Барвиц (1555- 1620) - советник, ближайшее доверенное лицо императора Рудольфа II. Источник</p>
+                        <p class="personality-p1">Эдвард Келли (1555-1597/8) - английский алхимик и компаньон знаменитого астролога, алхимика и математика Джона Ди. Источник</p>
+                        <p class="personality-p1">Рудольф II Габсбург (18.07.1552, Вена – 20.01.1612, Прага) - король Германии и император Священной Римской империи. Сын Максимилиана II Габсбурга и дочери имератора Карла V Марии Испанской. Источник</p>
+                    </div>
+                </div>
+            </div>
+            <div id="personality-page2" class="paper">
+                <div class="front">
+                    <div id="f10" class="front-content personality-page2">
+                        <p class="personality-p2">Яков I (1566-1625) - король Англии и Шотландии (как Яков VI). Единственный сын шотландской королевы Марии и Генриха Стюарта. Источник</p>
+                        <p class="personality-p2">Стивен Лезье (1586–1627) - английский посол в Дании, Флоренции и Священной Римской империи. Источник</p>
+                        <p class="personality-p2">Георг Мартин фон Бальдховен (1578- 1633) - поэт и юрист, редактировал и публиковал стихи и письма Элизабет Джейн Уэстон в 1602 и 1607 годах. Источник</p>
+                        <p class="personality-p2">Йоханесс Лео -муж Элизабет Джейн Уэстон, адвокат при императорском дворе, магистр. Источник</p>
+                    </div>
+                </div>
             </div>
         </div>
 
