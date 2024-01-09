@@ -187,7 +187,7 @@ function goPrevious() {
         dictionaryPage2.style.zIndex = '-10';
         nextBtnNeed();
         prevBtnNeed();
-        dictionaryTab.style.backgroundImage = 'url("../img/dictionary-tab-hidden.png")';
+        dictionaryTab.style.backgroundImage = 'url("img/dictionary-tab-hidden.png")';
         dictionaryTab.style.backgroundRepeat = 'no repeat';
         dictionaryTab.style.position = 'absolute';
         dictionaryTab.style.top = '50px';
@@ -202,7 +202,7 @@ function goPrevious() {
         personalityPage2.style.zIndex = '-10';
         nextBtnNeed();
         prevBtnNeed();
-        personalityTab.style.backgroundImage = 'url("../img/personality-tab-hidden.png")';
+        personalityTab.style.backgroundImage = 'url("img/personality-tab-hidden.png")';
         personalityTab.style.backgroundRepeat = 'no repeat';
         personalityTab.style.position = 'absolute';
         personalityTab.style.top = '110px';
@@ -379,7 +379,7 @@ function showDictionary() {
     dictionaryPage2.style.zIndex = '12';
     nextBtn.style.visibility = 'hidden';
     prevBtn.style.visibility = 'unset';
-    dictionaryTab.style.backgroundImage = 'url("../img/dictionary-tab.png")';
+    dictionaryTab.style.backgroundImage = 'url("img/dictionary-tab.png")';
     dictionaryTab.style.backgroundRepeat = 'no repeat';
     dictionaryTab.style.right = '140px';
     dictionaryTab.style.width = '118px';
@@ -393,7 +393,7 @@ function showPersonality() {
     personalityPage2.style.zIndex = '12';
     nextBtn.style.visibility = 'hidden';
     prevBtn.style.visibility = 'unset';
-    personalityTab.style.backgroundImage = 'url("../img/personality-tab.png")';
+    personalityTab.style.backgroundImage = 'url("img/personality-tab.png")';
     personalityTab.style.backgroundRepeat = 'no repeat';
     personalityTab.style.right = '140px';
     personalityTab.style.width = '118px';
