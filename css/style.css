@@ -219,7 +219,7 @@ header {
 }
 
 .dictionary-tab:hover {
-    background-image: url("../img/dictionary-tab.png") !important;
+    background-image: url("../img/dictionary-tab.png");
     background-repeat: no-repeat !important;
     right: 140px !important;
     width: 118px !important;
@@ -242,7 +242,7 @@ header {
 }
 
 .personality-tab:hover {
-    background-image: url("../img/personality-tab.png") !important;
+    background-image: url("../img/personality-tab.png");
     background-repeat: no-repeat !important;
     right: 140px !important;
     width: 118px !important;
