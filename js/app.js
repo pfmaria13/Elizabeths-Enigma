@@ -1,4 +1,5 @@
 // References to DOM elements
+
 const prevBtn = document.querySelector('#prev-btn');
 const pulseAnimation = document.querySelector('#pulse');
 const nextBtn = document.querySelector('#next-btn');
@@ -208,33 +209,11 @@ function goPrevious() {
     }
 
     if (dictionaryPage1.style.zIndex === '12') {
-        dictionaryPage1.classList.remove("flipped");
-        dictionaryPage1.style.zIndex = '-10';
-        dictionaryPage2.style.zIndex = '-10';
-        nextBtnNeed();
-        prevBtnNeed();
-        dictionaryTab.style.backgroundImage = 'url("img/dictionary-tab-hidden.png")';
-        dictionaryTab.style.backgroundRepeat = 'no repeat';
-        dictionaryTab.style.position = 'absolute';
-        dictionaryTab.style.top = '50px';
-        dictionaryTab.style.left = '460px';
-        dictionaryTab.style.width = '71px';
-        dictionaryTab.style.height = '30px';
+        closeDictionary();
     }
 
     if (personalityPage1.style.zIndex === '12') {
-        personalityPage1.classList.remove("flipped");
-        personalityPage1.style.zIndex = '-10';
-        personalityPage2.style.zIndex = '-10';
-        nextBtnNeed();
-        prevBtnNeed();
-        personalityTab.style.backgroundImage = 'url("img/personality-tab-hidden.png")';
-        personalityTab.style.backgroundRepeat = 'no repeat';
-        personalityTab.style.position = 'absolute';
-        personalityTab.style.top = '110px';
-        personalityTab.style.left = '460px';
-        personalityTab.style.width = '71px';
-        personalityTab.style.height = '30px';
+        closePersonality();
     }
 }
 
@@ -256,8 +235,10 @@ function hidePrevNextBtns() {
 
 function spendLife() {
     if (gameLife3.style.opacity !== '0.3') {
+        localStorage.setItem('life', '2')
         gameLife3.style.opacity = '0.3';
     } else if (gameLife3.style.opacity === '0.3' && gameLife2.style.opacity !== '0.3') {
+        localStorage.setItem('life', '1');
         gameLife2.style.opacity = '0.3';
     } else if (gameLife2.style.opacity === '0.3' && gameLife1.style.opacity !== '0.3') {
         gameLife1.style.opacity = '0.3';
@@ -268,7 +249,7 @@ function spendLife() {
 const tryAgainYakov1 = document.querySelector('#againYakov1');
 const tryAgainYakov2 = document.querySelector('#againYakov2');
 
-const tryAgainRudolf1 = document.querySelector('#againRudolf1');
+// const tryAgainRudolf1 = document.querySelector('#againRudolf1');
 const tryAgainRudolf2 = document.querySelector('#againRudolf2');
 const tryAgainRudolf3 = document.querySelector('#againRudolf3');
 const verseWrongAnswerTryAgain = document.querySelector("#againRudolf4");
@@ -433,7 +414,7 @@ const trigger = document.querySelector(".trigger");
 const closeButton = document.querySelector(".close-button");
 const playAgainYesBtn = document.querySelector(".play-again-yes");
 const playAgainNoBtn = document.querySelector(".play-again-no");
-const playAgainFinal = document.querySelector("#againRudolf1");
+// const playAgainFinal = document.querySelector("#againRudolf1");
 
 const modalLivesOver = document.querySelector('.modal-lives-over');
 const closeButtonLivesOver = document.querySelector('.close-button-lives-over');
@@ -459,7 +440,7 @@ closeButton.addEventListener("click", toggleModal);
 window.addEventListener("click", windowOnClick);
 playAgainYesBtn.addEventListener("click", playAgainYes);
 playAgainNoBtn.addEventListener("click", toggleModal);
-playAgainFinal.addEventListener("click", playAgainYes);
+// playAgainFinal.addEventListener("click", playAgainYes);
 
 closeButtonLivesOver.addEventListener("click", toggleModalLivesOver);
 playAgainYesBtnLivesOver.addEventListener("click", playAgainYes);
@@ -469,8 +450,7 @@ function playAgainYes() {
     location.reload(true);
 }
 
-// Show dictionary
-function showDictionary() {
+function openDictionary() {
     dictionaryPage1.classList.add("flipped");
     dictionaryPage1.style.zIndex = '12';
     dictionaryPage2.style.zIndex = '12';
@@ -483,8 +463,7 @@ function showDictionary() {
     dictionaryTab.style.height = '30px';
 }
 
-// Show personality
-function showPersonality() {
+function openPersonality() {
     personalityPage1.classList.add('flipped');
     personalityPage1.style.zIndex = '12';
     personalityPage2.style.zIndex = '12';
@@ -495,6 +474,60 @@ function showPersonality() {
     personalityTab.style.right = '140px';
     personalityTab.style.width = '118px';
     personalityTab.style.height = '30px';
+}
+
+function closeDictionary() {
+    dictionaryPage1.classList.remove("flipped");
+    dictionaryPage1.style.zIndex = '-10';
+    dictionaryPage2.style.zIndex = '-10';
+    nextBtnNeed();
+    prevBtnNeed();
+    dictionaryTab.style.backgroundImage = 'url("img/dictionary-tab-hidden.png")';
+    dictionaryTab.style.backgroundRepeat = 'no repeat';
+    dictionaryTab.style.position = 'absolute';
+    dictionaryTab.style.top = '50px';
+    dictionaryTab.style.left = '460px';
+    dictionaryTab.style.width = '71px';
+    dictionaryTab.style.height = '30px';
+}
+
+function closePersonality() {
+    personalityPage1.classList.remove("flipped");
+    personalityPage1.style.zIndex = '-10';
+    personalityPage2.style.zIndex = '-10';
+    nextBtnNeed();
+    prevBtnNeed();
+    personalityTab.style.backgroundImage = 'url("img/personality-tab-hidden.png")';
+    personalityTab.style.backgroundRepeat = 'no repeat';
+    personalityTab.style.position = 'absolute';
+    personalityTab.style.top = '110px';
+    personalityTab.style.left = '460px';
+    personalityTab.style.width = '71px';
+    personalityTab.style.height = '30px';
+}
+
+// Show dictionary
+function showDictionary() {
+    if (personalityPage1.style.zIndex !== '12') {
+        openDictionary();
+    }
+
+    else {
+        closePersonality();
+        setTimeout(openDictionary, 200);
+    }
+}
+
+// Show personality
+function showPersonality() {
+    if (dictionaryPage1.style.zIndex !== '12') {
+        openPersonality();
+    }
+
+    else {
+        closeDictionary();
+        setTimeout(openPersonality, 200);
+    }
 }
 
 // Main choices

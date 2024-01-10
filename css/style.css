@@ -23,7 +23,7 @@
 body {
     background-color: #79543F;
     color: #2F1301;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .container {
@@ -523,7 +523,8 @@ header {
 }
 
 .personality-Steven {
-
+    left: -300px;
+    height: 120px;
 }
 
 .personality-Baldhoven {
@@ -651,6 +652,13 @@ header {
 .word-Baldhoven3 {
     top: -100px;
     height: 100px;
+}
+
+.word-Tristiya {
+    left: -130px;
+    top: 24px;
+    width: 240px;
+    height: 40px;
 }
 
 .dictionary-word:hover {
@@ -1024,6 +1032,47 @@ i {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+}
+
+.page8-choice1 {
+    position: relative;
+}
+
+.page8-p {
+    font-family: PP Writer;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: -0.7px;
+    position: absolute;
+    bottom: 63%;
+    width: 355px;
+    height: 160px;
+    left: 11%;
+}
+.page10-u {
+    position: relative;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: -0.7px;
+    position: absolute;
+    bottom: 86.8%;
+    left: 51.8%;
+}
+
+.page8-h {
+    text-align: center;
+    font-family: PP Writer;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 30px */
+    letter-spacing: -1px;
+    font-size: 21px;
+    position: relative;
+    bottom: 82%;
 }
 
 .page9-yakov {
@@ -1825,8 +1874,48 @@ i {
     justify-content: center;
 }
 
+.comics1-img {
+    padding-bottom: 5px;
+    position: absolute;
+}
+.comics-page1-u {
+    position: absolute;
+    left: -35px;
+    top: -70px;
+}
+
+.word-iogan {
+    color: #2F1301;
+    text-align: center;
+    font-family: MontserratNew;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    left: -33%;
+    bottom: -7.5%;
+}
+
+.comics-page1-p {
+    position: relative;
+    color: #2F1301;
+    text-align: center;
+    font-family: MontserratNew;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    left: -33%;
+    bottom: -7.7%;
+
+}
+
 .numeration {
     font-family: MontserratNew;
     position: absolute;
     bottom: 11px;
+}
+
+.game-over-logo {
+    width: 40%;
 }
