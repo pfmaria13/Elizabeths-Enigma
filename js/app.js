@@ -291,85 +291,139 @@ tryAgainFate1.addEventListener("click", tryAgainFateP1);
 tryAgainFate2.addEventListener("click", tryAgainFateP2);
 
 function tryAgainYakovP1() {
-    paper6.classList.remove("flipped");
-    paper5.classList.remove("flipped");
-    paper3.style.zIndex = 'unset';
-    paper5.style.zIndex = '5';
-    paper6.style.zIndex = '2';
-    paper7.style.zIndex = '1';
-    paper8.style.zIndex = '0';
-    nextBtn.style.visibility = 'hidden';
+    if (gameLife1.style.opacity === '0.3') {
+        toggleModalLivesOver();
+    }
+
+    else {
+        paper6.classList.remove("flipped");
+        paper5.classList.remove("flipped");
+        paper3.style.zIndex = 'unset';
+        paper5.style.zIndex = '5';
+        paper6.style.zIndex = '2';
+        paper7.style.zIndex = '1';
+        paper8.style.zIndex = '0';
+        nextBtn.style.visibility = 'hidden';
+    }
 }
 
 function tryAgainYakovP2() {
-    paper6.classList.remove("flipped");
-    paper5.classList.remove("flipped");
-    paper32.classList.remove("flipped");
-    paper3.style.zIndex = 'unset';
-    paper4.style.zIndex = '4';
-    paper5.style.zIndex = '5';
-    paper6.style.zIndex = '2';
-    paper8.style.zIndex = '1';
-    paper7.style.zIndex = '0';
-    paper32.style.zIndex = 'unset';
-    nextBtn.style.visibility = 'hidden';
+    if (gameLife1.style.opacity === '0.3') {
+        toggleModalLivesOver();
+    }
+
+    else {
+        paper6.classList.remove("flipped");
+        paper5.classList.remove("flipped");
+        paper32.classList.remove("flipped");
+        paper3.style.zIndex = 'unset';
+        paper4.style.zIndex = '4';
+        paper5.style.zIndex = '5';
+        paper6.style.zIndex = '2';
+        paper8.style.zIndex = '1';
+        paper7.style.zIndex = '0';
+        paper32.style.zIndex = 'unset';
+        nextBtn.style.visibility = 'hidden';
+    }
 }
 
 function tryAgainRudolfP1() {
-    paper12.classList.remove("flipped");
-    paper12.style.zIndex = 'unset';
-    paper13.style.zIndex = 'unset';
+    if (gameLife1.style.opacity === '0.3') {
+        toggleModalLivesOver();
+    }
+
+    else {
+        paper12.classList.remove("flipped");
+        paper12.style.zIndex = 'unset';
+        paper13.style.zIndex = 'unset';
+    }
 }
 
 function tryAgainRudolfP2() {
-    paper25.classList.remove("flipped");
-    paper25.style.zIndex = 'unset';
-    paper26.style.zIndex = 'unset';
+    if (gameLife1.style.opacity === '0.3') {
+        toggleModalLivesOver();
+    }
+
+    else {
+        paper25.classList.remove("flipped");
+        paper25.style.zIndex = 'unset';
+        paper26.style.zIndex = 'unset';
+    }
 }
 
 function rudolfVerseWrongAnswerTryAgain() {
-    paper30.classList.remove("flipped");
-    paper30.style.zIndex = 'unset';
-    paper31.style.zIndex = 'unset';
-    paper11.classList.add("flipped");
-    paper11.style.zIndex = '6';
-    paper14.style.zIndex = '7';
+    if (gameLife1.style.opacity === '0.3') {
+        toggleModalLivesOver();
+    }
+
+    else {
+        paper30.classList.remove("flipped");
+        paper30.style.zIndex = 'unset';
+        paper31.style.zIndex = 'unset';
+        paper11.classList.add("flipped");
+        paper11.style.zIndex = '6';
+        paper14.style.zIndex = '7';
+    }
 }
 
 function tryAgainRudolfP4() {
-    paper18.classList.remove("flipped");
-    paper18.style.zIndex = 'unset';
-    paper19.style.zIndex = 'unset';
+    if (gameLife1.style.opacity === '0.3') {
+        toggleModalLivesOver();
+    }
+
+    else {
+        paper18.classList.remove("flipped");
+        paper18.style.zIndex = 'unset';
+        paper19.style.zIndex = 'unset';
+    }
 }
 
 function tryAgainRudolfP5() {
-    paper21.classList.remove("flipped");
-    paper21.style.zIndex = 'unset';
-    paper22.style.zIndex = 'unset';
+    if (gameLife1.style.opacity === '0.3') {
+        toggleModalLivesOver();
+    }
+
+    else {
+        paper21.classList.remove("flipped");
+        paper21.style.zIndex = 'unset';
+        paper22.style.zIndex = 'unset';
+    }
 }
 
 function tryAgainFateP1() {
-    paper23.classList.remove("flipped");
-    paper24.classList.remove("flipped");
-    paper4.style.zIndex = '4';
-    paper5.style.zIndex = '5';
-    paper23.style.zIndex = '2';
-    paper24.style.zIndex = '1';
-    paper27.style.zIndex = '0';
-    nextBtn.style.visibility = 'hidden';
+    if (gameLife1.style.opacity === '0.3') {
+        toggleModalLivesOver();
+    }
+
+    else {
+        paper23.classList.remove("flipped");
+        paper24.classList.remove("flipped");
+        paper4.style.zIndex = '4';
+        paper5.style.zIndex = '5';
+        paper23.style.zIndex = '2';
+        paper24.style.zIndex = '1';
+        paper27.style.zIndex = '0';
+        nextBtn.style.visibility = 'hidden';
+    }
 }
 
 function tryAgainFateP2() {
-    paper23.classList.remove("flipped");
-    paper24.classList.remove("flipped");
-    paper28.classList.remove("flipped");
-    paper4.style.zIndex = '4';
-    paper5.style.zIndex = '5';
-    paper28.style.zIndex = '2';
-    paper24.style.zIndex = '1';
-    paper29.style.zIndex = '0';
-    paper23.style.zIndex = '0';
-    nextBtn.style.visibility = 'hidden';
+    if (gameLife1.style.opacity === '0.3') {
+        toggleModalLivesOver();
+    }
+
+    else {
+        paper23.classList.remove("flipped");
+        paper24.classList.remove("flipped");
+        paper28.classList.remove("flipped");
+        paper4.style.zIndex = '4';
+        paper5.style.zIndex = '5';
+        paper28.style.zIndex = '2';
+        paper24.style.zIndex = '1';
+        paper29.style.zIndex = '0';
+        paper23.style.zIndex = '0';
+        nextBtn.style.visibility = 'hidden';
+    }
 }
 
 
@@ -381,8 +435,17 @@ const playAgainYesBtn = document.querySelector(".play-again-yes");
 const playAgainNoBtn = document.querySelector(".play-again-no");
 const playAgainFinal = document.querySelector("#againRudolf1");
 
+const modalLivesOver = document.querySelector('.modal-lives-over');
+const closeButtonLivesOver = document.querySelector('.close-button-lives-over');
+const playAgainYesBtnLivesOver = document.querySelector('.play-again-yes-lives-over');
+const playAgainNoBtnLivesOver = document.querySelector('.play-again-no-lives-over');
+
 function toggleModal() {
     modal.classList.toggle("show-modal");
+}
+
+function toggleModalLivesOver() {
+    modalLivesOver.classList.toggle("show-modal");
 }
 
 function windowOnClick(event) {
@@ -397,6 +460,10 @@ window.addEventListener("click", windowOnClick);
 playAgainYesBtn.addEventListener("click", playAgainYes);
 playAgainNoBtn.addEventListener("click", toggleModal);
 playAgainFinal.addEventListener("click", playAgainYes);
+
+closeButtonLivesOver.addEventListener("click", toggleModalLivesOver);
+playAgainYesBtnLivesOver.addEventListener("click", playAgainYes);
+playAgainNoBtnLivesOver.addEventListener("click", toggleModalLivesOver);
 
 function playAgainYes() {
     location.reload(true);
