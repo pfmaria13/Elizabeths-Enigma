@@ -42,7 +42,13 @@ const paper28 = document.querySelector('#p28');
 const paper29 = document.querySelector('#p29');
 const paper30 = document.querySelector('#p30');
 const paper31 = document.querySelector('#p31');
+const paper32 = document.querySelector('#p32');
 
+// Comics
+const comicsPage1 = document.querySelector('#comics-page1');
+const comicsPage2 = document.querySelector('#comics-page2');
+const comicsPage3 = document.querySelector('#comics-page3');
+const comicsPage4 = document.querySelector('#comics-page4');
 
 // Dictionary
 const dictionaryPage1 = document.querySelector('#dictionary-page1');
@@ -104,22 +110,34 @@ function goNext() {
                 paper2.style.zIndex = '2';
                 break;
             case 3:
-                paper3.classList.add("flipped");
-                paper3.style.zIndex = '3';
+                comicsPage1.classList.add("flipped");
+                comicsPage1.style.zIndex = '3';
+                comicsPage2.style.zIndex = '5';
                 break;
             case 4:
+                comicsPage3.classList.add("flipped");
+                comicsPage3.style.zIndex = '3';
+                comicsPage4.style.zIndex = '5';
+
+                comicsPage1.style.zIndex = '2';
+                comicsPage2.style.zIndex = 'unset';
+                paper3.style.zIndex = '3';
+                break;
+            case 5:
                 paper4.classList.add("flipped");
+                comicsPage3.style.zIndex = '2';
+                comicsPage4.style.zIndex = 'unset';
                 paper4.style.zIndex = '4';
                 paper5.style.zIndex = '4';
                 nextBtn.style.visibility = 'hidden';
                 break;
-            case 5:
+            case 6:
                 paper15.classList.add("flipped");
                 paper15.style.zIndex = '8';
                 paper16.style.zIndex = '9';
                 pulseAnimation.style.visibility = 'hidden';
                 break;
-            case 6:
+            case 7:
                 closeBook(false);
                 paper7.classList.add("flipped");
                 paper7.style.zIndex = '7';
@@ -152,26 +170,34 @@ function goPrevious() {
                 paper2.style.zIndex = '6';
                 break;
             case 4:
-                paper3.classList.remove("flipped");
-                paper3.style.zIndex = '5';
+                comicsPage1.classList.remove("flipped");
+                comicsPage1.style.zIndex = 'unset';
+                comicsPage2.style.zIndex = 'unset';
                 break;
             case 5:
+                comicsPage3.classList.remove("flipped");
+                comicsPage4.style.zIndex = 'unset';
+                comicsPage2.style.zIndex = '5';
+                paper3.style.zIndex = '5';
+                break;
+            case 6:
                 paper4.classList.remove("flipped");
+                comicsPage4.style.zIndex = '4';
                 paper4.style.zIndex = '4';
                 paper5.style.zIndex = '3';
                 nextBtn.style.visibility = 'unset';
                 break;
-            case 6:
+            case 7:
                 paper5.classList.remove("flipped");
                 paper5.style.zIndex = '4';
                 paper6.style.zIndex = '3';
                 break;
-            case 7:
+            case 8:
                 paper6.classList.remove("flipped");
                 paper6.style.zIndex = '5';
                 paper7.style.zIndex = '1';
                 break;
-            case 8:
+            case 9:
                 openBook()
                 paper7.classList.remove("flipped");
                 paper7.style.zIndex = '6';
@@ -267,6 +293,7 @@ tryAgainFate2.addEventListener("click", tryAgainFateP2);
 function tryAgainYakovP1() {
     paper6.classList.remove("flipped");
     paper5.classList.remove("flipped");
+    paper3.style.zIndex = 'unset';
     paper5.style.zIndex = '5';
     paper6.style.zIndex = '2';
     paper7.style.zIndex = '1';
@@ -277,11 +304,14 @@ function tryAgainYakovP1() {
 function tryAgainYakovP2() {
     paper6.classList.remove("flipped");
     paper5.classList.remove("flipped");
+    paper32.classList.remove("flipped");
+    paper3.style.zIndex = 'unset';
     paper4.style.zIndex = '4';
     paper5.style.zIndex = '5';
     paper6.style.zIndex = '2';
     paper8.style.zIndex = '1';
     paper7.style.zIndex = '0';
+    paper32.style.zIndex = 'unset';
     nextBtn.style.visibility = 'hidden';
 }
 
@@ -434,8 +464,8 @@ function chooseYakovP10_1() {
 }
 
 function chooseYakovP10_2() {
-    paper6.classList.add("flipped");
-    paper6.style.zIndex = '5';
+    paper32.classList.add("flipped");
+    paper32.style.zIndex = '5';
     paper8.style.zIndex = '5';
 
     spendLife();
