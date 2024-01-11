@@ -251,6 +251,24 @@ header {
     }
 }
 
+.play-again-no-lives-over:hover {
+    .play-again-no-decor {
+        background-image: url("../img/play-again-no-decor-hover.png");
+    }
+    .play-again-no-p {
+        color: #2F1301;
+    }
+}
+
+.play-again-yes-lives-over:hover {
+    .play-again-yes-decor {
+        background-image: url("../img/play-again-yes-decor-hover.png");
+    }
+    .play-again-yes-p {
+        color: #2F1301;
+    }
+}
+
 .cover-background {
     position: absolute;
     bottom: 10px;

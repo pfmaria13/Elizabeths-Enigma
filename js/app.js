@@ -1,5 +1,4 @@
 // References to DOM elements
-
 const prevBtn = document.querySelector('#prev-btn');
 const pulseAnimation = document.querySelector('#pulse');
 const nextBtn = document.querySelector('#next-btn');
@@ -133,6 +132,7 @@ function goNext() {
                 nextBtn.style.visibility = 'hidden';
                 break;
             case 6:
+                localStorage.setItem('choice', '14');
                 paper15.classList.add("flipped");
                 paper15.style.zIndex = '8';
                 paper16.style.zIndex = '9';
@@ -241,6 +241,7 @@ function spendLife() {
         localStorage.setItem('life', '1');
         gameLife2.style.opacity = '0.3';
     } else if (gameLife2.style.opacity === '0.3' && gameLife1.style.opacity !== '0.3') {
+        localStorage.setItem('life', '0');
         gameLife1.style.opacity = '0.3';
     }
 }
@@ -447,6 +448,8 @@ playAgainYesBtnLivesOver.addEventListener("click", playAgainYes);
 playAgainNoBtnLivesOver.addEventListener("click", toggleModalLivesOver);
 
 function playAgainYes() {
+    localStorage.life = '3';
+    localStorage.choice = '0';
     location.reload(true);
 }
 
@@ -532,6 +535,7 @@ function showPersonality() {
 
 // Main choices
 function chooseYakov() {
+    localStorage.setItem('choice', '1');
     paper5.classList.add("flipped");
     paper5.style.zIndex = '5';
     paper6.style.zIndex = '5';
@@ -539,6 +543,7 @@ function chooseYakov() {
 }
 
 function chooseRudolf() {
+    localStorage.setItem('choice', '2');
     paper9.classList.add("flipped");
     paper9.style.zIndex = '5';
     paper10.style.zIndex = '5';
@@ -546,6 +551,7 @@ function chooseRudolf() {
 }
 
 function chooseResignFate() {
+    localStorage.setItem('choice', '3');
     paper23.classList.add("flipped");
     paper23.style.zIndex = '5';
     paper24.style.zIndex = '5';
@@ -556,6 +562,7 @@ function chooseResignFate() {
 
 // Yakov's story
 function chooseYakovP10_1() {
+    localStorage.setItem('choice', '4');
     paper6.classList.add("flipped");
     paper6.style.zIndex = '5';
     paper7.style.zIndex = '5';
@@ -564,6 +571,7 @@ function chooseYakovP10_1() {
 }
 
 function chooseYakovP10_2() {
+    localStorage.setItem('choice', '5');
     paper32.classList.add("flipped");
     paper32.style.zIndex = '5';
     paper8.style.zIndex = '5';
@@ -581,12 +589,14 @@ verseWrongAnswer1.addEventListener("click", rudolfVerseWrongAnswer);
 verseWrongAnswer2.addEventListener("click", rudolfVerseWrongAnswer);
 
 function chooseRudolfP10_1() {
+    localStorage.setItem('choice', '8');
     paper10.classList.add("flipped");
     paper10.style.zIndex = '5';
     paper11.style.zIndex = '6';
 }
 
 function chooseRudolfP10_2() {
+    localStorage.setItem('choice', '9');
     spendLife();
     paper12.classList.add("flipped");
     paper12.style.zIndex = '5';
@@ -594,12 +604,14 @@ function chooseRudolfP10_2() {
 }
 
 function chooseRudolfP12_1() {
+    localStorage.setItem('choice', '10');
     paper11.classList.add("flipped");
     paper11.style.zIndex = '6';
     paper14.style.zIndex = '7';
 }
 
 function chooseRudolfP12_2() {
+    localStorage.setItem('choice', '11');
     spendLife();
     paper25.classList.add("flipped");
     paper25.style.zIndex = '6';
@@ -607,12 +619,14 @@ function chooseRudolfP12_2() {
 }
 
 function rudolfVerseCorrectAnswer() {
+    localStorage.setItem('choice', '12');
     paper14.classList.add("flipped");
     paper14.style.zIndex = '7';
     paper15.style.zIndex = '8';
 }
 
 function rudolfVerseWrongAnswer() {
+    localStorage.setItem('choice', '13');
     spendLife();
     paper30.classList.add("flipped");
     paper30.style.zIndex = '7';
@@ -620,12 +634,14 @@ function rudolfVerseWrongAnswer() {
 }
 
 function chooseRudolfP18_1() {
+    localStorage.setItem('choice', '15');
     paper16.classList.add("flipped");
     paper16.style.zIndex = '9';
     paper17.style.zIndex = '10';
 }
 
 function chooseRudolfP18_2() {
+    localStorage.setItem('choice', '16');
     spendLife();
     paper18.classList.add("flipped");
     paper18.style.zIndex = '9';
@@ -633,12 +649,14 @@ function chooseRudolfP18_2() {
 }
 
 function chooseRudolfP20_1() {
+    localStorage.setItem('choice', '17');
     paper17.classList.add("flipped");
     paper17.style.zIndex = '10';
     paper20.style.zIndex = '11';
 }
 
 function chooseRudolfP20_2() {
+    localStorage.setItem('choice', '18');
     spendLife();
     paper21.classList.add("flipped");
     paper21.style.zIndex = '10';
@@ -647,6 +665,7 @@ function chooseRudolfP20_2() {
 
 // Resign Fate
 function chooseResignFateP10_1() {
+    localStorage.setItem('choice', '6');
     paper24.classList.add("flipped");
     paper24.style.zIndex = '5';
     paper27.style.zIndex = '6';
@@ -655,9 +674,487 @@ function chooseResignFateP10_1() {
 }
 
 function chooseResignFateP10_2() {
+    localStorage.setItem('choice', '7');
     paper28.classList.add("flipped");
     paper28.style.zIndex = '5';
     paper29.style.zIndex = '6';
 
     spendLife()
+}
+
+// Local storage
+
+// Save lives status
+if (localStorage.life === '2') {
+    gameLife3.style.opacity = '0.3';
+}
+else if (localStorage.life === '1') {
+    gameLife3.style.opacity = '0.3';
+    gameLife2.style.opacity = '0.3';
+}
+else if (localStorage.life === '0') {
+    gameLife3.style.opacity = '0.3';
+    gameLife2.style.opacity = '0.3';
+    gameLife1.style.opacity = '0.3';
+}
+
+// Save game progress
+switch (localStorage.choice) {
+    case '1':
+        openBook();
+        book.style.visibility = 'unset';
+        coverBackground.style.visibility = 'hidden';
+        prevBtn.style.visibility = 'unset';
+        bookBackground.style.visibility = 'unset';
+        dictionaryTab.style.visibility = 'unset';
+        dictionaryTab.style.transition = '1s';
+        personalityTab.style.visibility = 'unset';
+        personalityTab.style.transition = '1s';
+        paper1.classList.add("flipped");
+        paper1.style.zIndex = '1';
+        paper2.classList.add("flipped");
+        paper2.style.zIndex = '2';
+        paper4.classList.add("flipped");
+        nextBtn.style.visibility = 'hidden';
+
+        paper5.classList.add("flipped");
+        paper5.style.zIndex = '5';
+        paper6.style.zIndex = '5';
+        prevBtn.style.visibility = 'hidden';
+        break;
+    case '2':
+        openBook();
+        book.style.visibility = 'unset';
+        coverBackground.style.visibility = 'hidden';
+        prevBtn.style.visibility = 'unset';
+        bookBackground.style.visibility = 'unset';
+        dictionaryTab.style.visibility = 'unset';
+        dictionaryTab.style.transition = '1s';
+        personalityTab.style.visibility = 'unset';
+        personalityTab.style.transition = '1s';
+        paper1.classList.add("flipped");
+        paper1.style.zIndex = '1';
+        paper2.classList.add("flipped");
+        paper2.style.zIndex = '2';
+        paper4.classList.add("flipped");
+        nextBtn.style.visibility = 'hidden';
+
+        paper9.classList.add("flipped");
+        paper9.style.zIndex = '5';
+        paper10.style.zIndex = '5';
+        prevBtn.style.visibility = 'hidden';
+        break;
+    case '3':
+        openBook();
+        book.style.visibility = 'unset';
+        coverBackground.style.visibility = 'hidden';
+        prevBtn.style.visibility = 'unset';
+        bookBackground.style.visibility = 'unset';
+        dictionaryTab.style.visibility = 'unset';
+        dictionaryTab.style.transition = '1s';
+        personalityTab.style.visibility = 'unset';
+        personalityTab.style.transition = '1s';
+        paper1.classList.add("flipped");
+        paper1.style.zIndex = '1';
+        paper2.classList.add("flipped");
+        paper2.style.zIndex = '2';
+        paper4.classList.add("flipped");
+        nextBtn.style.visibility = 'hidden';
+
+        paper23.classList.add("flipped");
+        paper23.style.zIndex = '5';
+        paper24.style.zIndex = '5';
+        prevBtn.style.visibility = 'hidden';
+        break;
+    case '4':
+        openBook();
+        book.style.visibility = 'unset';
+        coverBackground.style.visibility = 'hidden';
+        prevBtn.style.visibility = 'hidden';
+        bookBackground.style.visibility = 'unset';
+        dictionaryTab.style.visibility = 'unset';
+        dictionaryTab.style.transition = '1s';
+        personalityTab.style.visibility = 'unset';
+        personalityTab.style.transition = '1s';
+        paper1.classList.add("flipped");
+        paper1.style.zIndex = '1';
+        paper2.classList.add("flipped");
+        paper2.style.zIndex = '2';
+        paper4.classList.add("flipped");
+        nextBtn.style.visibility = 'hidden';
+
+        paper6.classList.add("flipped");
+        paper6.style.zIndex = '5';
+        paper7.style.zIndex = '5';
+        break;
+    case '5':
+        openBook();
+        book.style.visibility = 'unset';
+        coverBackground.style.visibility = 'hidden';
+        prevBtn.style.visibility = 'hidden';
+        bookBackground.style.visibility = 'unset';
+        dictionaryTab.style.visibility = 'unset';
+        dictionaryTab.style.transition = '1s';
+        personalityTab.style.visibility = 'unset';
+        personalityTab.style.transition = '1s';
+        paper1.classList.add("flipped");
+        paper1.style.zIndex = '1';
+        paper2.classList.add("flipped");
+        paper2.style.zIndex = '2';
+        paper4.classList.add("flipped");
+        nextBtn.style.visibility = 'hidden';
+
+        paper32.classList.add("flipped");
+        paper32.style.zIndex = '5';
+        paper8.style.zIndex = '5';
+        break;
+    case '6':
+        openBook();
+        book.style.visibility = 'unset';
+        coverBackground.style.visibility = 'hidden';
+        prevBtn.style.visibility = 'hidden';
+        bookBackground.style.visibility = 'unset';
+        dictionaryTab.style.visibility = 'unset';
+        dictionaryTab.style.transition = '1s';
+        personalityTab.style.visibility = 'unset';
+        personalityTab.style.transition = '1s';
+        paper1.classList.add("flipped");
+        paper1.style.zIndex = '1';
+        paper2.classList.add("flipped");
+        paper2.style.zIndex = '2';
+        paper4.classList.add("flipped");
+        nextBtn.style.visibility = 'hidden';
+
+        paper24.classList.add("flipped");
+        paper24.style.zIndex = '5';
+        paper27.style.zIndex = '6';
+        break;
+    case '7':
+        openBook();
+        book.style.visibility = 'unset';
+        coverBackground.style.visibility = 'hidden';
+        prevBtn.style.visibility = 'hidden';
+        bookBackground.style.visibility = 'unset';
+        dictionaryTab.style.visibility = 'unset';
+        dictionaryTab.style.transition = '1s';
+        personalityTab.style.visibility = 'unset';
+        personalityTab.style.transition = '1s';
+        paper1.classList.add("flipped");
+        paper1.style.zIndex = '1';
+        paper2.classList.add("flipped");
+        paper2.style.zIndex = '2';
+        paper4.classList.add("flipped");
+        nextBtn.style.visibility = 'hidden';
+
+        paper28.classList.add("flipped");
+        paper28.style.zIndex = '5';
+        paper29.style.zIndex = '6';
+        break;
+    case '8':
+        openBook();
+        book.style.visibility = 'unset';
+        coverBackground.style.visibility = 'hidden';
+        prevBtn.style.visibility = 'hidden';
+        bookBackground.style.visibility = 'unset';
+        dictionaryTab.style.visibility = 'unset';
+        dictionaryTab.style.transition = '1s';
+        personalityTab.style.visibility = 'unset';
+        personalityTab.style.transition = '1s';
+        paper1.classList.add("flipped");
+        paper1.style.zIndex = '1';
+        paper2.classList.add("flipped");
+        paper2.style.zIndex = '2';
+        paper4.classList.add("flipped");
+        paper5.style.zIndex = '5';
+        nextBtn.style.visibility = 'hidden';
+        currentState = 6;
+
+        paper10.classList.add("flipped");
+        paper10.style.zIndex = '5';
+        paper11.style.zIndex = '6';
+        break;
+    case '9':
+        openBook();
+        book.style.visibility = 'unset';
+        coverBackground.style.visibility = 'hidden';
+        prevBtn.style.visibility = 'hidden';
+        bookBackground.style.visibility = 'unset';
+        dictionaryTab.style.visibility = 'unset';
+        dictionaryTab.style.transition = '1s';
+        personalityTab.style.visibility = 'unset';
+        personalityTab.style.transition = '1s';
+        paper1.classList.add("flipped");
+        paper1.style.zIndex = '1';
+        paper2.classList.add("flipped");
+        paper2.style.zIndex = '2';
+        paper4.classList.add("flipped");
+        paper5.style.zIndex = '5';
+        paper9.classList.add("flipped");
+        paper9.style.zIndex = '5';
+        paper10.style.zIndex = '5';
+        nextBtn.style.visibility = 'hidden';
+        currentState = 6;
+
+        paper12.classList.add("flipped");
+        paper12.style.zIndex = '5';
+        paper13.style.zIndex = '6';
+        break;
+    case '10':
+        openBook();
+        book.style.visibility = 'unset';
+        coverBackground.style.visibility = 'hidden';
+        prevBtn.style.visibility = 'hidden';
+        bookBackground.style.visibility = 'unset';
+        dictionaryTab.style.visibility = 'unset';
+        dictionaryTab.style.transition = '1s';
+        personalityTab.style.visibility = 'unset';
+        personalityTab.style.transition = '1s';
+        paper1.classList.add("flipped");
+        paper1.style.zIndex = '1';
+        paper2.classList.add("flipped");
+        paper2.style.zIndex = '2';
+        paper4.classList.add("flipped");
+        paper5.style.zIndex = '5';
+        paper9.classList.add("flipped");
+        paper9.style.zIndex = '5';
+        paper10.style.zIndex = '5';
+        nextBtn.style.visibility = 'hidden';
+        currentState = 6;
+
+        paper11.classList.add("flipped");
+        paper11.style.zIndex = '6';
+        paper14.style.zIndex = '7';
+        break;
+    case '11':
+        openBook();
+        book.style.visibility = 'unset';
+        coverBackground.style.visibility = 'hidden';
+        prevBtn.style.visibility = 'hidden';
+        bookBackground.style.visibility = 'unset';
+        dictionaryTab.style.visibility = 'unset';
+        dictionaryTab.style.transition = '1s';
+        personalityTab.style.visibility = 'unset';
+        personalityTab.style.transition = '1s';
+        paper1.classList.add("flipped");
+        paper1.style.zIndex = '1';
+        paper2.classList.add("flipped");
+        paper2.style.zIndex = '2';
+        paper4.classList.add("flipped");
+        paper5.style.zIndex = '5';
+        paper9.classList.add("flipped");
+        paper9.style.zIndex = '5';
+        paper10.style.zIndex = '5';
+        paper10.classList.add("flipped");
+        paper11.style.zIndex = '6';
+        nextBtn.style.visibility = 'hidden';
+        currentState = 6;
+
+        paper25.classList.add("flipped");
+        paper25.style.zIndex = '6';
+        paper26.style.zIndex = '7';
+        break;
+    case '12':
+        openBook();
+        book.style.visibility = 'unset';
+        coverBackground.style.visibility = 'hidden';
+        prevBtn.style.visibility = 'hidden';
+        bookBackground.style.visibility = 'unset';
+        dictionaryTab.style.visibility = 'unset';
+        dictionaryTab.style.transition = '1s';
+        personalityTab.style.visibility = 'unset';
+        personalityTab.style.transition = '1s';
+        paper1.classList.add("flipped");
+        paper1.style.zIndex = '1';
+        paper2.classList.add("flipped");
+        paper2.style.zIndex = '2';
+        paper4.classList.add("flipped");
+        paper5.style.zIndex = '5';
+        paper9.classList.add("flipped");
+        paper9.style.zIndex = '5';
+        paper10.style.zIndex = '5';
+        paper10.classList.add("flipped");
+        paper11.style.zIndex = '6';
+        nextBtn.style.visibility = 'hidden';
+        currentState = 6;
+
+        paper14.classList.add("flipped");
+        paper14.style.zIndex = '7';
+        paper15.style.zIndex = '8';
+        break;
+    case '13':
+        openBook();
+        book.style.visibility = 'unset';
+        coverBackground.style.visibility = 'hidden';
+        prevBtn.style.visibility = 'hidden';
+        bookBackground.style.visibility = 'unset';
+        dictionaryTab.style.visibility = 'unset';
+        dictionaryTab.style.transition = '1s';
+        personalityTab.style.visibility = 'unset';
+        personalityTab.style.transition = '1s';
+        paper1.classList.add("flipped");
+        paper1.style.zIndex = '1';
+        paper2.classList.add("flipped");
+        paper2.style.zIndex = '2';
+        paper4.classList.add("flipped");
+        paper5.style.zIndex = '5';
+        paper9.classList.add("flipped");
+        paper9.style.zIndex = '5';
+        paper10.style.zIndex = '5';
+        paper10.classList.add("flipped");
+        paper11.classList.add("flipped");
+        paper11.style.zIndex = '6';
+        paper14.style.zIndex = '7';
+        nextBtn.style.visibility = 'hidden';
+        currentState = 6;
+
+        paper30.classList.add("flipped");
+        paper30.style.zIndex = '7';
+        paper31.style.zIndex = '8';
+        break;
+    case '14':
+        openBook();
+        book.style.visibility = 'unset';
+        coverBackground.style.visibility = 'hidden';
+        prevBtn.style.visibility = 'hidden';
+        bookBackground.style.visibility = 'unset';
+        dictionaryTab.style.visibility = 'unset';
+        dictionaryTab.style.transition = '1s';
+        personalityTab.style.visibility = 'unset';
+        personalityTab.style.transition = '1s';
+        paper1.classList.add("flipped");
+        paper1.style.zIndex = '1';
+        paper2.classList.add("flipped");
+        paper2.style.zIndex = '2';
+        paper4.classList.add("flipped");
+        paper5.style.zIndex = '5';
+        paper9.classList.add("flipped");
+        paper9.style.zIndex = '5';
+        paper10.style.zIndex = '5';
+        paper10.classList.add("flipped");
+        paper11.classList.add("flipped");
+        paper11.style.zIndex = '6';
+        paper14.style.zIndex = '7';
+        nextBtn.style.visibility = 'hidden';
+
+        paper15.classList.add("flipped");
+        paper15.style.zIndex = '8';
+        paper16.style.zIndex = '9';
+        pulseAnimation.style.visibility = 'hidden';
+        break;
+    case '15':
+        openBook();
+        book.style.visibility = 'unset';
+        coverBackground.style.visibility = 'hidden';
+        prevBtn.style.visibility = 'hidden';
+        bookBackground.style.visibility = 'unset';
+        dictionaryTab.style.visibility = 'unset';
+        dictionaryTab.style.transition = '1s';
+        personalityTab.style.visibility = 'unset';
+        personalityTab.style.transition = '1s';
+        paper1.classList.add("flipped");
+        paper1.style.zIndex = '1';
+        paper2.classList.add("flipped");
+        paper2.style.zIndex = '2';
+        paper4.classList.add("flipped");
+        paper5.style.zIndex = '5';
+        paper9.classList.add("flipped");
+        paper9.style.zIndex = '5';
+        paper10.style.zIndex = '5';
+        paper10.classList.add("flipped");
+        paper11.classList.add("flipped");
+        paper11.style.zIndex = '6';
+        paper14.style.zIndex = '7';
+        nextBtn.style.visibility = 'hidden';
+
+        paper16.classList.add("flipped");
+        paper16.style.zIndex = '9';
+        paper17.style.zIndex = '10';
+        break;
+    case '16':
+        openBook();
+        book.style.visibility = 'unset';
+        coverBackground.style.visibility = 'hidden';
+        prevBtn.style.visibility = 'hidden';
+        bookBackground.style.visibility = 'unset';
+        dictionaryTab.style.visibility = 'unset';
+        dictionaryTab.style.transition = '1s';
+        personalityTab.style.visibility = 'unset';
+        personalityTab.style.transition = '1s';
+        paper1.classList.add("flipped");
+        paper1.style.zIndex = '1';
+        paper2.classList.add("flipped");
+        paper2.style.zIndex = '2';
+        paper4.classList.add("flipped");
+        paper5.style.zIndex = '5';
+        paper9.classList.add("flipped");
+        paper9.style.zIndex = '5';
+        paper10.style.zIndex = '5';
+        paper10.classList.add("flipped");
+        paper11.classList.add("flipped");
+        paper11.style.zIndex = '6';
+        paper14.style.zIndex = '7';
+        nextBtn.style.visibility = 'hidden';
+
+        paper18.classList.add("flipped");
+        paper18.style.zIndex = '9';
+        paper19.style.zIndex = '10';
+        break;
+    case '17':
+        openBook();
+        book.style.visibility = 'unset';
+        coverBackground.style.visibility = 'hidden';
+        prevBtn.style.visibility = 'hidden';
+        bookBackground.style.visibility = 'unset';
+        dictionaryTab.style.visibility = 'unset';
+        dictionaryTab.style.transition = '1s';
+        personalityTab.style.visibility = 'unset';
+        personalityTab.style.transition = '1s';
+        paper1.classList.add("flipped");
+        paper1.style.zIndex = '1';
+        paper2.classList.add("flipped");
+        paper2.style.zIndex = '2';
+        paper4.classList.add("flipped");
+        paper5.style.zIndex = '5';
+        paper9.classList.add("flipped");
+        paper9.style.zIndex = '5';
+        paper10.style.zIndex = '5';
+        paper10.classList.add("flipped");
+        paper11.classList.add("flipped");
+        paper11.style.zIndex = '6';
+        paper14.style.zIndex = '7';
+        nextBtn.style.visibility = 'hidden';
+
+        paper17.classList.add("flipped");
+        paper17.style.zIndex = '10';
+        paper20.style.zIndex = '11';
+        break;
+    case '18':
+        openBook();
+        book.style.visibility = 'unset';
+        coverBackground.style.visibility = 'hidden';
+        prevBtn.style.visibility = 'hidden';
+        bookBackground.style.visibility = 'unset';
+        dictionaryTab.style.visibility = 'unset';
+        dictionaryTab.style.transition = '1s';
+        personalityTab.style.visibility = 'unset';
+        personalityTab.style.transition = '1s';
+        paper1.classList.add("flipped");
+        paper1.style.zIndex = '1';
+        paper2.classList.add("flipped");
+        paper2.style.zIndex = '2';
+        paper4.classList.add("flipped");
+        paper5.style.zIndex = '5';
+        paper9.classList.add("flipped");
+        paper9.style.zIndex = '5';
+        paper10.style.zIndex = '5';
+        paper10.classList.add("flipped");
+        paper11.classList.add("flipped");
+        paper11.style.zIndex = '6';
+        paper14.style.zIndex = '7';
+        nextBtn.style.visibility = 'hidden';
+
+        paper21.classList.add("flipped");
+        paper21.style.zIndex = '10';
+        paper22.style.zIndex = '11';
+        break;
 }
