@@ -587,6 +587,11 @@ header {
     top: 30px;
 }
 
+.word-Leo {
+    left: -200px;
+    top: 23px;
+}
+
 .word-Yakov {
     top: unset;
     height: 70px;
@@ -647,6 +652,7 @@ header {
 .word-Baldhoven2 {
     top: -100px;
     height: 100px;
+    left:-5px;
 }
 
 .word-Baldhoven3 {
@@ -1661,7 +1667,7 @@ i {
     letter-spacing: -0.7px;
     width: 356px;
     height: 42px;
-    bottom: 17%;
+    bottom: 14%;
     left: 8%;
 }
 
@@ -1672,7 +1678,7 @@ i {
     font-weight: 400;
     line-height: 150%; /* 21px */
     letter-spacing: -0.7px;
-    bottom: 17%;
+    bottom: 14%;
     left: 56%;
 }
 
