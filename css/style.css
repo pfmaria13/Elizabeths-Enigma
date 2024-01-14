@@ -23,7 +23,6 @@
 body {
     background-color: #79543F;
     color: #2F1301;
-    overflow-x: hidden;
 }
 
 .container {
@@ -110,6 +109,19 @@ header {
     transition: visibility 0s linear 0.25s, transform 0.25s;
 }
 
+.modal-return {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.1);
+    transition: visibility 0s linear 0.25s, transform 0.25s;
+}
+
 .modal-content {
     position: absolute;
     top: 33%;
@@ -133,6 +145,16 @@ header {
     background-color: #FBEDDC;
 }
 
+.modal-content-return {
+    position: absolute;
+    top: 33%;
+    left: 33%;
+    width: 526px;
+    height: 273px;
+    border-radius: 10px;
+    background-color: #FBEDDC;
+}
+
 .play-again-text-lives-over {
     display: flex;
     flex-direction: column;
@@ -146,6 +168,21 @@ header {
     column-gap: 32px;
     position: absolute;
     bottom: 30px;
+}
+
+.play-again-text-return {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5px;
+}
+
+.play-again-submit-return {
+    display: flex;
+    column-gap: 30px;
+    position: absolute;
+    bottom: 48px;
 }
 
 .close-button {
@@ -176,6 +213,20 @@ header {
     background-color: darkgray;
 }
 
+.close-button-return {
+    float: right;
+    width: 1.5rem;
+    line-height: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    background-color: lightgray;
+}
+
+.close-button-return:hover {
+    background-color: darkgray;
+}
+
 .show-modal {
     opacity: 1;
     visibility: visible;
@@ -197,10 +248,42 @@ header {
     position: relative;
 }
 
+.play-again-no-return {
+    position: relative;
+}
+
 .play-again-no-p {
     position: absolute;
     top: 0;
     left: 27px;
+    color: rgba(47, 19, 1, 0.70);
+    text-align: justify;
+    font-family: PP Writer;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 30px */
+    letter-spacing: -0.44px;
+}
+
+.play-again-no-p-return {
+    position: absolute;
+    top: 0;
+    left: 30px;
+    color: rgba(47, 19, 1, 0.70);
+    text-align: justify;
+    font-family: PP Writer;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 30px */
+    letter-spacing: -0.44px;
+}
+
+.play-again-yes-p-return {
+    position: absolute;
+    top: 0;
+    left: 30px;
     color: rgba(47, 19, 1, 0.70);
     text-align: justify;
     font-family: PP Writer;
@@ -216,6 +299,10 @@ header {
 }
 
 .play-again-yes-lives-over {
+    position: relative;
+}
+
+.play-again-yes-return {
     position: relative;
 }
 
@@ -265,6 +352,24 @@ header {
         background-image: url("../img/play-again-yes-decor-hover.png");
     }
     .play-again-yes-p {
+        color: #2F1301;
+    }
+}
+
+.play-again-no-return:hover {
+    .play-again-no-decor-return {
+        background-image: url("../img/modal-return-continue-decor-hover.png");
+    }
+    .play-again-no-p-return {
+        color: #2F1301;
+    }
+}
+
+.play-again-yes-return:hover {
+    .play-again-yes-decor-return {
+        background-image: url("../img/modal-return-start-again-decor-hover.png");
+    }
+    .play-again-yes-p-return {
         color: #2F1301;
     }
 }
@@ -330,6 +435,29 @@ header {
 
 .personality-tab:hover {
     background-image: url("../img/personality-tab.png") !important;
+    background-repeat: no-repeat !important;
+    right: 140px !important;
+    width: 118px !important;
+    height: 30px !important;
+    filter: drop-shadow(-8px 5px 4px rgba(0, 0, 0, 0.25));
+}
+
+.authors-tab {
+    position: absolute;
+    visibility: hidden;
+    bottom: 60px;
+    left: 460px;
+    z-index: 0;
+    background-image: url("../img/authors-tab-hidden.png");
+    background-repeat: no-repeat;
+    width: 71px;
+    height: 30px;
+    transition: 1s;
+    filter: drop-shadow(-8px 5px 4px rgba(0, 0, 0, 0.25));
+}
+
+.authors-tab:hover {
+    background-image: url("../img/authors-tab.png") !important;
     background-repeat: no-repeat !important;
     right: 140px !important;
     width: 118px !important;
@@ -587,6 +715,11 @@ header {
     left: -210px;
     height: 110px;
     bottom: -110px;
+}
+
+.word-Elizabeth {
+    left: 5px;
+    top: -65px;
 }
 
 .word-Kelly2 {
@@ -937,16 +1070,71 @@ i {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    padding-bottom: 50px;
+    padding-top: 60px;
 }
 
 .page1-title {
-    padding-top: 100px;
-    padding-bottom: 35px;
+    width: 200px;
+    height: 50px;
+    padding-bottom: 10px;
 }
 
-.page1-text {
+.page1-p1 {
+    color: #2F1301;
+    text-align: justify;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 21px */
+    letter-spacing: -0.308px;
+    width: 380px;
+    text-indent: 20px;
+}
+.page1-b {
+    font-family: PP WriterBold;
+    color: #2F1301;
+    text-align: justify;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 21px */
+    letter-spacing: -0.308px;
+    width: 380px;
+    height: 350px;
+    text-indent: 20px;
+}
+
+.page1-p2 {
+    text-indent: 20px;
+    color: #2F1301;
+    text-align: justify;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 21px */
+    letter-spacing: -0.308px;
+    width: 380px;
+}
+
+.page1-p4 {
+    font-family: "PP Writer";
+    color: #2F1301;
+    text-align: justify;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 21px */
+    letter-spacing: -0.308px;
+    width: 380px;
+    text-indent: 20px;
+    padding-bottom: 45px;
+}
+
+.page2-text {
     width: 392px;
-    height: 134px;
+    height: 155px;
     flex-shrink: 0;
     text-align: justify;
     font-size: 16px;
@@ -957,14 +1145,21 @@ i {
 
 .page2 {
     display: flex;
-    align-items: start;
-    justify-content: center;
-    padding-top: 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    padding-top: 35px;
+}
+
+.page2-img-title {
+    width: 290px;
+    height: 130px;
+    padding-bottom: 10px;
 }
 
 .page2-img {
-    width: 380px;
-    height: 530px;
+    width: 330px;
+    height: 200px;
 }
 
 .page3 {
@@ -1942,4 +2137,36 @@ i {
 
 .game-over-logo {
     width: 40%;
+}
+
+.authors-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.authors-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 25px;
+}
+
+.authors-text {
+    color: #2F1301;
+    text-align: center;
+    font-family: PP Writer;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+    letter-spacing: -0.352px;
+}
+
+@media (min-height: 810px) {
+    body {
+        overflow-y: hidden;
+    }
 }

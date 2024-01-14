@@ -7,6 +7,7 @@ const bookBackground = document.querySelector('#book-background');
 const coverBackground = document.querySelector('#cover-background')
 const dictionaryTab = document.querySelector('#dictionary-tab');
 const personalityTab = document.querySelector('#personality-tab');
+const authorsTab = document.querySelector('#authors-tab');
 const gameLife1 = document.querySelector('#game-life1');
 const gameLife2 = document.querySelector('#game-life2');
 const gameLife3 = document.querySelector('#game-life3');
@@ -58,14 +59,31 @@ const dictionaryPage2 = document.querySelector('#dictionary-page2');
 const personalityPage1 = document.querySelector('#personality-page1');
 const personalityPage2 = document.querySelector('#personality-page2');
 
+// Authors
+const authorsPage1 = document.querySelector('#authors-page1');
+const authorsPage2 = document.querySelector('#authors-page2');
+
 // Event listeners
 prevBtn.addEventListener("click", goPrevious);
 prevBtn.addEventListener("mouseover", e => prevBtn.src = "img/prev-btn-hover.png");
 prevBtn.addEventListener('mouseout', e => prevBtn.src = "img/prev%20button.png");
-
 nextBtn.addEventListener("click", goNext);
-nextBtn.addEventListener("mouseover", e => nextBtn.src = "img/next-btn-hover.png");
-nextBtn.addEventListener("mouseout", e => nextBtn.src = "img/next%20button.png")
+nextBtn.addEventListener("mouseover", e => {
+    if (currentState !== 2) {
+        nextBtn.src = "img/next-btn-hover.png";
+    }
+    else {
+        nextBtn.src = "img/start-game-hover.png";
+    }
+});
+nextBtn.addEventListener("mouseout", e => {
+   if (currentState !== 2) {
+       nextBtn.src = "img/next%20button.png";
+   }
+   else {
+       nextBtn.src = "img/start-game.png";
+   }
+});
 
 // Business Logic
 let currentState = 1;
@@ -102,6 +120,8 @@ function goNext() {
                 dictionaryTab.style.transition = '1s';
                 personalityTab.style.visibility = 'unset';
                 personalityTab.style.transition = '1s';
+                authorsTab.style.visibility = 'unset';
+                authorsTab.style.transition = '1s';
                 paper1.classList.add("flipped");
                 paper1.style.zIndex = '1';
                 break;
@@ -152,7 +172,7 @@ function goNext() {
 }
 
 function goPrevious() {
-    if(currentState > 1 && dictionaryPage1.style.zIndex !== '12' && personalityPage1.style.zIndex !== '12') {
+    if(currentState > 1 && dictionaryPage1.style.zIndex !== '12' && personalityPage1.style.zIndex !== '12' && authorsPage1.style.zIndex !== '12') {
         switch(currentState) {
             case 2:
                 closeBook(true);
@@ -163,6 +183,8 @@ function goPrevious() {
                 dictionaryTab.style.visibility = 'hidden';
                 personalityTab.style.transition = 'unset';
                 personalityTab.style.visibility = 'hidden';
+                authorsTab.style.visibility = 'hidden';
+                authorsTab.style.transition = 'unset';
                 paper1.classList.remove("flipped");
                 paper1.style.zIndex = '7';
                 break;
@@ -214,6 +236,10 @@ function goPrevious() {
 
     if (personalityPage1.style.zIndex === '12') {
         closePersonality();
+    }
+
+    if (authorsPage1.style.zIndex === '12') {
+        closeAuthors();
     }
 }
 
@@ -422,12 +448,21 @@ const closeButtonLivesOver = document.querySelector('.close-button-lives-over');
 const playAgainYesBtnLivesOver = document.querySelector('.play-again-yes-lives-over');
 const playAgainNoBtnLivesOver = document.querySelector('.play-again-no-lives-over');
 
+const modalReturn = document.querySelector('.modal-return');
+const closeButtonReturn = document.querySelector('.close-button-return');
+const playAgainYesBtnReturn = document.querySelector('.play-again-yes-return');
+const playAgainNoBtnReturn = document.querySelector('.play-again-no-return');
+
 function toggleModal() {
     modal.classList.toggle("show-modal");
 }
 
 function toggleModalLivesOver() {
     modalLivesOver.classList.toggle("show-modal");
+}
+
+function toggleModalReturn() {
+    modalReturn.classList.toggle("show-modal");
 }
 
 function windowOnClick(event) {
@@ -446,6 +481,10 @@ playAgainNoBtn.addEventListener("click", toggleModal);
 closeButtonLivesOver.addEventListener("click", toggleModalLivesOver);
 playAgainYesBtnLivesOver.addEventListener("click", playAgainYes);
 playAgainNoBtnLivesOver.addEventListener("click", toggleModalLivesOver);
+
+closeButtonReturn.addEventListener("click", toggleModalReturn);
+playAgainYesBtnReturn.addEventListener("click", playAgainYes);
+playAgainNoBtnReturn.addEventListener("click", toggleModalReturn);
 
 function playAgainYes() {
     localStorage.life = '3';
@@ -479,6 +518,19 @@ function openPersonality() {
     personalityTab.style.height = '30px';
 }
 
+function openAuthors() {
+    authorsPage1.classList.add('flipped');
+    authorsPage1.style.zIndex = '12';
+    authorsPage2.style.zIndex = '12';
+    nextBtn.style.visibility = 'hidden';
+    prevBtn.style.visibility = 'unset';
+    authorsTab.style.backgroundImage = 'url("img/authors-tab.png")';
+    authorsTab.style.backgroundRepeat = 'no repeat';
+    authorsTab.style.right = '140px';
+    authorsTab.style.width = '118px';
+    authorsTab.style.height = '30px';
+}
+
 function closeDictionary() {
     dictionaryPage1.classList.remove("flipped");
     dictionaryPage1.style.zIndex = '-10';
@@ -509,27 +561,57 @@ function closePersonality() {
     personalityTab.style.height = '30px';
 }
 
+function closeAuthors() {
+    authorsPage1.classList.remove("flipped");
+    authorsPage1.style.zIndex = '-10';
+    authorsPage2.style.zIndex = '-10';
+    nextBtnNeed();
+    prevBtnNeed();
+    authorsTab.style.backgroundImage = 'url("img/authors-tab-hidden.png")';
+    authorsTab.style.backgroundRepeat = 'no repeat';
+    authorsTab.style.position = 'absolute';
+    authorsTab.style.bottom = '60px';
+    authorsTab.style.left = '460px';
+    authorsTab.style.width = '71px';
+    authorsTab.style.height = '30px';
+}
+
 // Show dictionary
 function showDictionary() {
-    if (personalityPage1.style.zIndex !== '12') {
+    if (personalityPage1.style.zIndex !== '12' && authorsPage1.style.zIndex !== '12') {
         openDictionary();
     }
 
     else {
         closePersonality();
+        closeAuthors();
         setTimeout(openDictionary, 200);
     }
 }
 
 // Show personality
 function showPersonality() {
-    if (dictionaryPage1.style.zIndex !== '12') {
+    if (dictionaryPage1.style.zIndex !== '12' && authorsPage1.style.zIndex !== '12') {
         openPersonality();
     }
 
     else {
         closeDictionary();
+        closeAuthors();
         setTimeout(openPersonality, 200);
+    }
+}
+
+// Show authors
+function showAuthors() {
+    if (dictionaryPage1.style.zIndex !== '12' && personalityPage1.style.zIndex !== '12') {
+        openAuthors();
+    }
+
+    else {
+        closeDictionary();
+        closePersonality();
+        setTimeout(openAuthors, 200);
     }
 }
 
@@ -683,6 +765,10 @@ function chooseResignFateP10_2() {
 }
 
 // Local storage
+
+if (localStorage.choice !== '0' || localStorage.life !== '3') {
+    toggleModalReturn();
+}
 
 // Save lives status
 if (localStorage.life === '2') {

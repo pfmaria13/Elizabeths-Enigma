@@ -63,6 +63,24 @@
                 </div>
             </div>
         </div>
+        <div class="modal-return">
+            <div class="modal-content-return">
+                <span class="close-button-return"></span>
+                <div class="play-again-text-return">
+                    <img src="img/return-modal.png" alt="У вас есть сохраненная сессия игры" class="lives-over">
+                    <div class="play-again-submit-return">
+                        <button class="play-again-no-return">
+                            <img class="play-again-no-decor-return" src="img/modal-return-continue-decor.png" alt="Завитушки">
+                            <p class="play-again-no-p-return">Продолжить</p>
+                        </button>
+                        <button class="play-again-yes-return">
+                            <img src="img/modal-return-start-again.png" alt="Завитушки" class="play-again-yes-decor-return">
+                            <p class="play-again-yes-p-return">Начать заново</p>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </header>
 <main>
@@ -72,6 +90,7 @@
         <div id="book" class="book">
             <button class="dictionary-tab" id="dictionary-tab" onclick="showDictionary()"></button>
             <button class="personality-tab" id="personality-tab" onclick="showPersonality()"></button>
+            <button class="authors-tab" id="authors-tab" onclick="showAuthors()"></button>
             <img src="img/book-background.png" alt="Книга" class="book-background" id="book-background">
             <div id="p1" class="paper">
                 <!-- Page 0 -->
@@ -84,8 +103,25 @@
                 <!-- Page 1 -->
                 <div class="back">
                     <div id="b1" class="back-content page1">
-                        <div class="page1-title"><img src="img/page1-img.png" alt="Заголовок" class="page1-img"></div>
-                        <div class="page1-text"><p class="page1-p">В подростковом возрасте  в семье  Элизабет начались несчастья. Ее отчим  - алхимик <button class="dictionary-word"><u>Эдвард Келли</u><div class="dictionary-word-popup word-Kelly">
+                        <img src="img/page1-img.png" alt="Изображение" class="page1-title">
+                        <p class="page1-p1">Представьте, что Вы родились в конце XVI в. Вас ждет сложная, но чрезвычайно уникальная и интересная жизнь. В этой захватывающей игре Вы сыграете роль Элизабет Джейн Уэстон, талантливой поэтессы, родившейся в Англии и иммигрировавшей в Европу. Элизабет пришлось столкнуться с несправедливостью и нищетой. Только от Вас зависит, сможет ли девушка вырваться от оков бедности, отчаяния и преодолеть предрассудки своего времени, став влиятельной фигурой в мире неолатинской литературы.</p>
+                            <p class="page1-p2">Вам предстоит разгадать загадки судьбы Элизабет, решить, удастся ли главной героине выжить в реалиях раннего Нового времени.</p>
+                            <p class="page1-b">Ваша основная миссия мыслить и «действовать», как поэтесса. Всего у Вас будет 3 попытки. </p>
+                            <p class="page1-p4">Игра создана по мотивам <button class="dictionary-word"><u>произведения Элизабет Джейн Уэстон "Парфеникон"</u><div class="dictionary-word-popup word-Elizabeth">
+                            <img src="img/dictionary-word-hover-left-decor.png" alt="Декор слева">
+                            <p class="dictionary-short-text">Weston, E. Parhenicon. — Praga: Typ. Sessii, 1602. — 190 p.</p>
+                            <img src="img/dictionary-word-hover-right-decor.png" alt="Декор справа">
+                        </div></button>. Этот историко – литературный квиз принесет Вам удовольствие и новые знания! Удачи!</p>
+                        <div class="numeration">1</div>
+                    </div>
+                </div>
+            </div>
+            <div id="p2" class="paper">
+                <!-- Page 2 -->
+                <div class="front">
+                    <div id="f2" class="front-content page2">
+                        <div class="page2-title"><img src="img/page2-img-title.png" alt="Изображение" class="page2-img-title"></div>
+                        <div class="page2-text"><p class="page2-p">В подростковом возрасте  в семье  Элизабет начались несчастья. Ее отчим  - алхимик <button class="dictionary-word"><u>Эдвард Келли</u><div class="dictionary-word-popup word-Kelly">
                             <img src="img/dictionary-word-hover-left-decor.png" alt="Декор слева">
                             <p class="dictionary-short-text">Эдвард Келли (1555-1597/8) - английский алхимик и компаньон знаменитого астролога, алхимика и математика Джона Ди.</p>
                             <img src="img/dictionary-word-hover-right-decor.png" alt="Декор справа">
@@ -99,15 +135,7 @@
                             <img src="img/dictionary-word-hover-right-decor.png" alt="Декор справа" class="word-decor-right-Rudolf">
                         </div></button>,  Эдвард был заключен в тюрьму по обвинению в государственной измене.
                         </p></div>
-                        <div class="numeration">1</div>
-                    </div>
-                </div>
-            </div>
-            <div id="p2" class="paper">
-                <!-- Page 2 -->
-                <div class="front">
-                    <div id="f2" class="front-content page2" style="background-image: linear-gradient(89deg, #E0BF8F -1.75%, #F2D6B7 13.97%, #FBEEDE 49.08%, #F7E3CA 98.85%);">
-                        <img src="img/page2-img.png" alt="Картинка-2" class="page2-img">
+                        <div class="page2-img"><img src="img/page2-img.png" alt="Изображение" class="page2-img"></div>
                         <div class="numeration">2</div>
                     </div>
                 </div>
@@ -893,6 +921,35 @@
                 </div>
             </div>
 
+            <!-- Авторы -->
+            <div id="authors-page1" class="paper">
+                <div class="back">
+                    <div id="b10" class="back-content authors-page1">
+                        <div class="authors-title">
+                            <img src="img/authors-logo.png" alt="Заголовок словаря" class="authors-title-img">
+                        </div>
+                        <div class="authors-info">
+                            <p class="authors-text">Алена Кичигина - куратор, сценарист</p>
+                            <p class="authors-text">Сергей Рябов - научный руководитель</p>
+                            <br>
+                            <p class="authors-text">Александра Бирюкова - тимлид</p>
+                            <p class="authors-text">Виктория Мироненко - дизайнер</p>
+                            <p class="authors-text">Марина Виханова - дизайнер</p>
+                            <p class="authors-text">Мария Пряничникова - разработчик</p>
+                            <p class="authors-text">Даниил Иванов - разработчик</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="authors-page2" class="paper">
+                <div class="front">
+                    <div id="f11" class="front-content authors-page2">
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Комикс -->
             <div id="comics-page1" class="paper">
                 <div class="front">
                     <div class="front-content">
