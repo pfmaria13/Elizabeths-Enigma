@@ -796,6 +796,8 @@ switch (localStorage.choice) {
         dictionaryTab.style.transition = '1s';
         personalityTab.style.visibility = 'unset';
         personalityTab.style.transition = '1s';
+        authorsTab.style.visibility = 'unset';
+        authorsTab.style.transition = '1s';
         paper1.classList.add("flipped");
         paper1.style.zIndex = '1';
         paper2.classList.add("flipped");
@@ -818,6 +820,8 @@ switch (localStorage.choice) {
         dictionaryTab.style.transition = '1s';
         personalityTab.style.visibility = 'unset';
         personalityTab.style.transition = '1s';
+        authorsTab.style.visibility = 'unset';
+        authorsTab.style.transition = '1s';
         paper1.classList.add("flipped");
         paper1.style.zIndex = '1';
         paper2.classList.add("flipped");
@@ -840,6 +844,8 @@ switch (localStorage.choice) {
         dictionaryTab.style.transition = '1s';
         personalityTab.style.visibility = 'unset';
         personalityTab.style.transition = '1s';
+        authorsTab.style.visibility = 'unset';
+        authorsTab.style.transition = '1s';
         paper1.classList.add("flipped");
         paper1.style.zIndex = '1';
         paper2.classList.add("flipped");
@@ -862,6 +868,8 @@ switch (localStorage.choice) {
         dictionaryTab.style.transition = '1s';
         personalityTab.style.visibility = 'unset';
         personalityTab.style.transition = '1s';
+        authorsTab.style.visibility = 'unset';
+        authorsTab.style.transition = '1s';
         paper1.classList.add("flipped");
         paper1.style.zIndex = '1';
         paper2.classList.add("flipped");
@@ -883,6 +891,8 @@ switch (localStorage.choice) {
         dictionaryTab.style.transition = '1s';
         personalityTab.style.visibility = 'unset';
         personalityTab.style.transition = '1s';
+        authorsTab.style.visibility = 'unset';
+        authorsTab.style.transition = '1s';
         paper1.classList.add("flipped");
         paper1.style.zIndex = '1';
         paper2.classList.add("flipped");
@@ -904,6 +914,8 @@ switch (localStorage.choice) {
         dictionaryTab.style.transition = '1s';
         personalityTab.style.visibility = 'unset';
         personalityTab.style.transition = '1s';
+        authorsTab.style.visibility = 'unset';
+        authorsTab.style.transition = '1s';
         paper1.classList.add("flipped");
         paper1.style.zIndex = '1';
         paper2.classList.add("flipped");
@@ -925,6 +937,8 @@ switch (localStorage.choice) {
         dictionaryTab.style.transition = '1s';
         personalityTab.style.visibility = 'unset';
         personalityTab.style.transition = '1s';
+        authorsTab.style.visibility = 'unset';
+        authorsTab.style.transition = '1s';
         paper1.classList.add("flipped");
         paper1.style.zIndex = '1';
         paper2.classList.add("flipped");
@@ -946,6 +960,8 @@ switch (localStorage.choice) {
         dictionaryTab.style.transition = '1s';
         personalityTab.style.visibility = 'unset';
         personalityTab.style.transition = '1s';
+        authorsTab.style.visibility = 'unset';
+        authorsTab.style.transition = '1s';
         paper1.classList.add("flipped");
         paper1.style.zIndex = '1';
         paper2.classList.add("flipped");
@@ -969,6 +985,8 @@ switch (localStorage.choice) {
         dictionaryTab.style.transition = '1s';
         personalityTab.style.visibility = 'unset';
         personalityTab.style.transition = '1s';
+        authorsTab.style.visibility = 'unset';
+        authorsTab.style.transition = '1s';
         paper1.classList.add("flipped");
         paper1.style.zIndex = '1';
         paper2.classList.add("flipped");
@@ -995,6 +1013,8 @@ switch (localStorage.choice) {
         dictionaryTab.style.transition = '1s';
         personalityTab.style.visibility = 'unset';
         personalityTab.style.transition = '1s';
+        authorsTab.style.visibility = 'unset';
+        authorsTab.style.transition = '1s';
         paper1.classList.add("flipped");
         paper1.style.zIndex = '1';
         paper2.classList.add("flipped");
@@ -1021,6 +1041,8 @@ switch (localStorage.choice) {
         dictionaryTab.style.transition = '1s';
         personalityTab.style.visibility = 'unset';
         personalityTab.style.transition = '1s';
+        authorsTab.style.visibility = 'unset';
+        authorsTab.style.transition = '1s';
         paper1.classList.add("flipped");
         paper1.style.zIndex = '1';
         paper2.classList.add("flipped");
@@ -1049,6 +1071,8 @@ switch (localStorage.choice) {
         dictionaryTab.style.transition = '1s';
         personalityTab.style.visibility = 'unset';
         personalityTab.style.transition = '1s';
+        authorsTab.style.visibility = 'unset';
+        authorsTab.style.transition = '1s';
         paper1.classList.add("flipped");
         paper1.style.zIndex = '1';
         paper2.classList.add("flipped");
@@ -1077,6 +1101,8 @@ switch (localStorage.choice) {
         dictionaryTab.style.transition = '1s';
         personalityTab.style.visibility = 'unset';
         personalityTab.style.transition = '1s';
+        authorsTab.style.visibility = 'unset';
+        authorsTab.style.transition = '1s';
         paper1.classList.add("flipped");
         paper1.style.zIndex = '1';
         paper2.classList.add("flipped");
@@ -1107,6 +1133,8 @@ switch (localStorage.choice) {
         dictionaryTab.style.transition = '1s';
         personalityTab.style.visibility = 'unset';
         personalityTab.style.transition = '1s';
+        authorsTab.style.visibility = 'unset';
+        authorsTab.style.transition = '1s';
         paper1.classList.add("flipped");
         paper1.style.zIndex = '1';
         paper2.classList.add("flipped");
@@ -1137,6 +1165,8 @@ switch (localStorage.choice) {
         dictionaryTab.style.transition = '1s';
         personalityTab.style.visibility = 'unset';
         personalityTab.style.transition = '1s';
+        authorsTab.style.visibility = 'unset';
+        authorsTab.style.transition = '1s';
         paper1.classList.add("flipped");
         paper1.style.zIndex = '1';
         paper2.classList.add("flipped");
@@ -1166,6 +1196,8 @@ switch (localStorage.choice) {
         dictionaryTab.style.transition = '1s';
         personalityTab.style.visibility = 'unset';
         personalityTab.style.transition = '1s';
+        authorsTab.style.visibility = 'unset';
+        authorsTab.style.transition = '1s';
         paper1.classList.add("flipped");
         paper1.style.zIndex = '1';
         paper2.classList.add("flipped");
@@ -1195,6 +1227,8 @@ switch (localStorage.choice) {
         dictionaryTab.style.transition = '1s';
         personalityTab.style.visibility = 'unset';
         personalityTab.style.transition = '1s';
+        authorsTab.style.visibility = 'unset';
+        authorsTab.style.transition = '1s';
         paper1.classList.add("flipped");
         paper1.style.zIndex = '1';
         paper2.classList.add("flipped");
@@ -1224,6 +1258,8 @@ switch (localStorage.choice) {
         dictionaryTab.style.transition = '1s';
         personalityTab.style.visibility = 'unset';
         personalityTab.style.transition = '1s';
+        authorsTab.style.visibility = 'unset';
+        authorsTab.style.transition = '1s';
         paper1.classList.add("flipped");
         paper1.style.zIndex = '1';
         paper2.classList.add("flipped");
